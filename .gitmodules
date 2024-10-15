@@ -1,0 +1,3 @@
+[submodule "vividity"]
+	path = vividity
+	url = https://github.com/Sup2point0/vividity.git
