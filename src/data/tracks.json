@@ -1,6 +1,50 @@
 [
-  {
-    "shard": "terabyte-connection",
+  "dawn": {
+    "name": "Dawn",
+    "artist": "sup2point0",
+    "file": "sup/dawn.m4a"
+  },
+  "day": {
+    "name": "Day",
+    "artist": "sup2point0",
+    "file": "sup/day.m4a"
+  },
+  "night": {
+    "name": "Night",
+    "artist": "sup2point0",
+    "file": "sup/night.m4a"
+  },
+  "tomorrow": {
+    "name": "Tomorrow",
+    "artist": "sup2point0",
+    "file": "sup/tomorrow.m4a"
+  },
+  "Aphenia": {
+    "name": "Aphenia",
+    "artist": "sup2point0",
+    "file": "sup/aphenia.m4a"
+  },
+  "voxel": {
+    "name": "Voxel",
+    "artist": "sup2point0",
+    "file": "sup/voxel.m4a"
+  },
+  "rejuvenate": {
+    "name": "Rejuvenate",
+    "artist": "sup2point0",
+    "file": "sup/rejuvenate.m4a"
+  },
+  "ceruleus": {
+    "name": "Ceruleus",
+    "artist": "sup2point0",
+    "file": "sup/ceruleus.m4a"
+  },
+  "let-you-down": {
+    "name": "Let You Down",
+    "artist": "sup2point0",
+    "file": "sup/let-you-down.m4a"
+  },
+  "terabyte-connection": {
     "name": "+ERABY+E CONNEC+10N",
     "artist": "camellia",
     "file": "terabyte-connection.mp3"
