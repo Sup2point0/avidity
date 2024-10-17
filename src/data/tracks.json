@@ -1,52 +1,69 @@
 [
   "dawn": {
     "name": "Dawn",
-    "artist": "sup2point0",
-    "file": "sup/dawn.m4a"
+    "artist": "sup",
+    "file": "sup/dawn.m4a",
+    "album": "algorhythm-origins",
+    "lists": ["mood"]
   },
   "day": {
     "name": "Day",
-    "artist": "sup2point0",
-    "file": "sup/day.m4a"
+    "artist": "sup",
+    "file": "sup/day.m4a",
+    "album": "algorhythm-origins",
+    "lists": ["vibrant"]
   },
   "night": {
     "name": "Night",
-    "artist": "sup2point0",
-    "file": "sup/night.m4a"
+    "artist": "sup",
+    "file": "sup/night.m4a",
+    "album": "algorhythm-origins",
+    "lists": ["vibrant"]
   },
   "tomorrow": {
     "name": "Tomorrow",
-    "artist": "sup2point0",
-    "file": "sup/tomorrow.m4a"
+    "artist": "sup",
+    "file": "sup/tomorrow.m4a",
+    "album": "algorhythm-origins"
   },
   "Aphenia": {
     "name": "Aphenia",
-    "artist": "sup2point0",
-    "file": "sup/aphenia.m4a"
+    "artist": "sup",
+    "file": "sup/aphenia.m4a",
+    "album": "elysion",
+    "lists": ["hardcore"]
   },
   "voxel": {
     "name": "Voxel",
-    "artist": "sup2point0",
-    "file": "sup/voxel.m4a"
+    "artist": "sup",
+    "file": "sup/voxel.m4a",
+    "album": "cortex",
+    "lists": ["sound", "bop"]
   },
   "rejuvenate": {
     "name": "Rejuvenate",
-    "artist": "sup2point0",
-    "file": "sup/rejuvenate.m4a"
+    "artist": "sup",
+    "file": "sup/rejuvenate.m4a",
+    "lists": ["vibrant"]
   },
   "ceruleus": {
     "name": "Ceruleus",
-    "artist": "sup2point0",
-    "file": "sup/ceruleus.m4a"
+    "artist": "sup",
+    "file": "sup/ceruleus.m4a",
+    "album": "elysion",
+    "lists": ["neuro", "hardcore", "mood", "sound"]
   },
   "let-you-down": {
     "name": "Let You Down",
-    "artist": "sup2point0",
-    "file": "sup/let-you-down.m4a"
+    "artist": "sup",
+    "file": "sup/let-you-down.m4a",
+    "lists": ["chill"]
   },
-  "terabyte-connection": {
+  "terabyte": {
     "name": "+ERABY+E CONNEC+10N",
     "artist": "camellia",
-    "file": "terabyte-connection.mp3"
+    "file": "terabyte-connection.mp3",
+    "album": "tera-io",
+    "lists": ["rhythm", "hardcore", "neuro", "sound"]
   }
 ]
