@@ -3,6 +3,9 @@
 import { playbackExec } from "#scripts/play";
 
 import Nav from "#parts/nav.svelte";
+import TrackDetails from "#parts/track-details/index.svelte";
+import PlaybackDetails from "#parts/playback-details/index.svelte";
+import TrackControls from "#parts/track-controls/index.svelte";
 
 
 function onKeydown(event)
@@ -29,7 +32,7 @@ function onKeydown(event)
       case "ArrowRight":
         return playbackExec.shift(+5);
   
-      case "j:
+      case "j":
         return playbackExec.shift(-10);
       case "l":
         return playbackExec.shift(+10);
@@ -43,12 +46,12 @@ function onKeydown(event)
 <svelte:window on:keydown={onKeydown} />
 
 
-<main id="ui-layout-page">
-  <Nav>
+<main>
+  <Nav />
   
   <div id="ui-layout-split">
     <section style:flex-grow={0.5}>
-      <TrackDetails>
+      <TrackDetails />
     </section>
   
     <section style:flex-grow={1}>
@@ -56,19 +59,19 @@ function onKeydown(event)
     </section>
   
     <section style:flex-grow={0.5}>
-      <PlaybackDetails>
+      <PlaybackDetails />
     </section>
   </div>
   
-  <TrackControls>
+  <TrackControls />
 </main>
 
 
 <style lang="scss">
 
-#ui-layout-split {
+main {
   width: 100%;
-  height: 
+  max-height: 100vh;
   display: flex;
   flex-direction: row;
 }
