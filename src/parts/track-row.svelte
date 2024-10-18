@@ -5,15 +5,18 @@ A row representing a track in menus.
 
 <script lang="ts">
 
-import { Tracks } from "#src/tracks";
+import { Tracks } from "#src/scripts/tracks";
 
 import { nav, playback, Playlists } from "#scripts/stores";
+import type { Track } from "#scripts/types";
+
+import { base } from "$app/paths";
 
 export let track: string;
 export let ctx: "tracks" | "list" | "queue" = "tracks";
 
 
-const data = Tracks[track];
+const data: Track = Tracks[track];
 
 </script>
 
@@ -32,36 +35,36 @@ const data = Tracks[track];
 		</div>
 	
 		<div>
-			<p class="track-duration"> {data.duration} </p>
+			<p class="track-duration"> {data.duration ?? "--:--"} </p>
 		</div>
 	
 		<div class="track-info">
-			<h4 class="track-name"> {data.name} </h4>
+			<h4 class="track-name"> {data.name ?? "?"} </h4>
 			{#if !$nav.condensedView}
-				<p class="track-artist"> {data.artist} </p>
+				<p class="track-artist"> {data.artist ?? "?"} </p>
 			{/if}
 		</div>
 
 		{#if $nav.condensedView}
-			<p class="track-artist"> {data.artist} </p>
+			<p class="track-artist"> {data.artist ?? "?"} </p>
 		{/if}
   </section>
 
   <section class="playlist-tags">
-    {#each data.playlists as playlist}
+    {#each data.lists ?? [] as playlist}
       <a class="playlist-tag" href="{base}/playlists/{playlist}">
         {$Playlists[playlist].name}
       </a>
     {/each}
 
     <button class="ui"
-      on:click{() => alert("This feature is under development!")}
+      on:click={() => alert("This feature is under development!")}
     >
        <span class="material-symbols-rounded"> add </span>
     </button>
   </section>
 
-  <section class="right"">
+  <section class="right">
     {#if ctx == "tracks" || ctx == "list"}
       <button class="ui"
         on:click={() => $playback.queue.push(track)}
@@ -70,7 +73,7 @@ const data = Tracks[track];
       </button>
     {/if}
 
-    {#if}
+    {#if ctx == "queue"}
       <button class="ui"
         on:click={() => $playback.queue.remove(track)}
       >
