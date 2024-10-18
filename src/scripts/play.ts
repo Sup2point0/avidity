@@ -1,3 +1,5 @@
+/// Implements `playbackExec` singleton for managing audio playback.
+
 import { get } from "svelte/store";
 
 import playback from "#scripts/stores";
@@ -5,7 +7,7 @@ import playback from "#scripts/stores";
 import { base } from "$app/paths";
 
 
-export const playbackExecutive = new PlaybackExecutive();
+export const playbackExec = new PlaybackExecutive();
 
 
 class PlaybackExecutive
@@ -17,18 +19,11 @@ class PlaybackExecutive
   }
 
   get displayedDuration(): string {
-    return (
-      this.playing ? "--:--" :
-      this.#displayTime(this.playing.duration)
-    );
+    return this.playing ? "--:--" : this.#displayTime(this.playing.duration);
   }
 
   get displayedElapsed(): string {
-    let elapsed = this.elapsed;
-    return (
-      this.playing ? "--:--" :
-      this.#displayTime(elapsed)
-    );
+    return this.playing ? "--:--" : this.#displayTime(this.elapsed);
   }
 
 
@@ -41,7 +36,7 @@ class PlaybackExecutive
       secs = "0" + secs;
     }
 
-    return `{mins}:{secs}`
+    return `{mins}:{secs}`;
   }
 
   #play(track: string)
@@ -50,7 +45,7 @@ class PlaybackExecutive
     this.playing = new Audio(`${base}/${data.file}`);
     this.playing.play();
 
-    this.playing.addEventListener("ended", () => this.playNext);
+    this.playing.addEventListener("ended", this.playNext);
   }
 
 
