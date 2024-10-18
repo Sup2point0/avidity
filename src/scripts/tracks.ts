@@ -12,7 +12,7 @@ function processTracks(tracksData: object): TracksData
 
   for (let [shard, data] of Object.entries(tracksData)) {
     if (shard == "default") continue;
-    
+
     try {
       out[shard] = new Track(shard, data);
     } catch {

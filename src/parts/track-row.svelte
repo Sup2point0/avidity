@@ -96,13 +96,13 @@ button.track-row {
   align-items: center;
   background-color: var(--col-card);
 
-  &:hover {
-    background-color: var(--col-card-hover);
-  }
+  // &:hover {
+  //   background-color: var(--col-card-hover);
+  // }
 
-  &:click {
-    background-color: var(--col-card-click);
-  }
+  // &:click {
+  //   background-color: var(--col-card-click);
+  // }
 }
 
 section.left {
