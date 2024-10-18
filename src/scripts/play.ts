@@ -2,12 +2,9 @@
 
 import { get } from "svelte/store";
 
-import playback from "#scripts/stores";
+import { playback } from "#scripts/stores";
 
 import { base } from "$app/paths";
-
-
-export const playbackExec = new PlaybackExecutive();
 
 
 class PlaybackExecutive
@@ -19,16 +16,18 @@ class PlaybackExecutive
   }
 
   get displayedDuration(): string {
-    return this.playing ? "--:--" : this.#displayTime(this.playing.duration);
+    return this.#displayTime(this.playing?.duration);
   }
 
   get displayedElapsed(): string {
-    return this.playing ? "--:--" : this.#displayTime(this.elapsed);
+    return this.#displayTime(this.elapsed);
   }
 
 
-  #displayTime(t: number): string
+  #displayTime(t: number | null): string
   {
+    if (t === null) return "--:--";
+
     let mins = Math.floor(t / 60);
 
     let secs = (t % 60).toString();
@@ -36,7 +35,7 @@ class PlaybackExecutive
       secs = "0" + secs;
     }
 
-    return `{mins}:{secs}`;
+    return `${mins}:${secs}`;
   }
 
   #play(track: string)
@@ -74,3 +73,6 @@ class PlaybackExecutive
     this.#play(track)
   }
 }
+
+
+export const playbackExec = new PlaybackExecutive();
