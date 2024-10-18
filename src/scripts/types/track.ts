@@ -1,4 +1,4 @@
 export class Track
 {
-  public plays: number = 0;
+  plays: number = 0;
 }

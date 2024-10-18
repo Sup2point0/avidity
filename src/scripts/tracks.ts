@@ -1,9 +1,12 @@
+import { Track } from "#scripts/types";
+
+
 let tracksData = await import("./data/tracks.json");
 
 export const Tracks = processTracks(tracksData);
 
 
-function processTracks(tracksData: object)
+function processTracks(tracksData: object): TracksData
 {
   let out = {};
 
@@ -16,4 +19,10 @@ function processTracks(tracksData: object)
   }
 
   return out;
+}
+
+
+interface TracksData
+{
+  [key: string]: Track;
 }
