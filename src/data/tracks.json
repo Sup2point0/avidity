@@ -1,4 +1,4 @@
-[
+{
   "dawn": {
     "name": "Dawn",
     "artist": "sup",
@@ -66,4 +66,4 @@
     "album": "tera-io",
     "lists": ["rhythm", "hardcore", "neuro", "sound"]
   }
-]
+}
