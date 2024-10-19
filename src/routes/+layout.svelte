@@ -1,19 +1,14 @@
 <script lang="ts">
 
-import { playbackExec } from "#scripts/play";
-
-import Nav from "#parts/nav.svelte";
-import TrackDetails from "#parts/track-details/index.svelte";
-import PlaybackDetails from "#parts/playback-details/index.svelte";
-import TrackControls from "#parts/track-controls/index.svelte";
+import { playback_exec } from "#scripts/play";
 
 
-function onKeydown(event)
+function on_keydown(event)
 {
   if (event.ctrlKey || event.metaKey) {
     switch (event.key) {
       case " ":
-        return playbackExec.playNext();
+        return playback_exec.playNext();
   
       case "f":
       case "/":
@@ -25,17 +20,17 @@ function onKeydown(event)
       case " ":
       case "k":
         if (event.repeat) return;
-        return playbackExec.togglePause();
+        return playback_exec.togglePause();
 
       case "ArrowLeft":
-        return playbackExec.shift(-5);
+        return playback_exec.shift(-5);
       case "ArrowRight":
-        return playbackExec.shift(+5);
+        return playback_exec.shift(+5);
   
       case "j":
-        return playbackExec.shift(-10);
+        return playback_exec.shift(-10);
       case "l":
-        return playbackExec.shift(+10);
+        return playback_exec.shift(+10);
     }
   }
 }
@@ -43,37 +38,11 @@ function onKeydown(event)
 </script>
 
 
-<svelte:window on:keydown={onKeydown} />
+<svelte:window on:keydown={on_keydown} />
 
-
-<main>
-  <Nav />
-  
-  <div id="ui-layout-split">
-    <section style:flex-grow={0.5}>
-      <TrackDetails />
-    </section>
-  
-    <section style:flex-grow={1}>
-      <slot> Uh, something went wrong! </slot>
-    </section>
-  
-    <section style:flex-grow={0.5}>
-      <PlaybackDetails />
-    </section>
-  </div>
-  
-  <TrackControls />
-</main>
+<slot> Uh, something has gone <em>really</em> wrong! </slot>
 
 
 <style lang="scss">
-
-main {
-  width: 100%;
-  max-height: 100vh;
-  display: flex;
-  flex-direction: row;
-}
 
 </style>

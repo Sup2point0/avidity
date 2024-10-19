@@ -5,9 +5,7 @@ A row representing a track in menus.
 
 <script lang="ts">
 
-import { Tracks } from "#src/scripts/tracks";
-
-import { nav, playback, Playlists } from "#scripts/stores";
+import { nav, playback, Tracks, Playlists } from "#scripts/stores";
 import type { Track } from "#scripts/types";
 
 import { base } from "$app/paths";
@@ -16,7 +14,7 @@ export let track: string;
 export let ctx: "tracks" | "list" | "queue" = "tracks";
 
 
-const data: Track = Tracks[track];
+const data: Track = $Tracks[track];
 
 </script>
 
@@ -53,7 +51,7 @@ const data: Track = Tracks[track];
   <section class="playlist-tags">
     {#each data.lists ?? [] as playlist}
       <a class="playlist-tag" href="{base}/playlists/{playlist}">
-        {$Playlists[playlist].name}
+        {$Playlists[playlist]?.name ?? "?"}
       </a>
     {/each}
 
@@ -95,14 +93,15 @@ button.track-row {
   justify-content: space-between;
   align-items: center;
   background-color: var(--col-card);
+  border: none;
 
-  // &:hover {
-  //   background-color: var(--col-card-hover);
-  // }
+  &:hover {
+    background-color: var(--col-card-hover);
+  }
 
-  // &:click {
-  //   background-color: var(--col-card-click);
-  // }
+  &:click {
+    background-color: var(--col-card-click);
+  }
 }
 
 section.left {
