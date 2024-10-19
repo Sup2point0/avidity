@@ -6,6 +6,8 @@ import TrackRow from "#parts/track-row.svelte";
 
 
 <TrackRow track="dawn" />
+<TrackRow track="day" />
+<TrackRow track="terabyte" />
 
 
 <style lang="scss">

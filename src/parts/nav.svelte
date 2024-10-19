@@ -51,6 +51,7 @@ import { save_napkin } from "#scripts";
 
 nav {
   width: 100%;
+  min-height: 4rem;
   margin: 0;
   padding: 0.5rem 1rem;
   z-index: 2;
@@ -59,7 +60,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: var(--col-back-prot);
-  box-shadow: 0 0 4px rgb(black, 20%);
+  box-shadow: 0 0 4px rgb(black, 40%);
 }
 
 span {

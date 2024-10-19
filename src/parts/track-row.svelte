@@ -5,7 +5,8 @@ A row representing a track in menus.
 
 <script lang="ts">
 
-import { nav, playback, Tracks, Playlists } from "#scripts/stores";
+import { nav, playback, Tracks, Playlists, Artists } from "#scripts/stores";
+import { playback_exec } from "#src/scripts/play";
 import type { Track } from "#scripts/types";
 
 import { base } from "$app/paths";
@@ -20,13 +21,13 @@ const data: Track = $Tracks[track];
 
 
 <button class="track-row"
-  on:click={() => $nav.selectedTrack = track}
+  on:click={() => $nav.selected_track = track}
 >
 
   <section class="left">
 		<div>
 			<button class="ui rounded" style:height="2rem"
-				on:click={() => $playback.current = track}
+				on:click={() => playback_exec.play_track(track)}
 			>
 				<span class="material-symbols-rounded"> play_arrow </span>
 			</button>
@@ -38,13 +39,13 @@ const data: Track = $Tracks[track];
 	
 		<div class="track-info">
 			<h4 class="track-name"> {data.name ?? "?"} </h4>
-			{#if !$nav.condensedView}
-				<p class="track-artist"> {data.artist ?? "?"} </p>
+			{#if !$nav.condensed_view}
+				<p class="track-artist"> {data.artist? Artists[data.artist] : "?"} </p>
 			{/if}
 		</div>
 
-		{#if $nav.condensedView}
-			<p class="track-artist"> {data.artist ?? "?"} </p>
+		{#if $nav.condensed_view}
+			<p class="track-artist"> {data.artist? Artists[data.artist] : "?"} </p>
 		{/if}
   </section>
 
@@ -92,7 +93,8 @@ button.track-row {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  
+  gap: 0.5rem;
+
   @include font-ui;
   background-color: var(--col-card);
   border: none;
@@ -116,10 +118,7 @@ section {
     flex-direction: row;
     justify-content: start;
     align-items: center;
-
-    > * {
-      margin: 0 0.5rem;
-    }
+    gap: 0.5rem;
   }
 
   &.playlist-tags {
@@ -162,11 +161,12 @@ h4 {
 }
 
 a.playlist-tag {
+  min-width: 3em;
   margin: 0 0.5em;
   padding: 0.25em 0.5em;
   @include font-ui;
   background-color: var(--col-flavour);
-  border-radius: 0.25em;
+  border-radius: 1em;
 }
 
 </style>

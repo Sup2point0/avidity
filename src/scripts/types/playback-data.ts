@@ -3,7 +3,7 @@ export class PlaybackData
   current: string | null = null;
   queue: string[] = [];
 
-  nextTrack(): string | null
+  next_track(): string | null
   {
     if (this.queue.length) {
       this.current = this.queue.shift() ?? null;

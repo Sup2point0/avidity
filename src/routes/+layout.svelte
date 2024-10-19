@@ -8,7 +8,7 @@ function on_keydown(event)
   if (event.ctrlKey || event.metaKey) {
     switch (event.key) {
       case " ":
-        return playback_exec.playNext();
+        return playback_exec.play_next();
   
       case "f":
       case "/":
@@ -20,7 +20,7 @@ function on_keydown(event)
       case " ":
       case "k":
         if (event.repeat) return;
-        return playback_exec.togglePause();
+        return playback_exec.toggle_pause();
 
       case "ArrowLeft":
         return playback_exec.shift(-5);

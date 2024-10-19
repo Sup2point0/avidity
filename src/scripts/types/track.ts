@@ -5,6 +5,7 @@ export class Track
   artist: string | null = null;
   album: string | null = null;
   lists: string[] = [];
+  file: string;
   plays: number = 0;
 
   constructor(
@@ -17,6 +18,7 @@ export class Track
     this.artist = data?.artist ?? null;
     this.album = data?.album ?? null;
     this.lists = data?.lists ?? [];
+    this.file = data?.file;
     this.plays = data?.plays ?? 0;
   }
 }

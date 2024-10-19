@@ -2,7 +2,7 @@
 
 import { get } from "svelte/store";
 
-import { playback } from "#scripts/stores";
+import { playback, Tracks } from "#scripts/stores";
 
 import { base } from "$app/paths";
 
@@ -15,16 +15,16 @@ class playback_executive
     return this.playing?.currentTime;
   }
 
-  get displayedDuration(): string {
-    return this.#displayTime(this.playing?.duration);
+  get displayed_duration(): string {
+    return this.#display_time(this.playing?.duration);
   }
 
-  get displayedElapsed(): string {
-    return this.#displayTime(this.elapsed);
+  get displayed_elapsed(): string {
+    return this.#display_time(this.elapsed);
   }
 
 
-  #displayTime(t: number | null): string
+  #display_time(t: number | null): string
   {
     if (t === null) return "--:--";
 
@@ -38,24 +38,35 @@ class playback_executive
     return `${mins}:${secs}`;
   }
 
-  #play(track: string)
+  #play(track: string | null)
   {
-    let data = Tracks[track];
-    this.playing = new Audio(`${base}/${data.file}`);
+    if (track == null) return;
+
+    let data = get(Tracks)[track];
+    this.playing = new Audio(`${base}/tracks/${data.file}`);
     this.playing.play();
 
-    this.playing.addEventListener("ended", this.playNext);
+    this.playing.addEventListener("ended", this.play_next);
   }
 
 
-  playCurrent()
+  toggle_pause()
   {
-    this.#play(get(playbackData).current);
+    if (this.playing?.paused) {
+      this.playing.pause();
+    } else if (this.playing) {
+      this.playing.play();
+    }
   }
 
-  playNext()
+  play_current()
   {
-    let next = get(playback).nextTrack()
+    this.#play(get(playback).current);
+  }
+
+  play_next()
+  {
+    let next = get(playback).next_track()
     if (next) {
       this.#play(next);
     } else {
@@ -63,7 +74,7 @@ class playback_executive
     }
   }
 
-  playTrack(track: string)
+  play_track(track: string)
   {
     playback.update(s => {
       s.current = track;

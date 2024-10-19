@@ -1,8 +1,8 @@
 export class NavData
 {
   page: "home" | "tracks" | "lists" = "home";
-  selectedTrack: string | null = null;
+  selected_track: string | null = null;
 
-  condensedView: boolean = false;
-  showPersonal: boolean = false;
+  condensed_wiew: boolean = false;
+  show_personal: boolean = false;
 }
