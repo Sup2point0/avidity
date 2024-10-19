@@ -53,14 +53,17 @@ nav {
   width: 100%;
   margin: 0;
   padding: 0.5rem 1rem;
-  position: fixed;
-  top: 0;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: var(--col-back-prot);
   box-shadow: 0 0 4px rgb(black, 20%);
+}
+
+span {
+  @include font-flavour;
 }
 
 </style>

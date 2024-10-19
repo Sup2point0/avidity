@@ -1,7 +1,38 @@
+@use './src/styles/mixins/fonts' as *;
 @use './src/styles/colours' as *;
 
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  @include font-ui;
+}
 
 html, body {
   margin: 0;
   padding: 0;
+}
+
+
+button {
+  cursor: pointer;
+
+  &.ui {
+    padding: 0.25em;
+    @include font-ui;
+    background: none;
+    border: none;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgb(black, 20%);
+    }
+  }
+
+  &.rounded {
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
 }

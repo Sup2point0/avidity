@@ -25,10 +25,10 @@ const data: Track = $Tracks[track];
 
   <section class="left">
 		<div>
-			<button class="ui"
+			<button class="ui rounded" style:height="2rem"
 				on:click={() => $playback.current = track}
 			>
-				<span class="material-symbols-rounded"> play </span>
+				<span class="material-symbols-rounded"> play_arrow </span>
 			</button>
 		</div>
 	
@@ -55,7 +55,7 @@ const data: Track = $Tracks[track];
       </a>
     {/each}
 
-    <button class="ui"
+    <button class="ui rounded" style:height="2rem"
       on:click={() => alert("This feature is under development!")}
     >
        <span class="material-symbols-rounded"> add </span>
@@ -64,7 +64,7 @@ const data: Track = $Tracks[track];
 
   <section class="right">
     {#if ctx == "tracks" || ctx == "list"}
-      <button class="ui"
+      <button class="ui rounded" style:height="2rem"
         on:click={() => $playback.queue.push(track)}
       >
         <span class="material-symbols-rounded"> add </span>
@@ -72,7 +72,7 @@ const data: Track = $Tracks[track];
     {/if}
 
     {#if ctx == "queue"}
-      <button class="ui"
+      <button class="ui rounded" style:height="2rem"
         on:click={() => $playback.queue.remove(track)}
       >
         <span class="material-symbols-rounded"> delete </span>
@@ -92,6 +92,8 @@ button.track-row {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  
+  @include font-ui;
   background-color: var(--col-card);
   border: none;
 
@@ -104,32 +106,67 @@ button.track-row {
   }
 }
 
-section.left {
-	flex-grow: 1;
+section {
+  margin: 0;
+  padding: 1rem;
+
+  &.left {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+    > * {
+      margin: 0 0.5rem;
+    }
+  }
+
+  &.playlist-tags {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: start;
+  }
+
+  &.right {
+    flex-grow: 0;
+  }
 }
 
-section.playlist-tags {
-  flex-grow: 1;
+
+p,
+h4 {
+  margin: 0;
+  padding: 0;
 }
 
-section.right {
-	flex-grow: 0;
-}
 
 .track-info {
 	min-width: 4rem;
 	flex-grow: 1;
+  text-align: left;
 }
 
 .track-duration {
   color: var(--col-text-deut);
 }
 .track-name {
+  @include font-flavour;
   font-size: 120%;
   color: white;
 }
 .track-artist {
   color: var(--col-text-prot);
+}
+
+a.playlist-tag {
+  margin: 0 0.5em;
+  padding: 0.25em 0.5em;
+  @include font-ui;
+  background-color: var(--col-flavour);
+  border-radius: 0.25em;
 }
 
 </style>
