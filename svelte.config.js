@@ -33,7 +33,7 @@ const config = {
     }),
     sveltePreprocess({
       scss: {
-        prependData: ``,
+        prependData: `@use './src/styles/mixins/fonts' as *;`,
       }
     }),
   ],

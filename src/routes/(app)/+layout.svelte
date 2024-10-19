@@ -10,7 +10,7 @@ import TrackControls from "#parts/track-controls/index.svelte";
 </script>
 
 
-<main class="avidity">
+<main class="tomorrow-night-blue">
   <Nav />
   
   <div id="ui-layout-split">
@@ -35,9 +35,11 @@ import TrackControls from "#parts/track-controls/index.svelte";
 
 main {
   width: 100%;
+  min-height: 100vh;
   max-height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  background-color: var(--col-back);
 }
 
 #ui-layout-split {
