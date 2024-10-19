@@ -1,4 +1,4 @@
-/// Implements `playbackExec` singleton for managing audio playback.
+/// Implements `playback_exec` singleton for managing audio playback.
 
 import { get } from "svelte/store";
 
@@ -7,7 +7,7 @@ import { playback } from "#scripts/stores";
 import { base } from "$app/paths";
 
 
-class PlaybackExecutive
+class playback_executive
 {
   playing: Audio | null = null;
 
@@ -75,4 +75,4 @@ class PlaybackExecutive
 }
 
 
-export const playbackExec = new PlaybackExecutive();
+export const playback_exec = new playback_executive();
