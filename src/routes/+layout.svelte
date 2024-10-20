@@ -4,8 +4,12 @@ import playback_executive from "#scripts";
 import { Tracks } from "#scripts/data";
 import { hydrate_data } from "#scripts/data/tracks";
 
+import { onMount } from "svelte";
 
-window.addEventListener("load", () => Tracks.update(data => hydrate_data(data)));
+
+onMount(() => {
+  Tracks.update(data => hydrate_data(data));
+});
 
 
 function on_keydown(event: KeyboardEvent)
