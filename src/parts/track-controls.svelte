@@ -15,18 +15,18 @@ $: track = $playback.current;
     <section id="playback-controls">
       <button class="ui rounded" style:height="2rem"
         on:click={playback_executive.restart}
-        disabled={!playback_executive.playing}
+        disabled={!track}
       >
         <span class="material-symbols-rounded"> arrow_left </span>
       </button>
 
       <button class="ui rounded" style:height="2rem"
         on:click={playback_executive.toggle_pause}
-        disabled={!playback_executive.playing}
+        disabled={!track}
       >
         <span class="material-symbols-rounded">
-          {#if playback_executive.playing?.paused}
-            play
+          {#if playback_executive.playing == null || playback_executive.playing?.paused}
+            play_arrow
           {:else}
             pause
           {/if}
@@ -35,7 +35,7 @@ $: track = $playback.current;
 
       <button class="ui rounded" style:height="2rem"
         on:click={playback_executive.play_next}
-        disabled={!playback_executive.playing}
+        disabled={!track}
       >
         <span class="material-symbols-rounded"> arrow_right </span>
       </button>

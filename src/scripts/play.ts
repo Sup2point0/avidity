@@ -66,7 +66,7 @@ class PlaybackExecutive
   play_track(track: string)
   {
     playback.update(s => {
-      s.current = track;
+      s.current = get(Tracks)[track];
       return s;
     });
 
