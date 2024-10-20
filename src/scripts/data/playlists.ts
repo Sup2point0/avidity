@@ -4,7 +4,7 @@ import { Playlist } from "#scripts/types";
 import type { PlaylistsData } from "#scripts/types/interfaces";
 
 
-let raw_data = await import("../../data/artists.json");
+let raw_data = await import("../../data/playlists.json");
 let data = process_raw(raw_data)
 
 export const Playlists = writable<PlaylistsData>(data);
@@ -19,6 +19,7 @@ function process_raw(raw_data: object): PlaylistsData
     if (shard == "default") continue;
 
     try {
+      /* @ts-ignore */
       out[shard] = new Playlist(shard, name);
     } catch {
       console.error(`failed to load playlist \`${shard}\``);

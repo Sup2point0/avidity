@@ -16,6 +16,7 @@ export let track: string;
 export let ctx: "tracks" | "list" | "queue" = "tracks";
 
 
+console.log($Playlists);
 const data: Track = $Tracks[track];
 
 </script>
