@@ -1,9 +1,14 @@
 <script lang="ts">
 
 import playback_executive from "#scripts";
+import { Tracks } from "#scripts/data";
+import { hydrate_data } from "#scripts/data/tracks";
 
 
-function on_keydown(event)
+window.addEventListener("load", () => Tracks.update(data => hydrate_data(data)));
+
+
+function on_keydown(event: KeyboardEvent)
 {
   if (event.ctrlKey || event.metaKey) {
     switch (event.key) {

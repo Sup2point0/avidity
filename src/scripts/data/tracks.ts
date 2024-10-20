@@ -34,7 +34,10 @@ function process_raw(raw_data: object): TracksData
 }
 
 
-function hydrate_data(tracks_data: TracksData): TracksData
+/**
+ * Hydrate tracks data with changes from `$changes`.
+ */
+export function hydrate_data(tracks_data: TracksData): TracksData
 {
   console.group("hydrating tracks data...");
 
