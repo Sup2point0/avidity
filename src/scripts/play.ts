@@ -1,10 +1,10 @@
-/// Implements `playback_executive` singleton for managing audio playback.
+/// Implements the `playback_executive` singleton for managing audio playback.
 
 import { get } from "svelte/store";
+import { base } from "$app/paths";
 
 import { playback, Tracks } from "#scripts/stores";
-
-import { base } from "$app/paths";
+import { display_time } from "#scripts/utils";
 
 
 class PlaybackExecutive
@@ -15,41 +15,17 @@ class PlaybackExecutive
     return this.playing?.currentTime;
   }
 
-  get displayed_duration(): string {
-    return this.#display_time(this.playing?.duration);
-  }
-
-  get displayed_elapsed(): string {
-    return this.#display_time(this.elapsed);
-  }
-
-
-  #display_time(t: number | null): string
-  {
-    if (t === null) return "--:--";
-
-    let mins = Math.floor(t / 60);
-
-    let secs = (t % 60).toString();
-    if (secs.length < 2) {
-      secs = "0" + secs;
-    }
-
-    return `${mins}:${secs}`;
-  }
 
   #play(track: string | null)
   {
     if (track == null) return;
-
-    if (this.playing) {
+    if (!this.playing.paused) {
       this.playing.pause();
     }
 
     let data = get(Tracks)[track];
     this.playing = new Audio(`${base}/tracks/${data.file}`);
     this.playing.play();
-
     this.playing.addEventListener("ended", this.play_next);
   }
 
@@ -94,7 +70,7 @@ class PlaybackExecutive
       return s;
     });
 
-    this.#play(track)
+    this.#play(track);
   }
 }
 
