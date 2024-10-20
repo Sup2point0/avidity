@@ -1,7 +1,7 @@
 import { get } from "svelte/store";
 
 import { Track } from "./track";
-import { Tracks } from "#scripts/stores";
+import { Tracks } from "#scripts/data";
 
 
 export class PlaybackData
