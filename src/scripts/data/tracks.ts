@@ -4,6 +4,7 @@ import { writable, get } from "svelte/store";
 
 import { changes } from "#scripts/stores";
 import { Track } from "#scripts/types";
+import type { TracksData } from "#scripts/types/interfaces";
 
 
 let raw_data = await import("../../data/tracks.json");
@@ -13,16 +14,10 @@ let data = hydrate_data(tracks_data);
 export const Tracks = writable<TracksData>(data);
 
 
-export interface TracksData
-{
-  [shard: string]: Track;
-}
-
-
 function process_raw(raw_data: object): TracksData
 {
   let out: TracksData = {};
-  console.group();
+  console.group("loading tracks data...");
 
   for (let [shard, data] of Object.entries(raw_data)) {
     if (shard == "default") continue;
@@ -41,7 +36,7 @@ function process_raw(raw_data: object): TracksData
 
 function hydrate_data(tracks_data: TracksData): TracksData
 {
-  console.group();
+  console.group("hydrating tracks data...");
 
   for (let [shard, data] of Object.entries(get(changes).tracks)) {
     for (let [key, val] of Object.entries(tracks_data)) {

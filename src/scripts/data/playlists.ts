@@ -1,6 +1,7 @@
 import { writable } from "svelte/store";
 
 import { Playlist } from "#scripts/types";
+import type { PlaylistsData } from "#scripts/types/interfaces";
 
 
 let raw_data = await import("../../data/artists.json");
@@ -9,16 +10,10 @@ let data = process_raw(raw_data)
 export const Playlists = writable<PlaylistsData>(data);
 
 
-export interface PlaylistsData
-{
-  [shard: string]: Playlist;
-}
-
-
 function process_raw(raw_data: object): PlaylistsData
 {
   let out = {};
-  console.group();
+  console.group("loading playlists data...");
 
   for (let [shard, name] of Object.entries(raw_data)) {
     if (shard == "default") continue;

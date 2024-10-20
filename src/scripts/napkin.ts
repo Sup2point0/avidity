@@ -1,6 +1,7 @@
 import { get } from "svelte/store";
 
-import { shard, Tracks } from "#scripts/stores";
+import { Tracks } from "#scripts/data";
+import { shard } from "#scripts/stores";
 
 
 const SOURCE = "https://npkn.io";
