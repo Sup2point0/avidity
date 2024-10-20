@@ -5,7 +5,6 @@ import { base } from "$app/paths";
 
 import { Tracks } from "#scripts/data";
 import { playback } from "#scripts/stores";
-import { display_time } from "#scripts/utils";
 
 
 class PlaybackExecutive
@@ -20,7 +19,7 @@ class PlaybackExecutive
   #play(track: string | null)
   {
     if (track == null) return;
-    if (!this.playing.paused) {
+    if (this.playing && !this.playing.paused) {
       this.playing.pause();
     }
 

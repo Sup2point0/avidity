@@ -6,7 +6,8 @@ A row representing a track in menus.
 <script lang="ts">
 
 import playback_executive from "#scripts";
-import { nav, playback, Tracks, Playlists, Artists } from "#scripts/stores";
+import { Tracks, Playlists, Artists } from "#scripts/data";
+import { nav, playback } from "#scripts/stores";
 import type { Track } from "#scripts/types";
 
 import { base } from "$app/paths";
@@ -40,12 +41,12 @@ const data: Track = $Tracks[track];
 		<div class="track-info">
 			<h4 class="track-name"> {data.name ?? "?"} </h4>
 			{#if !$nav.condensed_view}
-				<p class="track-artist"> {data.artist? Artists[data.artist] : "?"} </p>
+				<p class="track-artist"> {data.artist? $Artists[data.artist] : "?"} </p>
 			{/if}
 		</div>
 
 		{#if $nav.condensed_view}
-			<p class="track-artist"> {data.artist? Artists[data.artist] : "?"} </p>
+			<p class="track-artist"> {data.artist? $Artists[data.artist] : "?"} </p>
 		{/if}
   </section>
 
