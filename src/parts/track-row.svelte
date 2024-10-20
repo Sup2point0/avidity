@@ -11,6 +11,7 @@ import { nav, playback } from "#scripts/stores";
 import type { Track } from "#scripts/types";
 
 import { base } from "$app/paths";
+    import { page } from "$app/stores";
 
 export let track: string;
 export let ctx: "tracks" | "list" | "queue" = "tracks";
@@ -52,9 +53,15 @@ const data: Track = $Tracks[track];
 
   <section id="playlist-tags">
     {#each data.lists ?? [] as playlist}
-      <a class="playlist-tag" href="{base}/playlists/{playlist}">
-        {$Playlists[playlist]?.name ?? "?"}
-      </a>
+      <button class="playlist-tag"
+        on:click={() => {
+          $nav.page = "lists";
+          $nav.selected_playlist = playlist;
+        }}
+        style:background-color={$Playlists[playlist]?.colour ?? "var(--col-flavour)"}
+      >
+        {$Playlists[playlist]?.name ?? playlist}
+      </button>
     {/each}
 
     <button class="ui rounded" style:height="2rem"
@@ -164,11 +171,11 @@ button.track-row {
   color: var(--col-text-prot);
 }
 
-a.playlist-tag {
+button.playlist-tag {
   min-width: 3em;
-  padding: 0.25em 0.5em;
+  padding: 0.4em 0.8em;
   @include font-ui;
-  background-color: var(--col-flavour);
+  border: none;
   border-radius: 1em;
 }
 

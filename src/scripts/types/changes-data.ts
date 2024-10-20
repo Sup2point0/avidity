@@ -1,6 +1,4 @@
-import type { TracksData } from "../data/tracks";
-import type { PlaylistsData } from "../data/playlists";
-import type { ArtistsData } from "../data/artists";
+import type { TracksData, PlaylistsData, ArtistsData } from "./interfaces";
 
 
 export class Changes

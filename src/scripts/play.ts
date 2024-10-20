@@ -5,6 +5,7 @@ import { base } from "$app/paths";
 
 import { Tracks } from "#scripts/data";
 import { playback } from "#scripts/stores";
+import { Track } from "#scripts/types";
 
 
 class PlaybackExecutive
@@ -16,15 +17,14 @@ class PlaybackExecutive
   }
 
 
-  #play(track: string | null)
+  #play(track: Track | null)
   {
     if (track == null) return;
     if (this.playing && !this.playing.paused) {
       this.playing.pause();
     }
 
-    let data = get(Tracks)[track];
-    this.playing = new Audio(`${base}/tracks/${data.file}`);
+    this.playing = new Audio(`${base}/tracks/${track.file}`);
     this.playing.play();
     this.playing.addEventListener("ended", this.play_next);
   }
@@ -63,14 +63,20 @@ class PlaybackExecutive
     }
   }
 
-  play_track(track: string)
+  play_track(shard: string): boolean
   {
+    let track: Track = get(Tracks)[shard];
+    if (track == null) {
+      return false;
+    }
+
     playback.update(s => {
-      s.current = get(Tracks)[track];
+      s.current = track;
       return s;
     });
 
     this.#play(track);
+    return true;
   }
 }
 

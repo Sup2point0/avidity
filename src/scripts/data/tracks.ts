@@ -39,7 +39,7 @@ function hydrate_data(tracks_data: TracksData): TracksData
   console.group("hydrating tracks data...");
 
   for (let [shard, data] of Object.entries(get(changes).tracks)) {
-    for (let [key, val] of Object.entries(tracks_data)) {
+    for (let [key, val] of Object.entries(data)) {
       try {
         /* @ts-ignore */
         tracks_data[shard][key] = val;

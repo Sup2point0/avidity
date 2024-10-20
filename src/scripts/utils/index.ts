@@ -1,6 +1,6 @@
 export function display_time(t: number | null): string
 {
-  if (t === null) return "--:--";
+  if (t == null) return "--:--";
 
   let mins = Math.floor(t / 60);
 

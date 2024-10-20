@@ -24,18 +24,14 @@ import { save_napkin } from "#scripts";
   <section>
     {#if $shard.valid}
       <button class="ui" on:click={save_napkin}>
-        <span class="material-symbols-rounded">
-          sync
-        </span>
+        <span class="material-symbols-rounded"> backup </span>
       </button>
 
     {:else}
       <button class="ui" on:click={() => {
         $nav.popup = "shard";
       }}>
-        <span class="material-symbols-rounded">
-          user
-        </span>
+        <span class="material-symbols-rounded"> key </span>
       </button>
 
     {/if}

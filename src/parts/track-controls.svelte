@@ -1,7 +1,9 @@
 <script>
 
 import playback_executive from "#scripts";
+import { Artists } from "#scripts/data";
 import { playback } from "#scripts/stores";
+import { display_time } from "#scripts/utils";
 
 
 $: track = $playback.current;
@@ -43,17 +45,17 @@ $: track = $playback.current;
 
     <section id="track-details">
       <h4> {track?.name ?? "?"} </h4>
-      <p> {track?.artist ?? "?"} </p>
+      <p> {track?.artist ? $Artists[track.artist] : "?"} </p>
     </section>
 
     <section id="playback-details">
       <div id="playback-progress">
-        <p> {playback_executive.elapsed ?? "--:--"} </p>}
+        <p> {display_time(playback_executive.elapsed)} </p>
         <meter
           min={0} max={1}
           value={playback_executive.playing ? (playback_executive.elapsed / track.duration) : 0}
         >
-        <p> {track?.duration ?? "--:--"} </p>
+        <p> {display_time(track?.duration)} </p>
       </div>
     </section>
 
@@ -74,7 +76,7 @@ $: track = $playback.current;
 }
 
 .track-controls {
-  margin-left: auto;
+  margin: auto;
   width: 90%;
   height: 100%;
   max-width: 600px;
