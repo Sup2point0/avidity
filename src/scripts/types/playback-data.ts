@@ -1,12 +1,19 @@
+import { get } from "svelte/store";
+
+import { Track } from "./track";
+import { Tracks } from "#scripts/stores";
+
+
 export class PlaybackData
 {
-  current: string | null = null;
+  current: Track | null = null;
   queue: string[] = [];
 
-  next_track(): string | null
+  next_track(): Track | null
   {
     if (this.queue.length) {
-      this.current = this.queue.shift() ?? null;
+      let next = this.queue.shift() ?? null;
+      this.current = next ? get(Tracks)[next] : null;
       return this.current;
     }
     return null;

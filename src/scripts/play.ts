@@ -1,4 +1,4 @@
-/// Implements `playback_exec` singleton for managing audio playback.
+/// Implements `playback_executive` singleton for managing audio playback.
 
 import { get } from "svelte/store";
 
@@ -7,7 +7,7 @@ import { playback, Tracks } from "#scripts/stores";
 import { base } from "$app/paths";
 
 
-class playback_executive
+class PlaybackExecutive
 {
   playing: Audio | null = null;
 
@@ -42,6 +42,10 @@ class playback_executive
   {
     if (track == null) return;
 
+    if (this.playing) {
+      this.playing.pause();
+    }
+
     let data = get(Tracks)[track];
     this.playing = new Audio(`${base}/tracks/${data.file}`);
     this.playing.play();
@@ -57,6 +61,15 @@ class playback_executive
     } else if (this.playing) {
       this.playing.play();
     }
+  }
+
+  restart(): boolean
+  {
+    if (this.playing) {
+      this.playing.currentTime = 0;
+      return true;
+    }
+    return false;
   }
 
   play_current()
@@ -86,4 +99,4 @@ class playback_executive
 }
 
 
-export const playback_exec = new playback_executive();
+export const playback_executive = new PlaybackExecutive();
