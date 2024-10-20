@@ -3,9 +3,9 @@
 import "#styles/essence.scss";
 
 import Nav from "#parts/nav.svelte";
-import TrackDetails from "#parts/track-details/index.svelte";
-import PlaybackDetails from "#parts/playback-details/index.svelte";
-import TrackControls from "#parts/track-controls/index.svelte";
+// import TrackDetails from "#parts/track-details.svelte";
+// import PlaybackDetails from "#parts/playback-details/index.svelte";
+import TrackControls from "#parts/track-controls.svelte";
 
 </script>
 
@@ -15,7 +15,7 @@ import TrackControls from "#parts/track-controls/index.svelte";
   
   <div id="ui-layout-split">
     <section style:flex-grow={0.5}>
-      <TrackDetails />
+      <!-- <TrackDetails /> -->
     </section>
   
     <section style:flex-grow={1}>
@@ -23,7 +23,7 @@ import TrackControls from "#parts/track-controls/index.svelte";
     </section>
   
     <section style:flex-grow={0.5}>
-      <PlaybackDetails />
+      <!-- <PlaybackDetails /> -->
     </section>
   </div>
   
@@ -44,6 +44,7 @@ main {
 
 #ui-layout-split {
   width: 100%;
+  flex-grow: 1;
 }
 
 </style>

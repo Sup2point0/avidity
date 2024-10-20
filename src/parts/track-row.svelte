@@ -5,8 +5,8 @@ A row representing a track in menus.
 
 <script lang="ts">
 
+import playback_executive from "#scripts";
 import { nav, playback, Tracks, Playlists, Artists } from "#scripts/stores";
-import { playback_exec } from "#src/scripts/play";
 import type { Track } from "#scripts/types";
 
 import { base } from "$app/paths";
@@ -27,7 +27,7 @@ const data: Track = $Tracks[track];
   <section class="left">
 		<div>
 			<button class="ui rounded" style:height="2rem"
-				on:click={() => playback_exec.play_track(track)}
+				on:click={() => playback_executive.play_track(track)}
 			>
 				<span class="material-symbols-rounded"> play_arrow </span>
 			</button>
@@ -89,9 +89,10 @@ const data: Track = $Tracks[track];
 button.track-row {
   width: 100%;
   min-height: 2rem;
+  padding: 0.75rem 1rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   gap: 0.5rem;
 
@@ -109,9 +110,6 @@ button.track-row {
 }
 
 section {
-  margin: 0;
-  padding: 1rem;
-
   &.left {
     flex-grow: 1;
     display: flex;

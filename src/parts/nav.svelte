@@ -59,8 +59,8 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--col-back-prot);
-  box-shadow: 0 0 4px rgb(black, 40%);
+
+  @include elevated-block;
 }
 
 span {

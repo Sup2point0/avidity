@@ -1,6 +1,6 @@
 <script lang="ts">
 
-import { playback_exec } from "#scripts/play";
+import playback_executive from "#scripts";
 
 
 function on_keydown(event)
@@ -8,7 +8,7 @@ function on_keydown(event)
   if (event.ctrlKey || event.metaKey) {
     switch (event.key) {
       case " ":
-        return playback_exec.play_next();
+        return playback_executive.play_next();
   
       case "f":
       case "/":
@@ -20,17 +20,17 @@ function on_keydown(event)
       case " ":
       case "k":
         if (event.repeat) return;
-        return playback_exec.toggle_pause();
+        return playback_executive.toggle_pause();
 
       case "ArrowLeft":
-        return playback_exec.shift(-5);
+        return playback_executive.shift(-5);
       case "ArrowRight":
-        return playback_exec.shift(+5);
+        return playback_executive.shift(+5);
   
       case "j":
-        return playback_exec.shift(-10);
+        return playback_executive.shift(-10);
       case "l":
-        return playback_exec.shift(+10);
+        return playback_executive.shift(+10);
     }
   }
 }
