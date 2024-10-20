@@ -10,7 +10,7 @@ import TrackControls from "#parts/track-controls.svelte";
 </script>
 
 
-<main class="tokyo-night">
+<main class="tomorrow-night-blue">
   <Nav />
   
   <div id="ui-layout-split">

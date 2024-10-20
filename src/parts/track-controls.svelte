@@ -13,14 +13,14 @@ $: track = $playback.current;
   <div class="track-controls">
 
     <section id="playback-controls">
-      <button class="ui rounded"
+      <button class="ui rounded" style:height="2rem"
         on:click={playback_executive.restart}
         disabled={!playback_executive.playing}
       >
         <span class="material-symbols-rounded"> arrow_left </span>
       </button>
 
-      <button class="ui rounded"
+      <button class="ui rounded" style:height="2rem"
         on:click={playback_executive.toggle_pause}
         disabled={!playback_executive.playing}
       >
@@ -33,7 +33,7 @@ $: track = $playback.current;
         </span>
       </button>
 
-      <button class="ui rounded"
+      <button class="ui rounded" style:height="2rem"
         on:click={playback_executive.play_next}
         disabled={!playback_executive.playing}
       >
@@ -41,12 +41,12 @@ $: track = $playback.current;
       </button>
     </section>
 
-    <section id="playback-details">
-      <div id="track-details">
-        <h4> {track?.name ?? ""} </h4>
-        <p> {track?.artist ?? ""} </p>
-      </div>
+    <section id="track-details">
+      <h4> {track?.name ?? "?"} </h4>
+      <p> {track?.artist ?? "?"} </p>
+    </section>
 
+    <section id="playback-details">
       <div id="playback-progress">
         <p> {playback_executive.elapsed ?? "--:--"} </p>}
         <meter
@@ -69,6 +69,7 @@ $: track = $playback.current;
 .part {
   width: 100%;
   min-height: 2rem;
+  padding: 0.5rem 0;
   @include elevated-block;
 }
 
@@ -90,27 +91,27 @@ section#playback-controls {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
 }
 
-
-section#playback-details {
+section#track-details {
   flex-grow: 1;
 
-  #track-details {
-    > * {
-      display: block;
-    }
-
-      h4 {
-        @include font-flavour;
-        color: var(--col-text);
-      }
-      p {
-        @include font-ui;
-        color: var(--col-text-deut);
-      }
+  > * {
+    display: block;
   }
+
+  h4 {
+    @include font-flavour;
+    color: var(--col-text);
+  }
+  p {
+    @include font-ui;
+    color: var(--col-text-deut);
+  }
+}
+
+section#playback-details {
+  flex-grow: 0.5;
 
   #playback-progress {
     p {

@@ -16,7 +16,6 @@ export let track: string;
 export let ctx: "tracks" | "list" | "queue" = "tracks";
 
 
-console.log($Playlists);
 const data: Track = $Tracks[track];
 
 </script>
@@ -26,9 +25,9 @@ const data: Track = $Tracks[track];
   on:click={() => $nav.selected_track = track}
 >
 
-  <section class="left">
+  <section id="left">
 		<div>
-			<button class="ui rounded" style:height="2rem"
+			<button class="ui rounded play-track" style:height="2rem"
 				on:click={() => playback_executive.play_track(track)}
 			>
 				<span class="material-symbols-rounded"> play_arrow </span>
@@ -51,7 +50,7 @@ const data: Track = $Tracks[track];
 		{/if}
   </section>
 
-  <section class="playlist-tags">
+  <section id="playlist-tags">
     {#each data.lists ?? [] as playlist}
       <a class="playlist-tag" href="{base}/playlists/{playlist}">
         {$Playlists[playlist]?.name ?? "?"}
@@ -65,7 +64,7 @@ const data: Track = $Tracks[track];
     </button>
   </section>
 
-  <section class="right">
+  <section id="right">
     {#if ctx == "tracks" || ctx == "list"}
       <button class="ui rounded" style:height="2rem"
         on:click={() => $playback.queue.push(track)}
@@ -112,7 +111,7 @@ button.track-row {
 }
 
 section {
-  &.left {
+  &#left {
     flex-grow: 1;
     display: flex;
     flex-direction: row;
@@ -121,26 +120,31 @@ section {
     gap: 0.5rem;
   }
 
-  &.playlist-tags {
+  &#playlist-tags {
     flex-grow: 1;
     display: flex;
     flex-direction: row;
     justify-content: end;
     align-items: start;
+    gap: 0.25rem;
   }
 
-  &.right {
+  &#right {
     flex-grow: 0;
   }
 }
 
 
-p,
-h4 {
-  margin: 0;
-  padding: 0;
-}
+button.track-row {
+  button.play-track {
+    opacity: 0;
+    transition: opacity 80ms ease-out;
+  }
 
+  &:hover button.play-track {
+    opacity: 1;
+  }
+}
 
 .track-info {
 	min-width: 4rem;
@@ -162,7 +166,6 @@ h4 {
 
 a.playlist-tag {
   min-width: 3em;
-  margin: 0 0.5em;
   padding: 0.25em 0.5em;
   @include font-ui;
   background-color: var(--col-flavour);

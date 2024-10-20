@@ -28,7 +28,11 @@ button {
     border: none;
     transition: background-color 0.2s;
 
-    &:hover {
+    &:disabled {
+      color: var(--col-text-deut);
+    }
+
+    &:not(:disabled):hover {
       background-color: rgb(black, 20%);
     }
   }
