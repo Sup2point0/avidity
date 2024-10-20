@@ -13,7 +13,7 @@ let data = hydrate_data(tracks_data);
 export const Tracks = writable<TracksData>(data);
 
 
-interface TracksData
+export interface TracksData
 {
   [shard: string]: Track;
 }
@@ -21,7 +21,7 @@ interface TracksData
 
 function process_raw(raw_data: object): TracksData
 {
-  let out = {};
+  let out: TracksData = {};
   console.group();
 
   for (let [shard, data] of Object.entries(raw_data)) {
@@ -43,9 +43,10 @@ function hydrate_data(tracks_data: TracksData): TracksData
 {
   console.group();
 
-  for (let [shard, data] of get(changes).tracks) {
-    for (let [key, val] of data) {
+  for (let [shard, data] of Object.entries(get(changes).tracks)) {
+    for (let [key, val] of Object.entries(tracks_data)) {
       try {
+        /* @ts-ignore */
         tracks_data[shard][key] = val;
       } catch {
         console.error(`failed to set \`${shard}.${key}\``);

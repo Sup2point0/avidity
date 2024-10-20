@@ -6,7 +6,7 @@ let data = await import("../../data/artists.json");
 export const Artists = writable<ArtistsData>(data.default);
 
 
-interface ArtistsData
+export interface ArtistsData
 {
   [shard: string]: string;
 }

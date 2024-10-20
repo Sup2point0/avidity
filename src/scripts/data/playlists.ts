@@ -9,7 +9,7 @@ let data = process_raw(raw_data)
 export const Playlists = writable<PlaylistsData>(data);
 
 
-interface PlaylistsData
+export interface PlaylistsData
 {
   [shard: string]: Playlist;
 }

@@ -3,7 +3,8 @@
 import { get } from "svelte/store";
 import { base } from "$app/paths";
 
-import { playback, Tracks } from "#scripts/stores";
+import { Tracks } from "#scripts/data";
+import { playback } from "#scripts/stores";
 import { display_time } from "#scripts/utils";
 
 
