@@ -1,0 +1,4 @@
+@mixin elevated-block {
+  background-color: var(--col-back-prot);
+  box-shadow: 0 0 8px rgb(black, 40%);
+}
