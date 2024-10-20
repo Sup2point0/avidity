@@ -1,0 +1,61 @@
+name: 'Assort'
+
+on:
+  workflow_dispatch:
+  push:
+    paths: '*.yml'
+  schedule:
+    - cron: '20 4 * * 2,4,6'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+        
+    steps:
+      - name: 'git / checkout'
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: 'python / vividity / install'
+        run: |
+          cd vividity
+          pip install jsonschema
+
+      - name: 'node / setup'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: ./package-lock.json'
+
+      - name: 'svelte / install'
+        run: npm install
+
+      - name: 'svelte / build'
+        env:
+          BASE_PATH: '/${{ github.event.repository.name }}/site'
+        run: |
+          npm run buildx
+
+      - name: 'github / upload artifacts'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'build/'
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: 'github / deploy'
+        id: deployment
+        uses: actions/deploy-pages@v4

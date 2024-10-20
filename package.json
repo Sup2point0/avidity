@@ -4,8 +4,10 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-      "devx": "python vividity/export --root=src/styles --css=colours.css && vite dev",
+      "devx": "npm run prep && vite dev",
+    "prep": "python vividity/export --root=src/styles --css=colours.css",
 		"build": "vite build",
+      "buildx": "npm run prep && vite build",
 		"preview": "vite preview"
 	},
 	"devDependencies": {
