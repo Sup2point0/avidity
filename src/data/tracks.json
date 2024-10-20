@@ -92,5 +92,17 @@
       "neuro",
       "sound"
     ]
+  },
+  "fate": {
+    "name": "Distorted Fate",
+    "artist": "sakuzyo",
+    "file": "distorted-fate.mp3",
+    "lists": [
+      "rhythm",
+      "phigros",
+      "artcore",
+      "melodramatic",
+      "sound"
+    ]
   }
 }
