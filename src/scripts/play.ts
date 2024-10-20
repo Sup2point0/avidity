@@ -48,12 +48,20 @@ class PlaybackExecutive
    */
   play_next()
   {
-    let next = get(playback).next_track()
-    if (next) {
-      this.#play(next);
-    } else {
-      this.playing = null;
-    }
+    playback.update(s => {
+      if (s.queue.length) {
+        let next = s.queue.shift() ?? null;
+        s.current = next ? get(Tracks)[next] : null;
+      }
+
+      if (s.current) {
+        this.#play(s.current);
+      } else {
+        this.playing = null;
+      }
+
+      return s;
+    });
   }
 
   /**
@@ -83,9 +91,9 @@ class PlaybackExecutive
   toggle_pause()
   {
     if (this.playing?.paused) {
-      this.playing.pause();
-    } else if (this.playing) {
       this.playing.play();
+    } else if (this.playing) {
+      this.playing.pause();
     }
   }
 

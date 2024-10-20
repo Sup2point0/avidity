@@ -7,6 +7,7 @@ import { display_time } from "#scripts/utils";
 
 
 $: track = $playback.current;
+$: not_playing = !playback_executive.playing?.paused;
 
 </script>
 
@@ -23,11 +24,11 @@ $: track = $playback.current;
       </button>
 
       <button class="ui rounded" style:height="2rem"
-        on:click={playback_executive.toggle_pause}
+        on:click={() => playback_executive.toggle_pause()}
         disabled={!track}
       >
         <span class="material-symbols-rounded">
-          {#if playback_executive.playing == null || playback_executive.playing?.paused}
+          {#if not_playing}
             play_arrow
           {:else}
             pause
