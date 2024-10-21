@@ -1,4 +1,4 @@
-name: 'Assort'
+name: 'deploy'
 
 on:
   workflow_dispatch:
