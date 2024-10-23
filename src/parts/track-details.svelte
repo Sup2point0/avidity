@@ -5,9 +5,10 @@ A pane for viewing and editing details of the selected track?.
 
 <script>
 
-import { Playlists, Artists } from "#scripts/data";
 import { nav } from "#scripts/stores";
-import { find_track, find_playlist, find_artist } from "#scripts/utils";
+import { find_track, find_artist } from "#scripts/utils";
+
+import PlaylistTag from "#parts/playlist-tag.svelte";
 
 import { base } from "$app/paths";
 
@@ -18,7 +19,8 @@ $: track = find_track($nav.selected_track);
 
 
 <div class="part">
-  <img alt={track?.name ?? "?"}
+  <img
+    alt={track?.name ?? "?"}
     src="{base}/covers/{track?.cover}"
   >
 
@@ -28,9 +30,7 @@ $: track = find_track($nav.selected_track);
   <p id="plays"> {track?.plays} </p>
 
   {#each track?.lists ?? [] as playlist}
-    <span class="playlist-tag">
-      {find_playlist(playlist)?.name ?? "?"}
-    </span>
+    <PlaylistTag {playlist} />
   {/each}
 </div>
 
@@ -44,9 +44,19 @@ $: track = find_track($nav.selected_track);
   max-width: 40vw;
   flex-grow: 0.5;
   height: 100%;
+  padding: 1rem;
   @include elevated-block;
 }
 
+
+img {
+  max-width: 100%;
+  aspect-ratio: 1;
+}
+
+p {
+  color: var(--col-text);
+}
 
 h2#name {
   @include font-flavour;
