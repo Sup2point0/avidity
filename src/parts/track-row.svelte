@@ -23,11 +23,11 @@ const data: Track | null = find_track(track);
 </script>
 
 
-<button class="track-row"
+<div class="part"
   on:click={() => $nav.selected_track = track}
 >
 
-  <section id="left">
+  <div class="left">
 		<div>
 			<button class="ui rounded play-track" style:height="2rem"
 				on:click={() => play_exec.play_track(track)}
@@ -50,9 +50,9 @@ const data: Track | null = find_track(track);
 		{#if $nav.condensed_view}
 			<p class="track-artist"> {data?.artist? $Artists[data?.artist] : "?"} </p>
 		{/if}
-  </section>
+  </div>
 
-  <section id="playlist-tags">
+  <div class="playlist-tags">
     {#each data?.lists ?? [] as playlist}
       <PlaylistTag {playlist} />
     {/each}
@@ -62,9 +62,9 @@ const data: Track | null = find_track(track);
     >
        <span class="material-symbols-rounded"> add </span>
     </button>
-  </section>
+  </div>
 
-  <section id="right">
+  <div class="right">
     {#if ctx == "tracks" || ctx == "list"}
       <button class="ui rounded" style:height="2rem"
         on:click={() => $playback.queue.push(track)}
@@ -80,14 +80,16 @@ const data: Track | null = find_track(track);
         <span class="material-symbols-rounded"> delete </span>
       </button>
     {/if}
-  </section>
+  </div>
 
-</button>
+</div>
 
 
 <style lang="scss">
 
-button.track-row {
+.part {
+  cursor: pointer;
+  
   width: 100%;
   min-height: 2rem;
   padding: 0.75rem 1rem;
@@ -110,8 +112,8 @@ button.track-row {
   }
 }
 
-section {
-  &#left {
+div {
+  &.left {
     flex-grow: 1;
     display: flex;
     flex-direction: row;
@@ -120,7 +122,7 @@ section {
     gap: 0.5rem;
   }
 
-  &#playlist-tags {
+  &.playlist-tags {
     flex-grow: 1;
     display: flex;
     flex-direction: row;
@@ -129,7 +131,7 @@ section {
     gap: 0.25rem;
   }
 
-  &#right {
+  &.right {
     flex-grow: 0;
   }
 }

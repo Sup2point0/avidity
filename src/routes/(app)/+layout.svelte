@@ -13,16 +13,16 @@ import TrackControls from "#parts/track-controls.svelte";
 <main class="tomorrow-night-blue">
   <Nav />
   
-  <div id="ui-layout-split">
-    <section style:flex-grow={0.5}>
+  <div class="ui-layout" id="split">
+    <section class="ui-layout" id="left">
       <TrackDetails />
     </section>
   
-    <section style:flex-grow={1}>
+    <section class="ui-layout" id="core">
       <slot> Uh, something went wrong! </slot>
     </section>
   
-    <section style:flex-grow={0.5}>
+    <section class="ui-layout" id="right">
       <!-- <PlaybackDetails /> -->
     </section>
   </div>
@@ -42,12 +42,30 @@ main {
   background-color: var(--col-back);
 }
 
-#ui-layout-split {
-  width: 100%;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: row;
-  overflow-y: scroll;
+.ui-layout {
+  &#split {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+  }
+
+  &#left {
+    flex-grow: 0.25;
+    overflow-y: hidden;
+  }
+
+  &#core {
+    flex-grow: 1;
+    overflow-y: hidden;
+  }
+
+  &#right {
+    flex-grow: 0.25;
+    overflow-y: hidden;
+  }
 }
 
 </style>

@@ -9,7 +9,7 @@ import { playback } from "#scripts/stores";
 </script>
 
 
-{#each Object.keys($Tracks) as track}
+{#each Object.keys($Tracks).slice(0, 4) as track}
   <TrackRow track={track} />
 {/each}
 

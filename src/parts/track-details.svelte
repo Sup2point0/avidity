@@ -24,14 +24,20 @@ $: track = find_track($nav.selected_track);
     src="{base}/covers/{track?.cover}"
   >
 
-  <h2 id="name"> {track?.name} </h2>
-  <p id="artist"> {find_artist(track?.artist) ?? "?"} </p>
+  <div class="info">
+    <h2 id="name"> {track?.name} </h2>
+    <p id="artist"> {find_artist(track?.artist) ?? "?"} </p>
+  </div>
+  
+  <div class="stats">
+    <p id="plays"> {track?.plays} </p>
+  </div>
 
-  <p id="plays"> {track?.plays} </p>
-
-  {#each track?.lists ?? [] as playlist}
-    <PlaylistTag {playlist} />
-  {/each}
+  <div class="playlist-tags">
+    {#each track?.lists ?? [] as playlist}
+      <PlaylistTag {playlist} />
+    {/each}
+  </div>
 </div>
 
 
@@ -46,16 +52,21 @@ $: track = find_track($nav.selected_track);
   height: 100%;
   padding: 1rem;
   @include elevated-block;
-}
-
-
-img {
-  max-width: 100%;
-  aspect-ratio: 1;
+  
+  div {
+    margin: 1rem 0;
+  }
 }
 
 p {
   color: var(--col-text);
+}
+
+
+img {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1;
 }
 
 h2#name {
@@ -66,6 +77,13 @@ h2#name {
 p#artist {
   @include font-ui;
   font-size: 110%;
+}
+
+.playlist-tags {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
 }
 
 </style>
