@@ -35,11 +35,11 @@ import TrackControls from "#parts/track-controls.svelte";
 
 main {
   width: 100%;
-  min-height: 100vh;
   max-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: var(--col-back);
+  overflow: hidden;
 }
 
 .ui-layout {
@@ -47,6 +47,7 @@ main {
     width: 100%;
     height: 100%;
     flex-grow: 1;
+    flex-shrink: 1;
     display: flex;
     flex-direction: row;
     align-items: start;
