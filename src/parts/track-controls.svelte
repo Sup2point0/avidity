@@ -8,10 +8,10 @@ The global track playback control bar.
 import play_exec from "#scripts";
 import { Artists } from "#scripts/data";
 import { playback } from "#scripts/stores";
-import { display_time } from "#scripts/utils";
+import { find_track, display_time } from "#scripts/utils";
 
 
-$: track = play_exec.current;
+$: track = find_track($playback.current);
 
 </script>
 

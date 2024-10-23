@@ -1,34 +1,35 @@
 <!-- @component TrackDetails
 
-A pane for viewing and editing details of the selected track.
+A pane for viewing and editing details of the selected track?.
 -->
 
 <script>
 
 import { Playlists, Artists } from "#scripts/data";
 import { nav } from "#scripts/stores";
+import { find_track, find_playlist, find_artist } from "#scripts/utils";
 
 import { base } from "$app/paths";
 
 
-$: track = $nav.selected_track;
+$: track = find_track($nav.selected_track);
 
 </script>
 
 
 <div class="part">
   <img alt={track?.name ?? "?"}
-    src="{base}/covers/{track.cover}"
+    src="{base}/covers/{track?.cover}"
   >
 
-  <h2 id="name"> {track.name} </h2>
-  <p id="artist"> {Artists[track.artist] ?? "?"} </p>
+  <h2 id="name"> {track?.name} </h2>
+  <p id="artist"> {find_artist(track?.artist) ?? "?"} </p>
 
-  <p id="plays"> {track.plays} </p>
+  <p id="plays"> {track?.plays} </p>
 
-  {#each track.lists as playlist}
+  {#each track?.lists ?? [] as playlist}
     <span class="playlist-tag">
-      {$Playlists[playlist]?.name ?? "?"}
+      {find_playlist(playlist)?.name ?? "?"}
     </span>
   {/each}
 </div>

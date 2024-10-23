@@ -6,8 +6,9 @@ A row representing a track in menus.
 <script lang="ts">
 
 import play_exec from "#scripts";
-import { Tracks, Playlists, Artists } from "#scripts/data";
+import { Playlists, Artists } from "#scripts/data";
 import { nav, playback } from "#scripts/stores";
+import { find_track } from "#scripts/utils";
 import type { Track } from "#scripts/types";
 
 export let track: string;
@@ -15,7 +16,7 @@ export let ctx: "tracks" | "list" | "queue" = "tracks";
 export let idx: number | undefined = undefined;
 
 
-const data: Track = $Tracks[track];
+const data: Track | null = find_track(track);
 
 </script>
 
@@ -34,23 +35,23 @@ const data: Track = $Tracks[track];
 		</div>
 	
 		<div>
-			<p class="track-duration"> {data.duration ?? "--:--"} </p>
+			<p class="track-duration"> {data?.duration ?? "--:--"} </p>
 		</div>
 	
 		<div class="track-info">
-			<h4 class="track-name"> {data.name ?? "?"} </h4>
+			<h4 class="track-name"> {data?.name ?? "?"} </h4>
 			{#if !$nav.condensed_view}
-				<p class="track-artist"> {data.artist? $Artists[data.artist] : "?"} </p>
+				<p class="track-artist"> {data?.artist? $Artists[data?.artist] : "?"} </p>
 			{/if}
 		</div>
 
 		{#if $nav.condensed_view}
-			<p class="track-artist"> {data.artist? $Artists[data.artist] : "?"} </p>
+			<p class="track-artist"> {data?.artist? $Artists[data?.artist] : "?"} </p>
 		{/if}
   </section>
 
   <section id="playlist-tags">
-    {#each data.lists ?? [] as playlist}
+    {#each data?.lists ?? [] as playlist}
       <button class="playlist-tag"
         on:click={() => {
           $nav.page = "lists";
