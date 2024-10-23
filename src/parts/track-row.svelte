@@ -5,7 +5,7 @@ A row representing a track in menus.
 
 <script lang="ts">
 
-import play from "#scripts";
+import play_exec from "#scripts";
 import { Tracks, Playlists, Artists } from "#scripts/data";
 import { nav, playback } from "#scripts/stores";
 import type { Track } from "#scripts/types";
@@ -27,7 +27,7 @@ const data: Track = $Tracks[track];
   <section id="left">
 		<div>
 			<button class="ui rounded play-track" style:height="2rem"
-				on:click={() => $play.play_track(track)}
+				on:click={() => play_exec.play_track(track)}
 			>
 				<span class="material-symbols-rounded"> play_arrow </span>
 			</button>

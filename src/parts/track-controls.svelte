@@ -5,12 +5,13 @@ The global track playback control bar.
 
 <script>
 
-import play from "#scripts";
+import play_exec from "#scripts";
 import { Artists } from "#scripts/data";
+import { playback } from "#scripts/stores";
 import { display_time } from "#scripts/utils";
 
 
-$: track = $play.current;
+$: track = play_exec.current;
 
 </script>
 
@@ -20,21 +21,18 @@ $: track = $play.current;
 
     <section id="playback-controls">
       <button class="ui rounded" style:height="2rem"
-        on:click={$play.restart}
+        on:click={() => play_exec.restart()}
         disabled={!track}
       >
         <span class="material-symbols-rounded"> arrow_left </span>
       </button>
 
       <button class="ui rounded" style:height="2rem"
-        on:click={() => {
-          $play.toggle_pause();
-          $play = $play
-        }}
+        on:click={() => play_exec.toggle_pause()}
         disabled={!track}
       >
         <span class="material-symbols-rounded">
-          {#if $play.paused}
+          {#if $playback.paused}
             play_arrow
           {:else}
             pause
@@ -43,7 +41,7 @@ $: track = $play.current;
       </button>
 
       <button class="ui rounded" style:height="2rem"
-        on:click={$play.play_next}
+        on:click={() => play_exec.play_next()}
         disabled={!track}
       >
         <span class="material-symbols-rounded"> arrow_right </span>
@@ -57,10 +55,10 @@ $: track = $play.current;
 
     <section id="playback-details">
       <div id="playback-progress">
-        <p> {display_time($play.elapsed)} </p>
+        <p> {display_time($playback.elapsed)} </p>
         <!-- <meter
           min={0} max={1}
-          value={$play.playing ? ($play.elapsed / track.duration) : 0}
+          value={play_exec.playing ? (play_exec.elapsed / track.duration) : 0}
         > -->
         <p> {display_time(track?.duration)} </p>
       </div>

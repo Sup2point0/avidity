@@ -7,4 +7,7 @@ export class PlaybackData
 {
   current: string | null = null;
   queue: string[] = [];
+  
+  elapsed: number = 0;
+  paused: boolean = true;
 }

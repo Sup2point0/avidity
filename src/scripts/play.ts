@@ -1,6 +1,6 @@
-/// Implements the `$play` store for managing audio playback.
+/// Implements the `play_exec` store for managing audio playback.
 
-import { writable, get } from "svelte/store";
+import { get } from "svelte/store";
 import { base } from "$app/paths";
 
 import { Tracks } from "#scripts/data";
@@ -10,15 +10,18 @@ import { Track } from "#scripts/types";
 
 /**
  * Manages audio playback.
+ * 
+ * Synchronisation with $playback is managed through `.#sync_` methods.
  */
 class PlaybackExecutive
 {
-  _current: Track | null = null;
-  paused: boolean = true;
   audio: Audio | null = null;
 
+  _current: Track | null = null;
   /**
-   * The currently playing `Track` object. This is synced with `$playback.current` internally.
+   * The currently playing `Track` object.
+   * 
+   * This is synced with `playback.current` internally.
    */
   get current(): Track | null {
     return this._current;
@@ -26,27 +29,43 @@ class PlaybackExecutive
   set current(shard: string | null) {
     if (!shard) {
       this._current = null;
-      this.paused = true;
+      this.#sync_push("current", null);
+      this.#sync_push("paused", false);
     } else {
       this._current = get(Tracks)[shard];
+      this.#sync_push("current", shard);
     }
   }
 
   get elapsed(): number | null {
-    return this.audio?.currentTime;
+    return this.audio?.currentTime ?? null;
   }
+
 
   // == INTERNAL == //
 
   constructor()
   {
-    this.#sync();
+    this.#sync_pull("current");
     this.audio = this.#load(this.current);
+
+    let elapsed = get(playback).elapsed;
+    if (elapsed) {
+      this.audio.currentTime = elapsed;
+    }
   }
 
-  #sync()
+  #sync_pull(prop: string)
   {
-    this.current = get(playback).current;
+    this[prop] = get(playback)[prop];
+  }
+
+  #sync_push(prop: string, val: any)
+  {
+    playback.update(s => {
+      s[prop] = val;
+      return s;
+    })
   }
 
   #load(track: Track | null): Audio | null
@@ -66,15 +85,25 @@ class PlaybackExecutive
   #play(track: Track | null)
   {
     if (track == null) return;
-    if (this.audio && !this.audio.paused) {
-      this.audio.pause();
-    }
 
+    this.audio?.pause();
     this.audio = this.#load(track);
-    this.paused = false;
     this.audio.play();
     this.audio.addEventListener("ended", this.play_next);
+
+    this.#sync_push("paused", false);
   }
+
+  /**
+   * Clear current playback.
+   */
+  #clear()
+  {
+    this.audio?.pause();
+    this.audio = null;
+    this.current = null;
+  }
+
 
   // == START == //
 
@@ -83,7 +112,7 @@ class PlaybackExecutive
    */
   play_current()
   {
-    this.#sync();
+    this.#sync_pull("current");
     this.#play(this.current);
   }
 
@@ -92,22 +121,20 @@ class PlaybackExecutive
    */
   play_next()
   {
+    let next: string | null = null;
+
     playback.update(s => {
-      let next: string | null;
       if (s.queue.length) {
         next = s.queue.shift() ?? null;
         s.current = next;
-      } else {
-        return s;
       }
-
       return s;
     });
 
-    if (get(playback)) {
+    if (next) {
       this.play_current();
     } else {
-      this.audio = null;
+      this.#clear();
     }
   }
 
@@ -125,6 +152,7 @@ class PlaybackExecutive
     return true;
   }
 
+
   // == MOVE == //
 
   /**
@@ -134,11 +162,11 @@ class PlaybackExecutive
   {
     if (this.audio?.paused) {
       this.audio.play();
-      this.paused = false;
+      this.#sync_push("paused", false);
     }
     else {
       this.audio.pause();
-      this.paused = true;
+      this.#sync_push("paused", true);
     }
   }
 
@@ -166,4 +194,4 @@ class PlaybackExecutive
 }
 
 
-export const play = writable<PlaybackExecutive>(new PlaybackExecutive());
+export const play = new PlaybackExecutive();

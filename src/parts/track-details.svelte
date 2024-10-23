@@ -5,7 +5,8 @@ A pane for viewing and editing details of the selected track.
 
 <script>
 
-import { nav, Playlists, Artists } from "#scripts/stores";
+import { Playlists, Artists } from "#scripts/data";
+import { nav } from "#scripts/stores";
 
 import { base } from "$app/paths";
 

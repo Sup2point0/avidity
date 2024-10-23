@@ -1,14 +1,20 @@
 <script lang="ts">
 
-import play from "#scripts";
+import play_exec from "#scripts";
 import { Tracks } from "#scripts/data";
+import { playback } from "#scripts/stores";
 import { hydrate_data } from "#scripts/data/tracks";
 
 import { onMount } from "svelte";
 
 
+setInterval(() => {
+  $playback.elapsed = play_exec.elapsed;
+}, 250);
+
+
 onMount(() => {
-  Tracks.update(data => hydrate_data(data));
+  $Tracks = hydrate_data($Tracks);
 });
 
 
@@ -17,7 +23,7 @@ function on_keydown(event: KeyboardEvent)
   if (event.ctrlKey || event.metaKey) {
     switch (event.key) {
       case " ":
-        return $play.play_next();
+        return play_exec.play_next();
   
       case "f":
       case "/":
@@ -29,17 +35,17 @@ function on_keydown(event: KeyboardEvent)
       case " ":
       case "k":
         if (event.repeat) return;
-        return $play.toggle_pause();
+        return play_exec.toggle_pause();
 
       case "ArrowLeft":
-        return $play.shift(-5);
+        return play_exec.shift(-5);
       case "ArrowRight":
-        return $play.shift(+5);
+        return play_exec.shift(+5);
   
       case "j":
-        return $play.shift(-10);
+        return play_exec.shift(-10);
       case "l":
-        return $play.shift(+10);
+        return play_exec.shift(+10);
     }
   }
 }

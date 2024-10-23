@@ -2,15 +2,9 @@
 
 import TrackRow from "#parts/track-row.svelte";
 
-import play from "#scripts";
+import play_exec from "#scripts";
 import { Tracks } from "#scripts/data";
 import { playback } from "#scripts/stores";
-
-let t = {
-  test: 2.0
-}
-
-$: log = JSON.stringify($play, null, 2);
 
 </script>
 
@@ -22,7 +16,7 @@ $: log = JSON.stringify($play, null, 2);
 
 <section>
   <h2> debug </h2>
-  <pre>$play: {log} </pre>
+  <pre>play_exec: {JSON.stringify(play_exec, null, 2)} </pre>
   <pre>$playback: {JSON.stringify($playback, null, 2)} </pre>
 </section>
 
@@ -32,7 +26,7 @@ $: log = JSON.stringify($play, null, 2);
     padding: 1rem;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 1rem;
     color: white;
     background-color: rgb(0 0 0 / 80%);
 
