@@ -1,4 +1,4 @@
-import { playback_executive } from "./play";
+import { play } from "./play";
 
-export default playback_executive;
+export default play;
 export * from "./napkin";

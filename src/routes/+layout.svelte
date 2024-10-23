@@ -1,6 +1,6 @@
 <script lang="ts">
 
-import playback_executive from "#scripts";
+import play from "#scripts";
 import { Tracks } from "#scripts/data";
 import { hydrate_data } from "#scripts/data/tracks";
 
@@ -17,7 +17,7 @@ function on_keydown(event: KeyboardEvent)
   if (event.ctrlKey || event.metaKey) {
     switch (event.key) {
       case " ":
-        return playback_executive.play_next();
+        return $play.play_next();
   
       case "f":
       case "/":
@@ -29,17 +29,17 @@ function on_keydown(event: KeyboardEvent)
       case " ":
       case "k":
         if (event.repeat) return;
-        return playback_executive.toggle_pause();
+        return $play.toggle_pause();
 
       case "ArrowLeft":
-        return playback_executive.shift(-5);
+        return $play.shift(-5);
       case "ArrowRight":
-        return playback_executive.shift(+5);
+        return $play.shift(+5);
   
       case "j":
-        return playback_executive.shift(-10);
+        return $play.shift(-10);
       case "l":
-        return playback_executive.shift(+10);
+        return $play.shift(+10);
     }
   }
 }
@@ -50,8 +50,3 @@ function on_keydown(event: KeyboardEvent)
 <svelte:window on:keydown={on_keydown} />
 
 <slot> Uh, something has gone <em>really</em> wrong! </slot>
-
-
-<style lang="scss">
-
-</style>

@@ -1,13 +1,11 @@
 <script>
 
-import playback_executive from "#scripts";
+import play from "#scripts";
 import { Artists } from "#scripts/data";
-import { playback } from "#scripts/stores";
 import { display_time } from "#scripts/utils";
 
 
-$: track = $playback.current;
-$: not_playing = !playback_executive.playing?.paused;
+$: track = $play.current;
 
 </script>
 
@@ -17,18 +15,18 @@ $: not_playing = !playback_executive.playing?.paused;
 
     <section id="playback-controls">
       <button class="ui rounded" style:height="2rem"
-        on:click={playback_executive.restart}
+        on:click={$play.restart}
         disabled={!track}
       >
         <span class="material-symbols-rounded"> arrow_left </span>
       </button>
 
       <button class="ui rounded" style:height="2rem"
-        on:click={() => playback_executive.toggle_pause()}
+        on:click={() => $play.toggle_pause()}
         disabled={!track}
       >
         <span class="material-symbols-rounded">
-          {#if not_playing}
+          {#if $play.paused}
             play_arrow
           {:else}
             pause
@@ -37,7 +35,7 @@ $: not_playing = !playback_executive.playing?.paused;
       </button>
 
       <button class="ui rounded" style:height="2rem"
-        on:click={playback_executive.play_next}
+        on:click={$play.play_next}
         disabled={!track}
       >
         <span class="material-symbols-rounded"> arrow_right </span>
@@ -51,11 +49,11 @@ $: not_playing = !playback_executive.playing?.paused;
 
     <section id="playback-details">
       <div id="playback-progress">
-        <p> {display_time(playback_executive.elapsed)} </p>
-        <meter
+        <p> {display_time($play.elapsed)} </p>
+        <!-- <meter
           min={0} max={1}
-          value={playback_executive.playing ? (playback_executive.elapsed / track.duration) : 0}
-        >
+          value={$play.playing ? ($play.elapsed / track.duration) : 0}
+        > -->
         <p> {display_time(track?.duration)} </p>
       </div>
     </section>

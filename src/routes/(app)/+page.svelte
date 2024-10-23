@@ -2,20 +2,23 @@
 
 import TrackRow from "#parts/track-row.svelte";
 
-import playback_executive from "#scripts";
+import play from "#scripts";
+import { Tracks } from "#scripts/data";
 import { playback } from "#scripts/stores";
+
+$: log = JSON.stringify($play, null, 2);
 
 </script>
 
 
-<TrackRow track="dawn" />
-<TrackRow track="day" />
-<TrackRow track="terabyte" />
+{#each Object.keys($Tracks) as track}
+  <TrackRow track={track} />
+{/each}
 
 
 <section>
   <h2> debug </h2>
-  <pre>playback_executive: {JSON.stringify(playback_executive, null, 2)} </pre>
+  <pre>$play: {log} </pre>
   <pre>$playback: {JSON.stringify($playback, null, 2)} </pre>
 </section>
 

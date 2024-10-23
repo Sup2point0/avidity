@@ -1,6 +1,6 @@
-/// Implements the `playback_executive` singleton for managing audio playback.
+/// Implements the `$play` store for managing audio playback.
 
-import { get } from "svelte/store";
+import { writable, get } from "svelte/store";
 import { base } from "$app/paths";
 
 import { Tracks } from "#scripts/data";
@@ -8,15 +8,57 @@ import { playback } from "#scripts/stores";
 import { Track } from "#scripts/types";
 
 
+/**
+ * Manages audio playback.
+ */
 class PlaybackExecutive
 {
-  playing: Audio | null = null;
+  _current: Track | null = null;
+  paused: boolean = true;
+  audio: Audio | null = null;
+
+  /**
+   * The currently playing `Track` object. This is synced with `$playback.current` internally.
+   */
+  get current(): Track | null {
+    return this._current;
+  }
+  set current(shard: string | null) {
+    if (!shard) {
+      this._current = null;
+      this.paused = true;
+    } else {
+      this._current = get(Tracks)[shard];
+    }
+  }
 
   get elapsed(): number | null {
-    return this.playing?.currentTime;
+    return this.audio?.currentTime;
   }
 
   // == INTERNAL == //
+
+  constructor()
+  {
+    this.#sync();
+    this.audio = this.#load(this.current);
+  }
+
+  #sync()
+  {
+    this.current = get(playback).current;
+  }
+
+  #load(track: Track | null): Audio | null
+  {
+    if (!track) return null;
+
+    try {
+      return new Audio(`${base}/tracks/${track.file}`);
+    } catch {
+      return null;
+    }
+  }
 
   /**
    * Play the provided `Track`.
@@ -24,13 +66,14 @@ class PlaybackExecutive
   #play(track: Track | null)
   {
     if (track == null) return;
-    if (this.playing && !this.playing.paused) {
-      this.playing.pause();
+    if (this.audio && !this.audio.paused) {
+      this.audio.pause();
     }
 
-    this.playing = new Audio(`${base}/tracks/${track.file}`);
-    this.playing.play();
-    this.playing.addEventListener("ended", this.play_next);
+    this.audio = this.#load(track);
+    this.paused = false;
+    this.audio.play();
+    this.audio.addEventListener("ended", this.play_next);
   }
 
   // == START == //
@@ -40,7 +83,8 @@ class PlaybackExecutive
    */
   play_current()
   {
-    this.#play(get(playback).current);
+    this.#sync();
+    this.#play(this.current);
   }
 
   /**
@@ -49,19 +93,22 @@ class PlaybackExecutive
   play_next()
   {
     playback.update(s => {
+      let next: string | null;
       if (s.queue.length) {
-        let next = s.queue.shift() ?? null;
-        s.current = next ? get(Tracks)[next] : null;
-      }
-
-      if (s.current) {
-        this.#play(s.current);
+        next = s.queue.shift() ?? null;
+        s.current = next;
       } else {
-        this.playing = null;
+        return s;
       }
 
       return s;
     });
+
+    if (get(playback)) {
+      this.play_current();
+    } else {
+      this.audio = null;
+    }
   }
 
   /**
@@ -69,17 +116,12 @@ class PlaybackExecutive
    */
   play_track(shard: string): boolean
   {
-    let track: Track = get(Tracks)[shard];
-    if (track == null) {
-      return false;
-    }
-
     playback.update(s => {
-      s.current = track;
+      s.current = shard;
       return s;
     });
 
-    this.#play(track);
+    this.play_current();
     return true;
   }
 
@@ -90,10 +132,13 @@ class PlaybackExecutive
    */
   toggle_pause()
   {
-    if (this.playing?.paused) {
-      this.playing.play();
-    } else if (this.playing) {
-      this.playing.pause();
+    if (this.audio?.paused) {
+      this.audio.play();
+      this.paused = false;
+    }
+    else {
+      this.audio.pause();
+      this.paused = true;
     }
   }
 
@@ -102,8 +147,9 @@ class PlaybackExecutive
    */
   restart(): boolean
   {
-    if (this.playing) {
-      this.playing.currentTime = 0;
+    if (this.audio) {
+      this.audio.currentTime = 0;
+      this.paused = false;
       return true;
     }
     return false;
@@ -114,11 +160,11 @@ class PlaybackExecutive
    */
   shift(delta: number)
   {
-    if (this.playing) {
-      this.playing.currentTime += delta;
+    if (this.audio) {
+      this.audio.currentTime += delta;
     }
   }
 }
 
 
-export const playback_executive = new PlaybackExecutive();
+export const play = writable<PlaybackExecutive>(new PlaybackExecutive());

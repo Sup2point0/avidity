@@ -14,7 +14,9 @@ body {
 
 
 button {
-  cursor: pointer;
+  &:not(:disabled) {
+    cursor: pointer;
+  }
 
   &.ui {
     padding: 0.25em;
@@ -28,7 +30,7 @@ button {
     }
 
     &:not(:disabled):hover {
-      background-color: rgb(black, 20%);
+      background-color: var(--col-hover);
     }
   }
 

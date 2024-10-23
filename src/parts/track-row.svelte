@@ -5,16 +5,14 @@ A row representing a track in menus.
 
 <script lang="ts">
 
-import playback_executive from "#scripts";
+import play from "#scripts";
 import { Tracks, Playlists, Artists } from "#scripts/data";
 import { nav, playback } from "#scripts/stores";
 import type { Track } from "#scripts/types";
 
-import { base } from "$app/paths";
-    import { page } from "$app/stores";
-
 export let track: string;
 export let ctx: "tracks" | "list" | "queue" = "tracks";
+export let idx: number | undefined = undefined;
 
 
 const data: Track = $Tracks[track];
@@ -29,7 +27,7 @@ const data: Track = $Tracks[track];
   <section id="left">
 		<div>
 			<button class="ui rounded play-track" style:height="2rem"
-				on:click={() => playback_executive.play_track(track)}
+				on:click={() => $play.play_track(track)}
 			>
 				<span class="material-symbols-rounded"> play_arrow </span>
 			</button>
@@ -82,7 +80,7 @@ const data: Track = $Tracks[track];
 
     {#if ctx == "queue"}
       <button class="ui rounded" style:height="2rem"
-        on:click={() => $playback.queue.remove(track)}
+        on:click={() => $playback.queue.splice(idx, 1)}
       >
         <span class="material-symbols-rounded"> delete </span>
       </button>
