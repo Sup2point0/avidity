@@ -6,6 +6,10 @@ import play from "#scripts";
 import { Tracks } from "#scripts/data";
 import { playback } from "#scripts/stores";
 
+let t = {
+  test: 2.0
+}
+
 $: log = JSON.stringify($play, null, 2);
 
 </script>

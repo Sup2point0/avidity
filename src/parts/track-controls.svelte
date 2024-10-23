@@ -1,3 +1,8 @@
+<!-- @component TrackControls
+
+The global track playback control bar.
+-->
+
 <script>
 
 import play from "#scripts";
@@ -22,7 +27,10 @@ $: track = $play.current;
       </button>
 
       <button class="ui rounded" style:height="2rem"
-        on:click={() => $play.toggle_pause()}
+        on:click={() => {
+          $play.toggle_pause();
+          $play = $play
+        }}
         disabled={!track}
       >
         <span class="material-symbols-rounded">
@@ -70,7 +78,7 @@ $: track = $play.current;
 .part {
   width: 100%;
   min-height: 2rem;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   @include elevated-block;
 }
 

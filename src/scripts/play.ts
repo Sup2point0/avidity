@@ -149,7 +149,6 @@ class PlaybackExecutive
   {
     if (this.audio) {
       this.audio.currentTime = 0;
-      this.paused = false;
       return true;
     }
     return false;

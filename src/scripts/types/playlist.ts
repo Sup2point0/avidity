@@ -5,15 +5,17 @@ export class Playlist
 {
   public shard: string;
   public name: string;
+  public colour: string;
   public tracks: Track[];
 
   constructor(
     shard: string,
-    name: string | undefined,
+    data: any | undefined,
   )
   {
     this.shard = shard;
-    this.name = name ?? shard;
+    this.name = data?.name ?? shard;
+    this.colour = data?.colour ?? "var(--col-deut)"
     this.tracks = [];
   }
 }
