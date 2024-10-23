@@ -16,8 +16,8 @@ let data = find_playlist(playlist);
 </script>
 
 
-<button class="playlist-tag"
-  style:background-color={data?.colour ?? "var(--col-flavour)"}
+<button class="part"
+  style:--col={data?.colour ?? "var(--col-flavour)"}
   on:click={() => {
     $nav.page = "lists";
     $nav.selected_playlist = playlist;
@@ -25,3 +25,23 @@ let data = find_playlist(playlist);
 >
   {data?.name ?? playlist}
 </button>
+
+
+<style lang="scss">
+
+button.part {
+  min-width: 3em;
+  padding: 0.4em 0.8em;
+  @include font-ui;
+  background-color: var(--col);
+  border: none;
+  border-radius: 1em;
+
+  transition: background-color 0.2s ease-out;
+
+  &:hover {
+    background-color: var(--col-prot);
+  }
+}
+
+</style>

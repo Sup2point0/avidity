@@ -11,6 +11,8 @@ import { nav, playback } from "#scripts/stores";
 import { find_track } from "#scripts/utils";
 import type { Track } from "#scripts/types";
 
+import PlaylistTag from "#parts/playlist-tag.svelte";
+
 export let track: string;
 export let ctx: "tracks" | "list" | "queue" = "tracks";
 export let idx: number | undefined = undefined;
@@ -52,15 +54,7 @@ const data: Track | null = find_track(track);
 
   <section id="playlist-tags">
     {#each data?.lists ?? [] as playlist}
-      <button class="playlist-tag"
-        on:click={() => {
-          $nav.page = "lists";
-          $nav.selected_playlist = playlist;
-        }}
-        style:background-color={$Playlists[playlist]?.colour ?? "var(--col-flavour)"}
-      >
-        {$Playlists[playlist]?.name ?? playlist}
-      </button>
+      <PlaylistTag {playlist} />
     {/each}
 
     <button class="ui rounded" style:height="2rem"
@@ -168,14 +162,6 @@ button.track-row {
 }
 .track-artist {
   color: var(--col-text-prot);
-}
-
-button.playlist-tag {
-  min-width: 3em;
-  padding: 0.4em 0.8em;
-  @include font-ui;
-  border: none;
-  border-radius: 1em;
 }
 
 </style>
