@@ -1,3 +1,6 @@
+export { find_track, find_playlist, find_artist } from "./find";
+
+
 export function display_time(t: number | null): string
 {
   if (t == null) return "--:--";

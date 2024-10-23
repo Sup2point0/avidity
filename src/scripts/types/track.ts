@@ -11,16 +11,16 @@ export class Track
 
   constructor(
     shard: string,
-    data: any | undefined,
+    data: any,
   )
   {
     this.shard = shard;
-    this.name = data?.name ?? shard;
-    this.artist = data?.artist;
-    this.album = data?.album;
-    this.lists = data?.lists ?? [];
-    this.file = data?.file;
-    this.duration = data?.duration;
-    this.plays = data?.plays ?? 0;
+    this.name = data.name ?? shard;
+    this.artist = data.artist ?? null;
+    this.album = data.album ?? null;
+    this.lists = data.lists ?? [];
+    this.file = data.file;
+    this.duration = data.duration ?? null;
+    this.plays = data.plays ?? 0;
   }
 }
