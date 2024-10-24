@@ -2,10 +2,10 @@
 
 import "#styles/essence.scss";
 
-import Nav from "#parts/nav.svelte";
-import TrackDetails from "#parts/track-details.svelte";
-import PlaybackDetails from "#parts/playback-details.svelte";
-import TrackControls from "#parts/track-controls.svelte";
+import Nav from "#parts/panes/nav.svelte";
+import TrackDetails from "#parts/panes/track-details.svelte";
+import PlaybackDetails from "#parts/panes/playback-details.svelte";
+import TrackControls from "#parts/panes/track-controls.svelte";
 
 </script>
 
