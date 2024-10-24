@@ -1,4 +1,13 @@
 {
+  "all-falls-down": {
+    "name": "All Falls Down",
+    "artist": "Alan Walker",
+    "file": "alan-walker/all-falls-down.mp3",
+    "lists": [
+      "electronic",
+      "NCS"
+    ]
+  },
   "dawn": {
     "name": "Dawn",
     "artist": "sup",
@@ -105,6 +114,14 @@
       "artcore",
       "melodramatic",
       "sound"
+    ]
+  },
+  "rickroll": {
+    "name": "Never Gonna Give You Up",
+    "artist": "rick",
+    "file": "never-gonna-give-you-up.mp3",
+    "lists": [
+      "pop"
     ]
   }
 }

@@ -10,62 +10,74 @@ import TrackControls from "#parts/track-controls.svelte";
 </script>
 
 
-<main class="tomorrow-night-blue">
-  <Nav />
-  
-  <div class="ui-layout" id="split">
-    <section class="ui-layout" id="left">
-      <TrackDetails />
-    </section>
-  
-    <section class="ui-layout" id="core">
-      <slot> Uh, something went wrong! </slot>
-    </section>
-  
-    <section class="ui-layout" id="right">
-      <!-- <PlaybackDetails /> -->
-    </section>
+<div id="page" class="ui-layout tomorrow-night-blue">
+  <div class="bar">
+    <Nav />
   </div>
   
-  <TrackControls />
-</main>
+  <div id="split">
+    <div id="left">
+      <TrackDetails />
+    </div>
+  
+    <div id="core">
+      <slot> Uh, something went wrong! </slot>
+    </div>
+  
+    <div id="right">
+      <!-- <PlaybackDetails /> -->
+    </div>
+  </div>
+  
+  <div class="bar">
+    <TrackControls />
+  </div>
+</div>
 
 
 <style lang="scss">
 
-main {
+#page {
   width: 100%;
+  height: 100vh;
   max-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: var(--col-back);
   overflow: hidden;
+  // overflow-y: scroll;
 }
 
 .ui-layout {
-  &#split {
-    width: 100%;
-    height: 100%;
-    flex-grow: 1;
-    flex-shrink: 1;
+  .bar {
+    flex: 0 0 auto;
+  }
+
+  #split {
+    min-height: 0;
+    max-height: inherit;
+    flex: 1 1 auto;
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: start;
+
+    div {
+      min-height: 0;
+      max-height: inherit;
+    }
   }
 
-  &#left {
+  #left, #right {
     flex-grow: 0.25;
-    overflow-y: hidden;
+    overflow: hidden;
+    // overflow-y: scroll;
   }
 
-  &#core {
-    flex-grow: 1;
-    overflow-y: hidden;
-  }
-
-  &#right {
-    flex-grow: 0.25;
-    overflow-y: hidden;
+  #core {
+    flex: 0 1 auto;
+    overflow: hidden;
+    // overflow-y: scroll;
   }
 }
 

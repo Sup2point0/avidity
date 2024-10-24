@@ -7,7 +7,9 @@ import { Track } from "#scripts/types";
 import type { TracksData } from "#scripts/types/interfaces";
 
 
-let raw_data = await import("../../data/tracks.json");
+import * as raw_data from "../../data/tracks.json";
+
+// let raw_data = await import("../../data/tracks.json");
 let tracks_data = process_raw(raw_data);
 let data = hydrate_data(tracks_data);
 

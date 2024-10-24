@@ -38,6 +38,13 @@ $: track = find_track($nav.selected_track);
       <PlaylistTag {playlist} />
     {/each}
   </div>
+
+  <div> hi </div>
+  <div> hi </div>
+  <div> hi </div>
+  <div> hi </div>
+  <div> hi </div>
+  <div> hi </div>
 </div>
 
 
@@ -51,7 +58,7 @@ $: track = find_track($nav.selected_track);
   flex-grow: 0.5;
   height: 100%;
   padding: 1rem;
-  @include elevated-block;
+  overflow-y: scroll;
   
   div {
     margin: 1rem 0;

@@ -11,17 +11,18 @@ import { save_napkin } from "#scripts";
 </script>
 
 
-<nav>
-  <section>
+<!-- svelte-ignore component_name_lowercase -->
+<nav class="part">
+  <div>
     <span id="nav-title">
       avidity
     </span>
     <span id="nav-credits">
       by <a target="_blank" href="https://github.com/Sup2point0">Sup#2.0</a>
     </span>
-  </section>
+  </div>
 
-  <section>
+  <div>
     {#if $shard.valid}
       <button class="ui" on:click={save_napkin}>
         <span class="material-symbols-rounded"> backup </span>
@@ -39,18 +40,19 @@ import { save_napkin } from "#scripts";
     <button class="ui">
       <!-- github icon -->
     </button>
-  </section>
+  </div>
 </nav>
 
 
 <style lang="scss">
 
-nav {
+.part {
   width: 100%;
   min-height: 4rem;
   margin: 0;
   padding: 0.5rem 1rem;
-  z-index: 2;
+  position: relative;
+  z-index: 3;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

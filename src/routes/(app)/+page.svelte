@@ -9,9 +9,11 @@ import { playback } from "#scripts/stores";
 </script>
 
 
-{#each Object.keys($Tracks).slice(0, 4) as track}
-  <TrackRow track={track} />
-{/each}
+<main>
+  {#each Object.keys($Tracks) as track}
+    <TrackRow track={track} />
+  {/each}
+</main>
 
 
 <section>
@@ -22,13 +24,22 @@ import { playback } from "#scripts/stores";
 
 
 <style lang="scss">
+
+main {
+  height: 100%;
+  min-height: 0;
+  // max-height: 90vh;
+  z-index: 1;
+  overflow-y: scroll;
+}
+
   section {
     padding: 1rem;
     position: absolute;
-    top: 0;
-    right: 1rem;
+    bottom: 0;
+    left: 1rem;
     color: white;
-    background-color: rgb(0 0 0 / 80%);
+    background-color: rgb(0 0 0 / 90%);
 
     > * {
       margin: 1rem;

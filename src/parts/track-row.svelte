@@ -69,7 +69,7 @@ const data: Track | null = find_track(track);
       <button class="ui rounded" style:height="2rem"
         on:click={() => $playback.queue.push(track)}
       >
-        <span class="material-symbols-rounded"> add </span>
+        <span class="material-symbols-rounded"> playlist_add </span>
       </button>
     {/if}
 

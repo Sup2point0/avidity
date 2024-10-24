@@ -77,6 +77,8 @@ $: track = find_track($playback.current);
   width: 100%;
   min-height: 2rem;
   padding: 1rem 0;
+  position: relative;
+  z-index: 3;
   @include elevated-block;
 }
 
