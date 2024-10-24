@@ -30,9 +30,9 @@ main {
   min-height: 0;
   z-index: 1;
   overflow-y: scroll;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: start;
+  
+  scrollbar-color: var(--col-text-deut) var(--col-back);
+  scrollbar-width: thick;
 }
 
   section {

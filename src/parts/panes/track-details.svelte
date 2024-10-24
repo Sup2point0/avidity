@@ -38,16 +38,6 @@ $: track = find_track($nav.selected_track);
       <PlaylistTag {playlist} />
     {/each}
   </div>
-
-  <div> hi </div>
-  <div> hi </div>
-  <div> hi </div>
-  <div> hi </div>
-  <div> hi </div>
-  <div> hi </div>
-  <div> hi </div>
-  <div> hi </div>
-  <div> hi </div>
 </div>
 
 
@@ -58,7 +48,12 @@ $: track = find_track($nav.selected_track);
   flex-grow: 0.5;
   height: 100%;
   padding: 1rem;
+  background-color: var(--col-back-deut);
   overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
   
   div {
     margin: 1rem 0;
@@ -90,6 +85,7 @@ p#artist {
   width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 0.25rem;
 }
 

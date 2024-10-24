@@ -8,7 +8,7 @@ A row representing a track in menus.
 import play_exec from "#scripts";
 import { Playlists, Artists } from "#scripts/data";
 import { nav, playback } from "#scripts/stores";
-import { find_track } from "#scripts/utils";
+import { find_artist, find_track } from "#scripts/utils";
 import type { Track } from "#scripts/types";
 
 import PlaylistTag from "#parts/playlist-tag.svelte";
@@ -43,12 +43,12 @@ const data: Track | null = find_track(track);
 		<div class="track-info">
 			<h4 class="track-name"> {data?.name ?? "?"} </h4>
 			{#if !$nav.condensed_view}
-				<p class="track-artist"> {data?.artist? $Artists[data?.artist] : "?"} </p>
+				<p class="track-artist"> {find_artist(data?.artist)} </p>
 			{/if}
 		</div>
 
 		{#if $nav.condensed_view}
-			<p class="track-artist"> {data?.artist? $Artists[data?.artist] : "?"} </p>
+			<p class="track-artist"> {find_artist(data?.artist)} </p>
 		{/if}
   </div>
 
@@ -102,15 +102,15 @@ const data: Track | null = find_track(track);
   gap: 0.5rem;
 
   @include font-ui;
-  background-color: var(--col-card);
+  background-color: var(--col-back);
   border: none;
 
   &:hover {
-    background-color: var(--col-card-hover);
+    background-color: var(--col-back-deut);
   }
 
   &:click {
-    background-color: var(--col-card-click);
+    background-color: var(--col-back-trit);
   }
 }
 

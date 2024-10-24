@@ -27,8 +27,12 @@ import TrackRow from "#parts/track-row.svelte";
   flex-grow: 0.5;
   height: 100%;
   padding: 1rem;
-  background-color: var(--col-back-prot);
+  background-color: var(--col-back-deut);
   overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 </style>
