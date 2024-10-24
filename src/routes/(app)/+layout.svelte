@@ -4,7 +4,7 @@ import "#styles/essence.scss";
 
 import Nav from "#parts/nav.svelte";
 import TrackDetails from "#parts/track-details.svelte";
-// import PlaybackDetails from "#parts/playback-details/index.svelte";
+import PlaybackDetails from "#parts/playback-details.svelte";
 import TrackControls from "#parts/track-controls.svelte";
 
 </script>
@@ -25,7 +25,7 @@ import TrackControls from "#parts/track-controls.svelte";
     </div>
   
     <div id="right">
-      <!-- <PlaybackDetails /> -->
+      <PlaybackDetails />
     </div>
   </div>
   

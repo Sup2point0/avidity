@@ -50,9 +50,6 @@ $: track = find_track($nav.selected_track);
 
 <style lang="scss">
 
-@use './src/styles/mixins/ui' as *;
-
-
 .part {
   max-width: 40vw;
   flex-grow: 0.5;
@@ -72,7 +69,7 @@ p {
 
 img {
   width: 100%;
-  max-width: 400px;
+  max-width: 20vw;
   aspect-ratio: 1;
 }
 

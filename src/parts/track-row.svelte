@@ -52,17 +52,19 @@ const data: Track | null = find_track(track);
 		{/if}
   </div>
 
-  <div class="playlist-tags">
-    {#each data?.lists ?? [] as playlist}
-      <PlaylistTag {playlist} />
-    {/each}
+  {#if ctx != "queue"}
+    <div class="playlist-tags">
+      {#each data?.lists ?? [] as playlist}
+        <PlaylistTag {playlist} />
+      {/each}
 
-    <button class="ui rounded" style:height="2rem"
-      on:click={() => alert("This feature is under development!")}
-    >
-       <span class="material-symbols-rounded"> add </span>
-    </button>
-  </div>
+      <button class="ui rounded" style:height="2rem"
+        on:click={() => alert("This feature is under development!")}
+      >
+        <span class="material-symbols-rounded"> add </span>
+      </button>
+    </div>
+  {/if}
 
   <div class="right">
     {#if ctx == "tracks" || ctx == "list"}
@@ -123,11 +125,13 @@ div {
   }
 
   &.playlist-tags {
-    flex-grow: 1;
+    flex: 1 1 auto;
+    max-width: 50%;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: right;
     align-items: start;
+    flex-wrap: wrap;
     gap: 0.25rem;
   }
 

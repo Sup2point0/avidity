@@ -28,9 +28,11 @@ import { playback } from "#scripts/stores";
 main {
   height: 100%;
   min-height: 0;
-  // max-height: 90vh;
   z-index: 1;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
   section {
@@ -40,6 +42,10 @@ main {
     left: 1rem;
     color: white;
     background-color: rgb(0 0 0 / 90%);
+
+    &:hover {
+      display: none;
+    }
 
     > * {
       margin: 1rem;
