@@ -6,7 +6,6 @@ A row representing a track in menus.
 <script lang="ts">
 
 import play_exec from "#scripts";
-import { Playlists, Artists } from "#scripts/data";
 import { nav, playback } from "#scripts/stores";
 import { find_artist, find_track } from "#scripts/utils";
 import type { Track } from "#scripts/types";
@@ -79,7 +78,7 @@ const data: Track | null = find_track(track);
 
     {#if ctx == "queue"}
       <button class="ui rounded" style:height="2rem"
-        on:click={() => idx && $playback.queue.splice(idx, 1)}
+        on:click={() => (typeof(idx) == "number") && $playback.queue.splice(idx, 1)}
       >
         <span class="material-symbols-rounded"> delete </span>
       </button>

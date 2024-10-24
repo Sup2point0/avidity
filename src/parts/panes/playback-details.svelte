@@ -6,15 +6,17 @@ A pane for viewing and editing details of the selected track?.
 <script>
 
 import { playback } from "#scripts/stores";
-import { find_track } from "#scripts/utils";
 
 import TrackRow from "#parts/track-row.svelte";
+
+
+$: tracks = $playback.queue;
 
 </script>
 
 
 <div class="part">
-  {#each $playback.queue.entries() as [i, track]}
+  {#each tracks.entries() as [i, track]}
     <TrackRow {track} ctx="queue" idx={i} />
   {/each}
 </div>

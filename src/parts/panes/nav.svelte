@@ -65,6 +65,10 @@ import { save_napkin } from "#scripts";
   align-items: center;
 
   @include elevated-block;
+
+  div > * {
+    display: inline-block;
+  }
 }
 
 
