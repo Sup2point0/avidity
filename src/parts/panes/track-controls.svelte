@@ -70,9 +70,6 @@ $: track = find_track($playback.current);
 
 <style lang="scss">
 
-@use './src/styles/mixins/ui' as *;
-
-
 .part {
   width: 100%;
   min-height: 2rem;

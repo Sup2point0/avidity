@@ -36,9 +36,11 @@ const data: Track | null = find_track(track);
 			</button>
 		</div>
 	
-		<div>
-			<p class="track-duration"> {data?.duration ?? "--:--"} </p>
-		</div>
+    {#if ctx != "queue"}
+      <div>
+        <p class="track-duration"> {data?.duration ?? "--:--"} </p>
+      </div>
+    {/if}
 	
 		<div class="track-info">
 			<h4 class="track-name"> {data?.name ?? "?"} </h4>
@@ -77,7 +79,7 @@ const data: Track | null = find_track(track);
 
     {#if ctx == "queue"}
       <button class="ui rounded" style:height="2rem"
-        on:click={() => $playback.queue.splice(idx, 1)}
+        on:click={() => idx && $playback.queue.splice(idx, 1)}
       >
         <span class="material-symbols-rounded"> delete </span>
       </button>

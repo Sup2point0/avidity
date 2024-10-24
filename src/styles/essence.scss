@@ -18,25 +18,4 @@ button {
   &:not(:disabled) {
     cursor: pointer;
   }
-
-  &.ui {
-    padding: 0.25em;
-    @include font-ui;
-    background: none;
-    border: none;
-    transition: background-color 0.2s;
-
-    &:disabled {
-      color: var(--col-text-deut);
-    }
-
-    &:not(:disabled):hover {
-      background-color: var(--col-hover);
-    }
-  }
-
-  &.rounded {
-    aspect-ratio: 1;
-    border-radius: 50%;
-  }
 }

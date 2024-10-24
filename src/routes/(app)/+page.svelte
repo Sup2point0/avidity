@@ -16,11 +16,11 @@ import { playback } from "#scripts/stores";
 </main>
 
 
-<section>
+<!-- <section>
   <h2> debug </h2>
   <pre>play_exec: {JSON.stringify(play_exec, null, 2)} </pre>
   <pre>$playback: {JSON.stringify($playback, null, 2)} </pre>
-</section>
+</section> -->
 
 
 <style lang="scss">

@@ -44,6 +44,7 @@ $: track = find_track($nav.selected_track);
 <style lang="scss">
 
 .part {
+  min-width: 10vw;
   max-width: 40vw;
   flex-grow: 0.5;
   height: 100%;
@@ -66,6 +67,7 @@ p {
 
 
 img {
+  min-width: 10vw;
   width: 100%;
   max-width: 20vw;
   aspect-ratio: 1;
