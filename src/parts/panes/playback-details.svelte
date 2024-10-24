@@ -27,6 +27,7 @@ import TrackRow from "#parts/track-row.svelte";
   flex-grow: 0.5;
   height: 100%;
   padding: 1rem;
+  background-color: var(--col-back-prot);
   overflow-y: scroll;
 }
 

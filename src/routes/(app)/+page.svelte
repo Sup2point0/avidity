@@ -30,9 +30,9 @@ main {
   min-height: 0;
   z-index: 1;
   overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: start;
 }
 
   section {

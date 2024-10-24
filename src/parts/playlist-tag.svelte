@@ -31,8 +31,9 @@ let data = find_playlist(playlist);
 
 button.part {
   min-width: 3em;
-  padding: 0.4em 0.8em;
+  padding: 0.25em 0.75em;
   @include font-ui;
+  font-weight: 300;
   background-color: var(--col);
   border: none;
   border-radius: 1em;

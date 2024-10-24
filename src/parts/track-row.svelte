@@ -57,13 +57,13 @@ const data: Track | null = find_track(track);
       {#each data?.lists ?? [] as playlist}
         <PlaylistTag {playlist} />
       {/each}
-
-      <button class="ui rounded" style:height="2rem"
-        on:click={() => alert("This feature is under development!")}
-      >
-        <span class="material-symbols-rounded"> add </span>
-      </button>
     </div>
+    
+    <button class="ui rounded" style:height="2rem"
+      on:click={() => alert("This feature is under development!")}
+    >
+      <span class="material-symbols-rounded"> add </span>
+    </button>
   {/if}
 
   <div class="right">

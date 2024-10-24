@@ -45,6 +45,9 @@ $: track = find_track($nav.selected_track);
   <div> hi </div>
   <div> hi </div>
   <div> hi </div>
+  <div> hi </div>
+  <div> hi </div>
+  <div> hi </div>
 </div>
 
 

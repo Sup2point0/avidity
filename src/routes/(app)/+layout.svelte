@@ -60,7 +60,7 @@ import TrackControls from "#parts/panes/track-controls.svelte";
     position: relative;
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: stretch;
 
     div {
       min-height: 0;
@@ -71,13 +71,11 @@ import TrackControls from "#parts/panes/track-controls.svelte";
   #left, #right {
     flex-grow: 0.25;
     overflow: hidden;
-    // overflow-y: scroll;
   }
 
   #core {
-    flex: 0 1 auto;
+    flex: 1 1 auto;
     overflow: hidden;
-    // overflow-y: scroll;
   }
 }
 
