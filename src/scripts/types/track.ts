@@ -9,7 +9,7 @@ export class Track
 
   /// EXTERNAL
   name: string;
-  artist: string | null;
+  artist: string | string[] | null;
   album: string | null;
   lists: string[];
 
