@@ -7,9 +7,8 @@ import { Track } from "#scripts/types";
 import type { TracksData } from "#scripts/types/interfaces";
 
 
-import * as raw_data from "../../data/tracks.json";
+import { default as raw_data } from "../../data/tracks.json";
 
-// let raw_data = await import("../../data/tracks.json");
 let tracks_data = process_raw(raw_data);
 let data = hydrate_data(tracks_data);
 
@@ -22,8 +21,6 @@ function process_raw(raw_data: object): TracksData
   console.group("loading tracks data...");
 
   for (let [shard, data] of Object.entries(raw_data)) {
-    if (shard == "default") continue;
-
     try {
       out[shard] = new Track(shard, data);
     } catch {

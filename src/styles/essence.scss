@@ -13,6 +13,11 @@
   font-size: 80%;
 }
 
+::selection {
+  color: white !important;
+  background-color: var(--col-select) !important;
+}
+
 
 button {
   &:not(:disabled) {
