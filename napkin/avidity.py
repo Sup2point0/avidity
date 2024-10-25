@@ -1,7 +1,23 @@
 '''
 Avidity Cloud Engine
 Archived from napkin.io
-2024 October 19
+2024 October 25
+
+Expected format:
+{
+    "shard": "...",
+    "tracks": {
+        "<shard>": {
+            "<prop>": "<updated-value>"
+        },
+        ...
+    },
+    "lists": {
+        "<shard>": {
+            "<>": "<updated-value>"
+        }
+    }
+}
 '''
 
 import json
