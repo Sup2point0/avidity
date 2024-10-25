@@ -474,7 +474,7 @@
   },
   "1f1e33": {
     "name": "#1f1e33",
-    "lists": [ "electronic" / "rhythm"/ "orchestral" ],
+    "lists": [ "electronic",  "rhythm",  "orchestral" ],
     "file": null,
     "plays": 0
   },
@@ -528,7 +528,7 @@
   },
   "million-pp": {
     "name": "M1LLI0N PP",
-    "lists": [ "electronic", "rhythm" / "full-flavour" ],
+    "lists": [ "electronic", "rhythm", "full-flavour" ],
     "file": null,
     "plays": 0
   },
@@ -582,7 +582,7 @@
   },
   "ooparts": {
     "name": "ΩΩPARTS",
-    "lists": [ "electronic", "rhythm" / "full-flavour", "hardcore", "rich" ],
+    "lists": [ "electronic", "rhythm", "full-flavour", "hardcore", "rich" ],
     "file": null,
     "plays": 0
   },
@@ -610,7 +610,7 @@
   "invincible": {
     "name": "Invincible",
     "artist": "DEAF KEV",
-    "lists": [ "electronic" / "glitch-hop" ],
+    "lists": [ "electronic", "glitch-hop" ],
     "file": null,
     "plays": 0
   },
@@ -1070,14 +1070,14 @@
   "braving": {
     "name": "BRAVING!",
     "artist": "KANAN",
-    "lists": [ "J-pop" / "melodramatic" ],
+    "lists": [ "J-pop", "melodramatic" ],
     "file": null,
     "plays": 0
   },
   "calling": {
     "name": "Calling",
     "artist": "Kimeru",
-    "lists": [ "J-pop" / "melodramatic" ],
+    "lists": [ "J-pop", "melodramatic" ],
     "file": null,
     "plays": 0
   },
@@ -1266,19 +1266,19 @@
   "miss-you": {
     "name": "Miss You",
     "artist": "PIKASONIC",
-    "lists": [ "electronic", "rhythm" / "kawaii bass" ],
+    "lists": [ "electronic", "rhythm", "kawaii bass" ],
     "file": null,
     "plays": 0
   },
   "new-start": {
     "name": "New Start",
-    "lists": [ "electronic", "rhythm" / "kawaii bass" ],
+    "lists": [ "electronic", "rhythm", "kawaii bass" ],
     "file": null,
     "plays": 0
   },
   "skydive": {
     "name": "Skydive",
-    "lists": [ "electronic", "rhythm" / "kawaii bass" ],
+    "lists": [ "electronic", "rhythm", "kawaii bass" ],
     "file": null,
     "plays": 0
   },
@@ -1292,13 +1292,13 @@
   "lockdown": {
     "name": "Lockdown",
     "artist": ["PIKASONIC", "Tatsunoshin"],
-    "lists": [ "electronic", "rhythm" / "kawaii bass", "hardcore" ],
+    "lists": [ "electronic", "rhythm", "kawaii bass", "hardcore" ],
     "file": null,
     "plays": 0
   },
   "shizuku": {
     "name": "Shizuku",
-    "lists": [ "electronic", "rhythm" / "kawaii bass", "hardcore" ],
+    "lists": [ "electronic", "rhythm", "kawaii bass", "hardcore" ],
     "file": null,
     "plays": 0
   },
@@ -1675,7 +1675,7 @@
   },
   "yoru-ni-kakeru": {
     "name": "Yoru ni Kakeru",
-    "lists": [ "electronic", "rhythm" / J-"pop" ],
+    "lists": [ "electronic", "rhythm", J-"pop" ],
     "file": null,
     "plays": 0
   },
@@ -1757,7 +1757,7 @@
   "luo-ri": {
     "name": "落日親吻銀光海",
     "artist": "皮卡丘多多",
-    "lists": [ "electronic" / "C-pop" / "bop" ],
+    "lists": [ "electronic", "C-pop", "bop" ],
     "file": null,
     "plays": 0
   },
