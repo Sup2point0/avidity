@@ -1245,7 +1245,7 @@
   "cant-catch-me-now": {
     "name": "Can't Catch Me Now",
     "artist": "Olivia Rodrigo",
-    "lists": [ alt "pop", "film" ],
+    "lists": [ "alt-pop", "film" ],
     "file": null,
     "plays": 0
   },
