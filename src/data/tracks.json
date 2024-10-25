@@ -116,12 +116,1684 @@
       "sound"
     ]
   },
+  "water": {
+    "name": "WATER",
+    "artist": "A-39",
+    "lists": [ "electronic", "rhythm", "vocaloid", "slap" ],
+    "file": null,
+    "plays": 0
+  },
+  "a39-ye": {
+    "name": "聖夜讃歌",
+    "lists": [ "electronic", "rhythm", "breakdown" ],
+    "file": null,
+    "plays": 0
+  },
+  "a39-xin": {
+    "name": "心の記憶",
+    "lists": [ "electronic", "rhythm", "breakdown", "vocaloid" ],
+    "file": null,
+    "plays": 0
+  },
+  "a39-xuejiang": {
+    "name": "雪降り、メリクリ",
+    "lists": [ "electronic", "rhythm", "vocaloid" ],
+    "file": null,
+    "plays": 0
+  },
+  "a39-hui": {
+    "name": "回転を止めた惑星",
+    "lists": [ "electronic", "rhythm", "breakdown", "vocaloid" ],
+    "file": null,
+    "plays": 0
+  },
+  "a39-sayonara": {
+    "name": "さようなら",
+    "lists": [ "electronic", "rhythm", "vocaloid" ],
+    "file": null,
+    "plays": 0
+  },
+  "eternal-snow": {
+    "name": "Eternal Snow",
+    "artist": "Abyss Idols",
+    "lists": [ "electronic", "rhythm", "J-pop", "girly" ],
+    "file": null,
+    "plays": 0
+  },
+  "rainy-season": {
+    "name": "Rainy Season",
+    "artist": "Abyss Idols",
+    "lists": [ "electronic", "J-pop", "anime" ],
+    "file": null,
+    "plays": 0
+  },
+  "alone": {
+    "name": "Alone",
+    "artist": "Alan Walker",
+    "lists": [ "electronic", "house", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "darkside": {
+    "name": "Darkside",
+    "artist": "Alan Walker",
+    "lists": [ "electronic", "melodramatic", "sad" ],
+    "file": null,
+    "plays": 0
+  },
+  "different-world": {
+    "name": "Different World",
+    "artist": "Alan Walker",
+    "lists": [ "electronic", "sad", "deep", "rich" ],
+    "file": null,
+    "plays": 0
+  },
+  "faded": {
+    "name": "Faded",
+    "artist": "Alan Walker",
+    "lists": [ "electronic", "house", "sad" ],
+    "file": null,
+    "plays": 0
+  },
+  "faded-restrung": {
+    "name": "Faded (restrung)",
+    "artist": "Alan Walker",
+    "lists": [ "orchestral", "sad" ],
+    "file": null,
+    "plays": 0
+  },
+  "force": {
+    "name": "Force",
+    "artist": "Alan Walker",
+    "lists": [ "electronic", "house" ],
+    "file": null,
+    "plays": 0
+  },
+  "lost-control": {
+    "name": "Lost Control",
+    "artist": "Alan Walker",
+    "lists": [ "electronic", "sad" ],
+    "file": null,
+    "plays": 0
+  },
+  "sing-sleep": {
+    "name": "Sing Me To Sleep",
+    "artist": "Alan Walker",
+    "lists": [ "electronic", "house", "sad" ],
+    "file": null,
+    "plays": 0
+  },
+  "the-spectre": {
+    "name": "The Spectre",
+    "artist": "Alan Walker",
+    "lists": [ "electronic", "house", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "sky": {
+    "name": "Sky",
+    "artist": ["Alan Walker", "Alex Skrindo"],
+    "lists": [ "electronic", "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "routine": {
+    "name": "Routine",
+    "artist": ["Alan Walker", "David Whistle"],
+    "lists": [ "electronic", "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "end-of-time": {
+    "name": "End of Time",
+    "artist": ["Alan Walker", "K-391", "Ahrix"],
+    "lists": [ "electronic", "house", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "lily": {
+    "name": "Lily",
+    "artist": ["Alan Walker", "K-391", "Emelie Hollow"],
+    "lists": [ "electronic", "house", "melodramatic", "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "ignite": {
+    "name": "Ignite",
+    "artist": ["Alan Walker", "K-391", "Julie Bergan, Seungri"],
+    "lists": [ "electronic", "house", "sad" ],
+    "file": null,
+    "plays": 0
+  },
+  "sheep": {
+    "name": "Sheep (Alan Walker Relift)",
+    "artist": ["Alan Walker", "Lay"],
+    "lists": [ "electronic", "rap", "edgy" ],
+    "file": null,
+    "plays": 0
+  },
+  "play": {
+    "name": "PLAY",
+    "artist": ["Alan Walker", "Tungevaag", "Mangoo"],
+    "lists": [ "electronic", "house", "melodramatic" ],
+    "file": null,
+    "plays": 0
+  },
+  "all-falls-down": {
+    "name": "All Falls Down",
+    "artist": ["Alan Walker", "Noah Cyrus", "Digital Farm Animals"],
+    "lists": [ "electronic", "house", "melodramatic" ],
+    "file": null,
+    "plays": 0
+  },
+  "miku": {
+    "name": "Miku",
+    "artist": "Anamanaguchi",
+    "lists": [ "electronic", "vocaloid", "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "deep-dark-blue": {
+    "name": "Deep Dark Blue (instrumental)",
+    "artist": "Approaching Nirvana",
+    "lists": [ "electronic", "rhythm", "drum-n-bass" ],
+    "file": null,
+    "plays": 0
+  },
+  "muffin-song": {
+    "name": "THE MUFFIN SONG",
+    "artist": ["asdfmovie", "Schmoyoho"],
+    "lists": [ "electronic", "quirky", "meme" ],
+    "file": null,
+    "plays": 0
+  },
+  "chariot": {
+    "name": "The Chariot ~REVIIVAL~",
+    "artist": "Attoclef",
+    "lists": [ "electronic", "rhythm", "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "awaken": {
+    "name": "Awaken",
+    "artist": "Au5",
+    "lists": [ "electronic", "rhythm", "bass", "dubstep", "complextro" ],
+    "file": null,
+    "plays": 0
+  },
+  "breakaway": {
+    "name": "Breakaway",
+    "artist": "Avril Lavigne",
+    "lists": [ "pop", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "complicated": {
+    "name": "Complicated",
+    "lists": [ "pop", "rock" ],
+    "file": null,
+    "plays": 0
+  },
+  "sk8er-boi": {
+    "name": "sk8er boi",
+    "lists": [ "pop", "rock", "upbeat" ],
+    "file": null,
+    "plays": 0
+  },
+  "when-youre-gone": {
+    "name": "When You're Gone",
+    "lists": [ "pop", "sad" ],
+    "file": null,
+    "plays": 0
+  },
+  "take-care": {
+    "name": "Take Care",
+    "artist": "Beach House",
+    "lists": [ "alt-pop", "sad" ],
+    "file": null,
+    "plays": 0
+  },
+  "life-weeb-eyes": {
+    "name": "life flashes before weeb eyes",
+    "artist": "BilliumMoto",
+    "lists": [ "electronic", "rhythm", "piano", "quirky" ],
+    "file": null,
+    "plays": 0
+  },
+  "qing-qiu": {
+    "name": "青丘",
+    "artist": "BLACK 0",
+    "lists": [ "electronic", "rhythm", "neurofunk", "atmos" ],
+    "file": null,
+    "plays": 0
+  },
+  "all-eyes-on-me": {
+    "name": "All Eyes On Me",
+    "artist": "Bo Burnham",
+    "lists": [ "pop", "deep", "haunting" ],
+    "file": null,
+    "plays": 0
+  },
+  "are-you-happy": {
+    "name": "Are You Happy",
+    "lists": [ "piano", "sad", "deep" ],
+    "file": null,
+    "plays": 0
+  },
+  "facetime-mom": {
+    "name": "FaceTime with My Mom",
+    "lists": [ "electronic", "pop", "lofi", "funny" ],
+    "file": null,
+    "plays": 0
+  },
+  "five-years": {
+    "name": "Five Years",
+    "lists": [ "electronic", "pop", "lofi" ],
+    "file": null,
+    "plays": 0
+  },
+  "gods-perspective": {
+    "name": "From God’s Perspective",
+    "lists": [ "piano", "funny" ],
+    "file": null,
+    "plays": 0
+  },
+  "kill-yourself": {
+    "name": "Kill Yourself",
+    "lists": [ "piano", "funny" ],
+    "file": null,
+    "plays": 0
+  },
+  "lower-expectations": {
+    "name": "Lower Your Expectations",
+    "lists": [ "piano", "funny" ],
+    "file": null,
+    "plays": 0
+  },
+  "nerds": {
+    "name": "Nerds",
+    "lists": [ "alt-pop", "rap", "quirky", "clever" ],
+    "file": null,
+    "plays": 0
+  },
+  "pandering": {
+    "name": "Pandering",
+    "lists": [ "pop", "funny" ],
+    "file": null,
+    "plays": 0
+  },
+  "repeat-stuff": {
+    "name": "Repeat Stuff",
+    "lists": [ "pop", "ironic" ],
+    "file": null,
+    "plays": 0
+  },
+  "that-funny-feeling": {
+    "name": "That Funny Feeling",
+    "lists": [ "guitar", "lofi", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "chicken": {
+    "name": "The Chicken",
+    "lists": [ "piano", "nostalgic", "funny" ],
+    "file": null,
+    "plays": 0
+  },
+  "wtwky": {
+    "name": "We Think We Know You",
+    "lists": [ "genius" ],
+    "file": null,
+    "plays": 0
+  },
+  "welcome-internet": {
+    "name": "Welcome to the Internt",
+    "lists": [ "electronic", "funny", "clever" ],
+    "file": null,
+    "plays": 0
+  },
+  "words": {
+    "name": "words, words, words.",
+    "lists": [ "rap", "clever" ],
+    "file": null,
+    "plays": 0
+  },
+  "sketch-plane": {
+    "name": "Sketch Plane",
+    "artist": "Cam Kelley",
+    "lists": [ "pop", "rap", "sad" ],
+    "file": null,
+    "plays": 0
+  },
+  "terabyte": {
+    "name": "+ERABY+E CONNEC+10N",
+    "artist": "Camellia",
+    "lists": [ "electronic", "rhythm", "hardcore", "rich", "flavour" ],
+    "file": null,
+    "plays": 0
+  },
+  "1f1e33": {
+    "name": "#1f1e33",
+    "lists": [ "electronic" / "rhythm"/ "orchestral" ],
+    "file": null,
+    "plays": 0
+  },
+  "1nput-spine": {
+    "name": "1nput This 2 Y0ur Spine",
+    "lists": [ "electronic", "rhythm", "metal" ],
+    "file": null,
+    "plays": 0
+  },
+  "compute-iwsdase": {
+    "name": "Compute It With Some Devilish Alcholic Steampunk Engines",
+    "lists": [ "electronic", "rhythm", "oriental" ],
+    "file": null,
+    "plays": 0
+  },
+  "dance-silence": {
+    "name": "Dance with Silence",
+    "lists": [ "electronic", "rhythm", "complextro", "melodic" ],
+    "file": null,
+    "plays": 0
+  },
+  "epitaxy": {
+    "name": "epitaxy",
+    "lists": [ "electronic", "rhythm", "chill", "atmos" ],
+    "file": null,
+    "plays": 0
+  },
+  "exit-earth-atmos": {
+    "name": "Exit This Earth's Atomosphere",
+    "lists": [ "electronic", "rhythm", "vibrant" ],
+    "file": null,
+    "plays": 0
+  },
+  "flamewall": {
+    "name": "Flamewall",
+    "lists": [ "electronic", "rhythm", "metal", "orchestral" ],
+    "file": null,
+    "plays": 0
+  },
+  "fly-wit-me": {
+    "name": "Fly Wit Me",
+    "lists": [ "electronic", "rhythm", "chill", "flavour" ],
+    "file": null,
+    "plays": 0
+  },
+  "labyrinth-kowloon": {
+    "name": "Labyrinth in Kowloon: Walled World",
+    "lists": [ "electronic", "rhythm", "oriental", "flavour" ],
+    "file": null,
+    "plays": 0
+  },
+  "million-pp": {
+    "name": "M1LLI0N PP",
+    "lists": [ "electronic", "rhythm" / "full-flavour" ],
+    "file": null,
+    "plays": 0
+  },
+  "megalovania": {
+    "name": "MEGALOVANIA (Camellia Remix)",
+    "lists": [ "electronic", "hardcore", "power", "remix" ],
+    "file": null,
+    "plays": 0
+  },
+  "nacreous-snowmelt": {
+    "name": "Nacreous Snowmelt",
+    "lists": [ "electronic", "rhythm", "atmos" ],
+    "file": null,
+    "plays": 0
+  },
+  "satellite": {
+    "name": "S.A.T.E.L.L.I.T.E.",
+    "lists": [ "electronic", "rhythm", "atmos", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "spin-eternally": {
+    "name": "Spin Eternally",
+    "lists": [ "electronic", "rhythm", "hardcore", "metal", "flavour" ],
+    "file": null,
+    "plays": 0
+  },
+  "tempo-katana": {
+    "name": "TEMPO KATANA",
+    "lists": [ "electronic", "rhythm", "hardcore", "oriental", "flavour" ],
+    "file": null,
+    "plays": 0
+  },
+  "tera-io": {
+    "name": "Tera I/O",
+    "lists": [ "electronic", "rhythm", "complextro", "flavour", "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "world-revolving": {
+    "name": "THE WORLD REVOLVING",
+    "lists": [ "electronic", "rhythm", "hardcore", "gothic" ],
+    "file": null,
+    "plays": 0
+  },
+  "delta": {
+    "name": "δ: for the DELTA",
+    "lists": [ "electronic", "rhythm", "flavour" ],
+    "file": null,
+    "plays": 0
+  },
+  "ooparts": {
+    "name": "ΩΩPARTS",
+    "lists": [ "electronic", "rhythm" / "full-flavour", "hardcore", "rich" ],
+    "file": null,
+    "plays": 0
+  },
+  "luminescent": {
+    "name": "Luminescent",
+    "artist": "Daison",
+    "lists": [ "electronic", "rhythm" ],
+    "file": null,
+    "plays": 0
+  },
+  "accidental-office": {
+    "name": "The Accidental Office",
+    "artist": "Daniel Thrasher",
+    "lists": [ "piano" ],
+    "file": null,
+    "plays": 0
+  },
+  "speed-up": {
+    "name": "Speed Up!",
+    "artist": "DarTokki",
+    "lists": [ "electronic", "rhythm" ],
+    "file": null,
+    "plays": 0
+  },
+  "invincible": {
+    "name": "Invincible",
+    "artist": "DEAF KEV",
+    "lists": [ "electronic" / "glitch-hop" ],
+    "file": null,
+    "plays": 0
+  },
+  "lightning": {
+    "name": "Lightning",
+    "artist": ["Distrion", "Alex Skrindo"],
+    "lists": [ "electronic", "house" ],
+    "file": null,
+    "plays": 0
+  },
+  "rubik": {
+    "name": "Rubik",
+    "artist": ["Distrion", "Electro-Light"],
+    "lists": [ "electronic", "house" ],
+    "file": null,
+    "plays": 0
+  },
+  "fractured-angel": {
+    "name": "Fractured Angel",
+    "artist": "DJ Raisei",
+    "lists": [ "electronic", "rhythm", "sound" ],
+    "file": null,
+    "plays": 0
+  },
+  "levitating": {
+    "name": "Levitating",
+    "artist": "Dua Lipa",
+    "lists": [ "pop" ],
+    "file": null,
+    "plays": 0
+  },
+  "goodtek": {
+    "name": "GOODTEK",
+    "artist": "EBIMAYO",
+    "lists": [ "electronic", "rhythm", "arcade" ],
+    "file": null,
+    "plays": 0
+  },
+  "the-a-team": {
+    "name": "The A Team",
+    "artist": "Ed Sheeran",
+    "lists": [ "alt-pop", "sad", "deep" ],
+    "file": null,
+    "plays": 0
+  },
+  "symbolism": {
+    "name": "Symbolism",
+    "artist": "Electro-Light",
+    "lists": [ "electronic", "house", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "throwback": {
+    "name": "Throwback",
+    "lists": [ "electronic", "house", "arcade", "upbeat" ],
+    "file": null,
+    "plays": 0
+  },
+  "breeze": {
+    "name": "Breeze",
+    "artist": "Elektronomia",
+    "lists": [ "electronic", "house", "upbeat" ],
+    "file": null,
+    "plays": 0
+  },
+  "butterfly": {
+    "name": "Butterfly",
+    "lists": [ "electronic", "house", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "close-to-you": {
+    "name": "Close To You",
+    "lists": [ "electronic", "house", "dubstep" ],
+    "file": null,
+    "plays": 0
+  },
+  "flashback": {
+    "name": "Flashback",
+    "lists": [ "electronic", "house", "sad" ],
+    "file": null,
+    "plays": 0
+  },
+  "ibiza": {
+    "name": "Ibiza",
+    "lists": [ "electronic", "house", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "limitless": {
+    "name": "Limitless",
+    "lists": [ "electronic", "house" ],
+    "file": null,
+    "plays": 0
+  },
+  "spirit": {
+    "name": "Spirit",
+    "lists": [ "electronic", "house", "rich" ],
+    "file": null,
+    "plays": 0
+  },
+  "united": {
+    "name": "United",
+    "lists": [ "electronic", "house", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "vitality": {
+    "name": "Vitality",
+    "lists": [ "electronic", "house", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "ascension": {
+    "name": "Ascension",
+    "artist": ["Elektronomia", "Alex Skrindo"],
+    "lists": [ "electronic", "house" ],
+    "file": null,
+    "plays": 0
+  },
+  "journey": {
+    "name": "Journey",
+    "artist": ["Elektronomia", "stahl!"],
+    "lists": [ "electronic", "house" ],
+    "file": null,
+    "plays": 0
+  },
+  "cold-herat": {
+    "name": "Cold Heart",
+    "artist": ["Elton John", "Dua Lipa"],
+    "lists": [ "pop", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "venom": {
+    "name": "Venom",
+    "artist": "Eminem",
+    "lists": [ "rap", "clever" ],
+    "file": null,
+    "plays": 0
+  },
+  "on-and-on": {
+    "name": "On And On!!",
+    "artist": ["ETIA.", "Jenga"],
+    "lists": [ "electronic", "rhythm", "J-pop", "hardcore", "flavour" ],
+    "file": null,
+    "plays": 0
+  },
+  "reverie": {
+    "name": "Reverie",
+    "artist": "Ezza Wan",
+    "lists": [ "electronic", "house", "sad" ],
+    "file": null,
+    "plays": 0
+  },
+  "arghena": {
+    "name": "Arghena",
+    "artist": ["Feryquitous", "Laur"],
+    "lists": [ "electronic", "rhythm", "flavour" ],
+    "file": null,
+    "plays": 0
+  },
+  "stacys-mom": {
+    "name": "Stacy's Mom",
+    "artist": "Fountains of Wayne",
+    "lists": [ "pop", "upbeat", "funny" ],
+    "file": null,
+    "plays": 0
+  },
+  "turning-tide": {
+    "name": "Turning Tide",
+    "artist": "Friends with Animals",
+    "lists": [ "electronic", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "credits": {
+    "name": "Credits",
+    "artist": "Frums",
+    "lists": [ "music" ],
+    "file": null,
+    "plays": 0
+  },
+  "xnor": {
+    "name": "XNOR XNOR XNOR",
+    "lists": [ "music", "rich" ],
+    "file": null,
+    "plays": 0
+  },
+  "algebra": {
+    "name": "Algebra",
+    "artist": "Function Phantom",
+    "lists": [ "electronic", "rhythm", "flavour", "atmos" ],
+    "file": null,
+    "plays": 0
+  },
+  "fatal": {
+    "name": "Fatal",
+    "artist": "GEMN",
+    "lists": [ "J-pop", "rap", "anime", "edgy" ],
+    "file": null,
+    "plays": 0
+  },
+  "beyond-the-way": {
+    "name": "Beyond the Way",
+    "artist": "Giga",
+    "lists": [ "electronic", "rhythm", "vocaloid", "edgy", "hop" ],
+    "file": null,
+    "plays": 0
+  },
+  "xing": {
+    "name": "XING",
+    "artist": "ginkiha",
+    "lists": [ "electronic", "rhythm", "arcade" ],
+    "file": null,
+    "plays": 0
+  },
+  "khrono-katharsis": {
+    "name": "Khronostasis Katharsis",
+    "artist": "Halv",
+    "lists": [ "electronic", "rhythm", "artcore" ],
+    "file": null,
+    "plays": 0
+  },
+  "nana": {
+    "name": "nana.",
+    "artist": "heiakim",
+    "lists": [ "electronic", "bop", "quirky" ],
+    "file": null,
+    "plays": 0
+  },
+  "realms": {
+    "name": "Realms",
+    "artist": ["Hinkik", "A Himitsu"],
+    "lists": [ "electronic", "rhythm" ],
+    "file": null,
+    "plays": 0
+  },
+  "time-night-sky": {
+    "name": "Time To Night Sky",
+    "artist": ["HyuN", "KLYDIX", "Lee Yu Jin"],
+    "lists": [ "electronic", "rhythm", "jazz" ],
+    "file": null,
+    "plays": 0
+  },
+  "journey-w-you": {
+    "name": "Journey with You",
+    "artist": "Iris",
+    "lists": [ "electronic", "rhythm", "breakdown" ],
+    "file": null,
+    "plays": 0
+  },
+  "kyu-kurarin": {
+    "name": "Kyu-kurarin",
+    "artist": ["Iyowa", "Kafu"],
+    "lists": [ "electronic", "rhythm", "J-pop", "cute" ],
+    "file": null,
+    "plays": 0
+  },
+  "link": {
+    "name": "Link",
+    "artist": "Jim Yosef",
+    "lists": [ "electronic", "house" ],
+    "file": null,
+    "plays": 0
+  },
+  "linked": {
+    "name": "Linked",
+    "artist": ["Jim Yosef", "Anna Yvette"],
+    "lists": [ "electronic", "house" ],
+    "file": null,
+    "plays": 0
+  },
+  "adventure-awaits": {
+    "name": "Adventure Awaits",
+    "artist": "Johannes Bornlöf",
+    "lists": [ "orchestral", "heroic" ],
+    "file": null,
+    "plays": 0
+  },
+  "beat-to-quarters": {
+    "name": "Beat to Quarters",
+    "lists": [ "orchestral", "heroic", "war" ],
+    "file": null,
+    "plays": 0
+  },
+  "checkpoint-76": {
+    "name": "Checkpoint 76",
+    "lists": [ "orchestral", "war" ],
+    "file": null,
+    "plays": 0
+  },
+  "clash": {
+    "name": "Clash",
+    "lists": [ "orchestral", "heroic" ],
+    "file": null,
+    "plays": 0
+  },
+  "eleven-thousand-feet": {
+    "name": "Eleven Thousand Feet",
+    "lists": [ "orchestral", "cute", "chill" ],
+    "file": null,
+    "plays": 0
+  },
+  "for-the-weary": {
+    "name": "For the Weary",
+    "lists": [ "orchestral", "folk", "mood" ],
+    "file": null,
+    "plays": 0
+  },
+  "forest-trekking": {
+    "name": "Forest Trekking",
+    "lists": [ "cute", "chill" ],
+    "file": null,
+    "plays": 0
+  },
+  "globetrotter": {
+    "name": "Globetrotter",
+    "lists": [ "cute", "chill" ],
+    "file": null,
+    "plays": 0
+  },
+  "heavy-duty": {
+    "name": "Heavy Duty",
+    "lists": [ "orchestral", "war" ],
+    "file": null,
+    "plays": 0
+  },
+  "highland-hymn": {
+    "name": "Highland Hymn",
+    "lists": [ "orchestral", "folk" ],
+    "file": null,
+    "plays": 0
+  },
+  "in-the-brume": {
+    "name": "In the Brume",
+    "lists": [ "orchestral", "war" ],
+    "file": null,
+    "plays": 0
+  },
+  "almost-spring-home": {
+    "name": "It's Almost Spring Back Home",
+    "lists": [ "orchestral" ],
+    "file": null,
+    "plays": 0
+  },
+  "knights-templar": {
+    "name": "Knight's Templar",
+    "lists": [ "orchestral", "traditional" ],
+    "file": null,
+    "plays": 0
+  },
+  "magnif-march": {
+    "name": "Magnificent March",
+    "lists": [ "orchestral", "heroic" ],
+    "file": null,
+    "plays": 0
+  },
+  "maximilian": {
+    "name": "Maximilian",
+    "lists": [ "orchestral", "war" ],
+    "file": null,
+    "plays": 0
+  },
+  "mighty-rush": {
+    "name": "Mighty Rush",
+    "lists": [ "orchestral", "heroic" ],
+    "file": null,
+    "plays": 0
+  },
+  "monuments": {
+    "name": "Monuments",
+    "lists": [ "orchestral", "film", "melodramatic" ],
+    "file": null,
+    "plays": 0
+  },
+  "mural-legends": {
+    "name": "Mural Legends",
+    "lists": [ "orchestral", "pirate" ],
+    "file": null,
+    "plays": 0
+  },
+  "only-the-brave": {
+    "name": "Only the Brave",
+    "lists": [ "orchestral", "heroic", "sad" ],
+    "file": null,
+    "plays": 0
+  },
+  "phoenix-rising": {
+    "name": "Phoenix Rising",
+    "lists": [ "orchestral", "epic" ],
+    "file": null,
+    "plays": 0
+  },
+  "ropes-away": {
+    "name": "Ropes Away",
+    "lists": [ "orchestral", "pirate" ],
+    "file": null,
+    "plays": 0
+  },
+  "sea-adventures": {
+    "name": "Sea Adventures",
+    "lists": [ "orchestral", "heroic", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "the-expedition": {
+    "name": "The Expedition",
+    "lists": [ "orchestral", "cute", "happy" ],
+    "file": null,
+    "plays": 0
+  },
+  "night-attack": {
+    "name": "The Night Attack",
+    "lists": [ "orchestral", "heroic" ],
+    "file": null,
+    "plays": 0
+  },
+  "pirate-cove": {
+    "name": "To Pirate Cove",
+    "lists": [ "orchestral", "pirate", "happy" ],
+    "file": null,
+    "plays": 0
+  },
+  "under-falling-sun": {
+    "name": "Under the Falling Sun",
+    "lists": [ "orchestral", "dramatic" ],
+    "file": null,
+    "plays": 0
+  },
+  "up-in-hills": {
+    "name": "Up in the Hills",
+    "lists": [ "orchestral", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "where-thistle-grows": {
+    "name": "Where the Thistle Grows",
+    "lists": [ "orchestral", "folk", "chill" ],
+    "file": null,
+    "plays": 0
+  },
+  "lonely-world": {
+    "name": "Lonely World",
+    "artist": ["K-391", "Victor Crone"],
+    "lists": [ "electronic", "house", "sad" ],
+    "file": null,
+    "plays": 0
+  },
+  "break-over": {
+    "name": "Break Over",
+    "artist": "K-forest",
+    "lists": [ "electronic", "rhythm", "breakcore" ],
+    "file": null,
+    "plays": 0
+  },
+  "braving": {
+    "name": "BRAVING!",
+    "artist": "KANAN",
+    "lists": [ "J-pop" / "melodramatic" ],
+    "file": null,
+    "plays": 0
+  },
+  "calling": {
+    "name": "Calling",
+    "artist": "Kimeru",
+    "lists": [ "J-pop" / "melodramatic" ],
+    "file": null,
+    "plays": 0
+  },
+  "sigma": {
+    "name": "SIGMA",
+    "artist": "Kry.exe",
+    "lists": [ "electronic", "rhythm", "arcade" ],
+    "file": null,
+    "plays": 0
+  },
+  "retribution": {
+    "name": "Retribution",
+    "artist": ["Kry.exe", "nm-y"],
+    "lists": [ "electronic", "rhythm", "hardcore", "bass", "melodramatic" ],
+    "file": null,
+    "plays": 0
+  },
+  "crave-wave": {
+    "name": "Crave Wave",
+    "artist": "LandRoot",
+    "lists": [ "electronic", "rhythm", "chill" ],
+    "file": null,
+    "plays": 0
+  },
+  "pragmatism": {
+    "name": "PRAGMATISM -RESSURECTION-",
+    "artist": "Laur",
+    "lists": [ "electronic", "rhythm", "artcore", "bass" ],
+    "file": null,
+    "plays": 0
+  },
+  "aleph-zero": {
+    "name": "Aleph-Zero",
+    "artist": "LeaF",
+    "lists": [ "electronic", "rhythm", "anxiety", "music" ],
+    "file": null,
+    "plays": 0
+  },
+  "phoenix": {
+    "name": "Phoenix",
+    "artist": "League of Legends",
+    "lists": [ "electronic", "orchestral", "epic" ],
+    "file": null,
+    "plays": 0
+  },
+  "warriors": {
+    "name": "Warriors",
+    "lists": [ "electronic", "orchestral", "epic" ],
+    "file": null,
+    "plays": 0
+  },
+  "popsicle": {
+    "name": "Popsicle",
+    "artist": "LFZ",
+    "lists": [ "electronic", "house", "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "chronomia": {
+    "name": "Chronomia",
+    "artist": "Lime",
+    "lists": [ "electronic", "rhythm", "artcore", "anime" ],
+    "file": null,
+    "plays": 0
+  },
+  "final-step": {
+    "name": "Final Step!",
+    "lists": [ "electronic", "rhythm" ],
+    "file": null,
+    "plays": 0
+  },
+  "can-you-hear-music": {
+    "name": "Can You Hear The Music",
+    "artist": "Ludwig Göransson",
+    "lists": [ "orchestral", "film", "rich" ],
+    "file": null,
+    "plays": 0
+  },
+  "wanna-be-girl": {
+    "name": "I wanna be a girl",
+    "artist": "Mafumafu",
+    "lists": [ "electronic", "J-pop", "rhythm", "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "geometric-love": {
+    "name": "Proof Geometric Construction Can Solve All Love Affairs",
+    "artist": "manbo-p",
+    "lists": [ "electronic", "J-pop", "rock", "rhythm", "vocaloid", "clever" ],
+    "file": null,
+    "plays": 0
+  },
+  "stasis": {
+    "name": "Stasis",
+    "artist": "Maozon",
+    "lists": [ "electronic", "rhythm", "artcore" ],
+    "file": null,
+    "plays": 0
+  },
+  "masterpiece": {
+    "name": "Masterpiece",
+    "artist": "mihimaru",
+    "lists": [ "J-pop", "rhythm", "quirky" ],
+    "file": null,
+    "plays": 0
+  },
+  "fuli-buster": {
+    "name": "FULi AUTO BUSTER",
+    "artist": "MYUKKE.",
+    "lists": [ "electronic", "rhythm", "arcade" ],
+    "file": null,
+    "plays": 0
+  },
+  "fuli-shooter": {
+    "name": "FULi AUTO SHOOTER",
+    "lists": [ "electronic", "rhythm", "arcade" ],
+    "file": null,
+    "plays": 0
+  },
+  "no-one-yes-man": {
+    "name": "NO ONE YES MAN",
+    "lists": [ "electronic", "rhythm", "arcade" ],
+    "file": null,
+    "plays": 0
+  },
+  "triad-dryad": {
+    "name": "Triad of Dryad",
+    "lists": [ "electronic", "rhythm", "arcade" ],
+    "file": null,
+    "plays": 0
+  },
+  "ttone": {
+    "name": "TTTTTONE",
+    "lists": [ "electronic", "rhythm", "arcade" ],
+    "file": null,
+    "plays": 0
+  },
+  "speechless": {
+    "name": "Speechless",
+    "artist": "Naomi Scott",
+    "lists": [ "musical", "orchestral" ],
+    "file": null,
+    "plays": 0
+  },
+  "indelible-scar": {
+    "name": "Indelible Scar",
+    "artist": "Noah",
+    "lists": [ "electronic", "rhythm", "orchestral" ],
+    "file": null,
+    "plays": 0
+  },
+  "revolt-abyss": {
+    "name": "Revolt from the Abyss",
+    "lists": [ "electronic", "rhythm", "orchestral", "melodramatic" ],
+    "file": null,
+    "plays": 0
+  },
+  "destruction": {
+    "name": "DESTRUCTION 3,2,1",
+    "artist": ["Normal1zer", "Broken Nerdz"],
+    "lists": [ "electronic", "piano", "rhythm", "hardcore", "sound" ],
+    "file": null,
+    "plays": 0
+  },
+  "cant-catch-me-now": {
+    "name": "Can't Catch Me Now",
+    "artist": "Olivia Rodrigo",
+    "lists": [ alt "pop", "film" ],
+    "file": null,
+    "plays": 0
+  },
+  "fireflies": {
+    "name": "Fireflies",
+    "artist": "Owl City",
+    "lists": [ "pop", "nostalgic", "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "freefalling": {
+    "name": "Freefalling",
+    "artist": ["Paper Skies", "Nytrix"],
+    "lists": [ "electronic", "rhythm", "hardcore", "rich" ],
+    "file": null,
+    "plays": 0
+  },
+  "miss-you": {
+    "name": "Miss You",
+    "artist": "PIKASONIC",
+    "lists": [ "electronic", "rhythm" / "kawaii bass" ],
+    "file": null,
+    "plays": 0
+  },
+  "new-start": {
+    "name": "New Start",
+    "lists": [ "electronic", "rhythm" / "kawaii bass" ],
+    "file": null,
+    "plays": 0
+  },
+  "skydive": {
+    "name": "Skydive",
+    "lists": [ "electronic", "rhythm" / "kawaii bass" ],
+    "file": null,
+    "plays": 0
+  },
+  "zhui-yi": {
+    "name": "追憶",
+    "artist": ["PIKASONIC", "nakotanmaru"],
+    "lists": [ "electronic", "rhythm" ],
+    "file": null,
+    "plays": 0
+  },
+  "lockdown": {
+    "name": "Lockdown",
+    "artist": ["PIKASONIC", "Tatsunoshin"],
+    "lists": [ "electronic", "rhythm" / "kawaii bass", "hardcore" ],
+    "file": null,
+    "plays": 0
+  },
+  "shizuku": {
+    "name": "Shizuku",
+    "lists": [ "electronic", "rhythm" / "kawaii bass", "hardcore" ],
+    "file": null,
+    "plays": 0
+  },
+  "euphoria": {
+    "name": "Euphoria",
+    "artist": ["PIKASONIC", "Tatsunoshin", "Tsugumi Nagahara"],
+    "lists": [ "electronic", "rhythm" ],
+    "file": null,
+    "plays": 0
+  },
+  "inferno-city": {
+    "name": "インフェルノシティ",
+    "artist": ["Ponchi♪", "はぁち"],
+    "lists": [ "electronic", "rock", "melodramatic" ],
+    "file": null,
+    "plays": 0
+  },
+  "technopolis": {
+    "name": "TECHNOPOLIS 2085",
+    "artist": "PRASTIC DANCEFLOOR",
+    "lists": [ "electronic", "rhythm", "arcade", "quirky" ],
+    "file": null,
+    "plays": 0
+  },
+  "filament": {
+    "name": "Filament",
+    "artist": "Puru",
+    "lists": [ "electronic", "rhythm", "breakdown", "chill", "atmos" ],
+    "file": null,
+    "plays": 0
+  },
+  "grimheart": {
+    "name": "Grimheart",
+    "lists": [ "electronic", "rhythm", "piano", "chill", "atmos" ],
+    "file": null,
+    "plays": 0
+  },
+  "trap-crow": {
+    "name": "Trap Crow",
+    "lists": [ "electronic", "rhythm", "piano", "chill", "atmos" ],
+    "file": null,
+    "plays": 0
+  },
+  "mephisto": {
+    "name": "Mephisto",
+    "artist": "QUEEN BEE",
+    "lists": [ "J-pop", "orchestral", "anime", "bop", "edgy" ],
+    "file": null,
+    "plays": 0
+  },
+  "kanataharuka": {
+    "name": "KANATAHARUKA",
+    "artist": "RADWIMPS",
+    "lists": [ "J-pop", "orchestral", "melodramatic" ],
+    "file": null,
+    "plays": 0
+  },
+  "suzume": {
+    "name": "Suzume",
+    "artist": ["RADWIMPS", "Toaka"],
+    "lists": [ "J-pop", "orchestral", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
   "rickroll": {
     "name": "Never Gonna Give You Up",
-    "artist": "rick",
-    "file": "never-gonna-give-you-up.mp3",
-    "lists": [
-      "pop"
-    ]
+    "artist": "Rick Astley",
+    "lists": [ "pop" ],
+    "file": null,
+    "plays": 0
+  },
+  "qian-zi-wan-hong": {
+    "name": "千紫万紅",
+    "artist": ["r0y", "WABI"],
+    "lists": [ "electronic", "rhythm", "oriental" ],
+    "file": null,
+    "plays": 0
+  },
+  "opia": {
+    "name": "opia",
+    "artist": "rN",
+    "lists": [ "electronic", "rhythm", "neurofunk" ],
+    "file": null,
+    "plays": 0
+  },
+  "upshift": {
+    "name": "Upshift",
+    "artist": "s-don",
+    "lists": [ "electronic", "rhythm" ],
+    "file": null,
+    "plays": 0
+  },
+  "after-dawn": {
+    "name": "AFTER DAWN",
+    "artist": "S9RYNE",
+    "lists": [ "electronic", "rhythm", "dubstep" ],
+    "file": null,
+    "plays": 0
+  },
+  "distorted-fate": {
+    "name": "Distorted Fate",
+    "artist": "Sakuzyo",
+    "lists": [ "electronic", "rhythm", "artcore", "hardcore", "rich", "sound" ],
+    "file": null,
+    "plays": 0
+  },
+  "gvn": {
+    "name": "G.V.N. (Glitter", "Vomitus and Neon)",
+    "artist": ["Salty Salt", "Unfold33"],
+    "lists": [ "electronic", "rhythm", "atmos" ],
+    "file": null,
+    "plays": 0
+  },
+  "igallta": {
+    "name": "Igallta",
+    "artist": "Se-U-Ra",
+    "lists": [ "electronic", "rhythm", "arcade" ],
+    "file": null,
+    "plays": 0
+  },
+  "crush-beta": {
+    "name": "Crush BETA",
+    "artist": "shadow_blink",
+    "lists": [ "electronic", "rhythm", "arcade" ],
+    "file": null,
+    "plays": 0
+  },
+  "prime": {
+    "name": "9876734123",
+    "artist": "Silentroom",
+    "lists": [ "electronic", "rhythm", "arcade", "intense" ],
+    "file": null,
+    "plays": 0
+  },
+  "fallensquare": {
+    "name": "Fallensquare",
+    "lists": [ "electronic", "rhythm", "arcade" ],
+    "file": null,
+    "plays": 0
+  },
+  "nhelv": {
+    "name": "Nhelv",
+    "lists": [ "electronic", "rhythm", "neurofunk" ],
+    "file": null,
+    "plays": 0
+  },
+  "nulctrl": {
+    "name": "NULCTRL",
+    "lists": [ "electronic", "rhythm", "quirky" ],
+    "file": null,
+    "plays": 0
+  },
+  "red+blue"{
+    "name": "Red and Blue",
+    "lists": [ "electronic", "rhythm", "arcade" ],
+    "file": null,
+    "plays": 0
+  },
+  "x7124": {
+    "name": "X7124",
+    "lists": [ "electronic", "rhythm", "arcade" ],
+    "file": null,
+    "plays": 0
+  },
+  "aegleseeker": {
+    "name": "Aegleseeker",
+    "artist": ["Silentroom", "Frums"],
+    "lists": [ "electronic", "rhythm", "quirky", "sad" ],
+    "file": null,
+    "plays": 0
+  },
+  "rainshower": {
+    "name": "Rainshower",
+    "artist": ["Silentroom", "Shun"],
+    "lists": [ "electronic", "rhythm", "neurofunk" ],
+    "file": null,
+    "plays": 0
+  },
+  "bound-quiet": {
+    "name": "Bounded Quietude",
+    "artist": ["Silis", "Finite Limit"],
+    "lists": [ "electronic", "rhythm", "anime" ],
+    "file": null,
+    "plays": 0
+  },
+  "sakura-fubiki": {
+    "name": "Sakura Fubiki",
+    "artist": "Street",
+    "lists": [ "electronic", "rhythm", "breakdown", "chill" ],
+    "file": null,
+    "plays": 0
+  },
+  "chronos-campanella": {
+    "name": "Chronos Collapse - La Campanella",
+    "artist": "SunsetRay",
+    "lists": [ "electronic", "rhythm", "anxiety" ],
+    "file": null,
+    "plays": 0
+  },
+  "diamond-eyes": {
+    "name": "Diamond Eyes",
+    "artist": "SYNTHETIC",
+    "lists": [ "electronic", "rhythm", "chill", "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "tempestissimo": {
+    "name": "Tempestissimo",
+    "artist": "t+pazolite",
+    "lists": [ "electronic", "rhythm", "piano", "artcore" ],
+    "file": null,
+    "plays": 0
+  },
+  "you-are-miserable": {
+    "name": "You are the Miserable",
+    "lists": [ "electronic", "rhythm", "artcore" ],
+    "file": null,
+    "plays": 0
+  },
+  "xenolith": {
+    "name": "Xenolith",
+    "artist": "Tatsh",
+    "lists": [ "electronic", "rhythm" ],
+    "file": null,
+    "plays": 0
+  },
+  "antihero": {
+    "name": "Anti-Hero",
+    "artist": "Taylor Swift",
+    "lists": [ "pop", "lofi", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "blank-space": {
+    "name": "Blank Space",
+    "lists": [ "pop" ],
+    "file": null,
+    "plays": 0
+  },
+  "rrhar-il": {
+    "name": "Rrhar'il",
+    "artist": "Team Grimoire",
+    "lists": [ "electronic", "orchestral", "rhythm", "hardcore", "gothic" ],
+    "file": null,
+    "plays": 0
+  },
+  "4-chords": {
+    "name": "Four Chords",
+    "artist": "The Axis of Awesome",
+    "lists": [ "pop", "mashup" ],
+    "file": null,
+    "plays": 0
+  },
+  "raw": {
+    "name": "Raw",
+    "artist": "tiasu",
+    "lists": [ "electronic", "rhythm", "arcade" ],
+    "file": null,
+    "plays": 0
+  },
+  "contradiction": {
+    "name": "Contradiction",
+    "artist": "tn-shi",
+    "lists": [ "electronic", "rhythm" ],
+    "file": null,
+    "plays": 0
+  },
+  "cyberfantasia": {
+    "name": "Cyberfantastia",
+    "lists": [ "electronic", "rhythm", "rich" ],
+    "file": null,
+    "plays": 0
+  },
+  "inversion": {
+    "name": "INVERSION",
+    "lists": [ "electronic", "rhythm", "rich" ],
+    "file": null,
+    "plays": 0
+  },
+  "party-pspace": {
+    "name": "Party in PSPACE",
+    "lists": [ "electronic", "rhythm" ],
+    "file": null,
+    "plays": 0
+  },
+  "synthesis": {
+    "name": "Synthesis.",
+    "lists": [ "electronic", "rhythm", "arcade", "rich" ],
+    "file": null,
+    "plays": 0
+  },
+  "slash": {
+    "name": "SLASH",
+    "artist": "Tokyo Machine",
+    "lists": [ "electronic", "rhythm", "sound" ],
+    "file": null,
+    "plays": 0
+  },
+  "banana-breeze": {
+    "name": "Banana Breeze",
+    "artist": "Vexento",
+    "lists": [ "electronic", "chill", "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "home": {
+    "name": "Home",
+    "lists": [ "electronic", "chill", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "masked-heroes": {
+    "name": "Masked Heroes",
+    "lists": [ "electronic", "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "no-turn-back": {
+    "name": "No Turning Back",
+    "lists": [ "electronic", "chill", "nostalgic" ],
+    "file": null,
+    "plays": 0
+  },
+  "northern-lights": {
+    "name": "Northern Lights",
+    "lists": [ "electronic", "chill", "vibe" ],
+    "file": null,
+    "plays": 0
+  },
+  "tevo": {
+    "name": "Tevo",
+    "lists": [ "electronic", "chill", "fun" ],
+    "file": null,
+    "plays": 0
+  },
+  "where-we-belong": {
+    "name": "Where We Belong",
+    "lists": [ "electronic", "chill", "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "anesthesia": {
+    "name": "Anesthesia",
+    "artist": ["Vexento", "Dexento"],
+    "lists": [ "electronic", "chill", "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "polyrhythms": {
+    "name": "I heard you like polyrhythms",
+    "artist": "Virtual Riot",
+    "lists": [ "electronic", "rich" ],
+    "file": null,
+    "plays": 0
+  },
+  "idols": {
+    "name": "Idols",
+    "lists": [ "pop", "mashup" ],
+    "file": null,
+    "plays": 0
+  },
+  "idol": {
+    "name": "IDOL",
+    "artist": "YOASOBI",
+    "lists": [ "J-pop", "rap", "electronic", "anime", "edgy" ],
+    "file": null,
+    "plays": 0
+  },
+  "tabun": {
+    "name": "Tabun",
+    "lists": [ "J-pop", "jazz", "lofi", "chill" ],
+    "file": null,
+    "plays": 0
+  },
+  "yoru-ni-kakeru": {
+    "name": "Yoru ni Kakeru",
+    "lists": [ "electronic", "rhythm" / J-"pop" ],
+    "file": null,
+    "plays": 0
+  },
+  "reanimate": {
+    "name": "暗夜苏醒 (REANIMATE)",
+    "artist": "Warak",
+    "lists": [ "electronic", "rhythm", "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "feast": {
+    "name": "Feast远东之宴",
+    "artist": "茶鸣拾贰律",
+    "lists": [ "electronic", "rhythm", "oriental" ],
+    "file": null,
+    "plays": 0
+  },
+  "day-we-become-family": {
+    "name": "The Day We Become Family",
+    "lists": [ "electronic", "rhythm", "breakdown" ],
+    "file": null,
+    "plays": 0
+  },
+  "cha-ying-xi": {
+    "name": "茶影戏",
+    "lists": [ "rhythm", "oriental", "chill" ],
+    "file": null,
+    "plays": 0
+  },
+  "le-yuan-shang": {
+    "name": "乐园之上",
+    "lists": [ "electronic", "rhythm" ],
+    "file": null,
+    "plays": 0
+  },
+  "qing-ya": {
+    "name": "青芽",
+    "lists": [ "electronic", "rhythm", "oriental", "breakdown" ],
+    "file": null,
+    "plays": 0
+  },
+  "zhan-ming": {
+    "name": "盏茗",
+    "lists": [ "electronic", "rhythm", "oriental", "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "inferior": {
+    "name": "inferior",
+    "artist": "姜米條",
+    "lists": [ "electronic", "rhythm", "neurofunk" ],
+    "file": null,
+    "plays": 0
+  },
+  "shadow": {
+    "name": "Shadow",
+    "lists": [ "electronic", "rhythm", "neurofunk" ],
+    "file": null,
+    "plays": 0
+  },
+  "spasmodic": {
+    "name": "Spasmodic",
+    "lists": [ "electronic", "rhythm", "arcade" ],
+    "file": null,
+    "plays": 0
+  },
+  "xin-zhi-suo-xiang": {
+    "name": "心之所向",
+    "lists": [ "electronic", "rhythm" ],
+    "file": null,
+    "plays": 0
+  },
+  "hikari": {
+    "name": "光",
+    "lists": [ "electronic", "rhythm", "hardcore" ],
+    "file": null,
+    "plays": 0
+  },
+  "luo-ri": {
+    "name": "落日親吻銀光海",
+    "artist": "皮卡丘多多",
+    "lists": [ "electronic" / "C-pop" / "bop" ],
+    "file": null,
+    "plays": 0
+  },
+  "reimei": {
+    "name": "Reimei",
+    "artist": "影虎。",
+    "lists": [ "electronic", "rhythm", "oriental" ],
+    "file": null,
+    "plays": 0
+  },
+  "papipupi": {
+    "name": "ぱぴぷぴぷぴぱ",
+    "artist": "ころねぽち",
+    "lists": [ "electronic", "rhythm", "vocaloid", "quirky" ],
+    "file": null,
+    "plays": 0
+  },
+  "destiny": {
+    "name": "Destiny",
+    "artist": ["Jim Yosef", "Electro-Light", "Anna Yvette, Deaf Kev, Tobu"],
+    "lists": [ "electronic", "house", "melodramatic" ],
+    "file": null,
+    "plays": 0
+  },
+  "inori": {
+    "name": "祈 -我ら神祖と共に歩む者なり-",
+    "artist": ["光吉猛修", "穴山大輔", "Kai, 水野健治, 大国奏音"],
+    "lists": [ "electronic", "rhythm", "arcade" ],
+    "file": null,
+    "plays": 0
+  },
+  "bug": {
+    "name": "バグ",
+    "artist": null,
+    "lists": [ "electronic", "rhythm", "vocaloid" ],
+    "file": null,
+    "plays": 0
   }
 }
