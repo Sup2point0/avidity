@@ -49,7 +49,8 @@ $: track = find_track($nav.selected_track);
   flex-grow: 0.5;
   height: 100%;
   padding: 1rem;
-  background-color: var(--col-back-deut);
+  background-color: color-mix(in oklch, var(--col-back-deut), transparent 8%);
+  @include frost-blur;
   overflow-y: scroll;
 
   &::-webkit-scrollbar {

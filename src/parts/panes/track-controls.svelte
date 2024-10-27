@@ -76,7 +76,8 @@ $: track = find_track($playback.current);
   padding: 1rem 0;
   position: relative;
   z-index: 3;
-  @include elevated-block;
+  background-color: color-mix(in oklch, var(--col-back-prot), transparent 16%);
+  @include ui-block;
 }
 
 .track-controls {

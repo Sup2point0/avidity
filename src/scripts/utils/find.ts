@@ -16,7 +16,14 @@ export function find_playlist(shard: string | null | undefined): Playlist | null
 }
 
 
-export function find_artist(shard: string | null | undefined): string | null | undefined
+export function find_artist(shard: string | string[] | null | undefined): string | null | undefined
 {
-  return shard ? (get(Artists)[shard] ?? shard) : null;
+  if (Array.isArray(shard)) {
+    return (shard
+      .map((shard) => find_artist(shard))
+      .join("<span class=\"separator\">/</span>")
+    );
+  } else {
+    return shard ? (get(Artists)[shard] ?? shard) : null;
+  }
 }

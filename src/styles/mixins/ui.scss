@@ -1,9 +1,15 @@
 @use './fonts' as *;
 
 
-@mixin elevated-block {
-  background-color: var(--col-back-prot);
+@mixin frost-blur {
+  backdrop-filter: blur(8px);
+}
+@mixin shadow-block {
   box-shadow: 0 0 8px rgb(black, 40%);
+}
+@mixin ui-block {
+  @include frost-blur;
+  @include shadow-block;
 }
 
 

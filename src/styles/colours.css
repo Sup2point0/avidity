@@ -1,3 +1,30 @@
+/* Avid
+ * 0.1.0
+ * The Avidity theme.
+ */
+.avid {
+  --col-prot: #d1f1a9;
+  --col-deut: #ff9da4;
+  --col-flavour: #ffc58f;
+  --col-hover: rgba(255 255 255 / 5%);
+  --col-select: #003f8e;
+  --col-text: white;
+  --col-text-prot: #ff9da4;
+  --col-text-deut: #7285b7;
+  --col-text-trit: #7285b7;
+  --col-back: oklch(20% 0.2 6);
+  --col-back-prot: oklch(58.75% 0.3 13.89);
+  --col-back-deut: oklch(39.75% 0.3 16);
+  --col-line: oklch(58.75% 0.3 13.89);
+  --col-line-deut: #7285b7;
+  --col-link: #99ffff;
+  --col-link-visit: #ebbbff;
+  --col-link-hover: #d1f1a9;
+  --col-card: blue;
+  --col-card-hover: blue;
+  --col-card-click: blue;
+}
+
 /* GitHub Dark
  * 1.0.0
  * The GitHub dark theme

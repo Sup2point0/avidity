@@ -44,12 +44,12 @@ const data: Track | null = find_track(track);
 		<div class="track-info">
 			<h4 class="track-name"> {data?.name ?? "?"} </h4>
 			{#if !$nav.condensed_view}
-				<p class="track-artist"> {find_artist(data?.artist)} </p>
+				<p class="track-artist"> {@html find_artist(data?.artist)} </p>
 			{/if}
 		</div>
 
 		{#if $nav.condensed_view}
-			<p class="track-artist"> {find_artist(data?.artist)} </p>
+			<p class="track-artist"> {@html find_artist(data?.artist)} </p>
 		{/if}
   </div>
 
@@ -103,7 +103,8 @@ const data: Track | null = find_track(track);
   gap: 0.5rem;
 
   @include font-ui;
-  background-color: var(--col-back);
+  background-color: color-mix(in oklch, var(--col-back), transparent 4%);
+  @include frost-blur;
   border: none;
 
   &:hover {

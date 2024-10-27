@@ -2,6 +2,9 @@
 
 import "#styles/essence.scss";
 
+import { nav } from "#scripts/stores";
+import { find_track } from "#scripts/utils";
+
 import Nav from "#parts/panes/nav.svelte";
 import TrackDetails from "#parts/panes/track-details.svelte";
 import PlaybackDetails from "#parts/panes/playback-details.svelte";
@@ -10,7 +13,9 @@ import TrackControls from "#parts/panes/track-controls.svelte";
 </script>
 
 
-<div id="page" class="ui-layout tomorrow-night-blue">
+<div id="page" class="ui-layout tomorrow-night-blue"
+  style:background-image="url(/covers/{find_track($nav.selected_track)?.cover})"
+>
   <div class="bar">
     <Nav />
   </div>
@@ -44,6 +49,9 @@ import TrackControls from "#parts/panes/track-controls.svelte";
   display: flex;
   flex-direction: column;
   background-color: var(--col-back);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
   // overflow-y: scroll;
 }

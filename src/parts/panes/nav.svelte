@@ -64,9 +64,10 @@ import { save_napkin } from "#scripts";
   justify-content: space-between;
   align-items: center;
 
-  @include elevated-block;
+  background-color: color-mix(in oklch, var(--col-back-prot), transparent 16%);
+  @include ui-block;
 
-  div > * {
+  div * {
     display: inline-block;
   }
 }
