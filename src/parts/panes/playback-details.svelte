@@ -1,4 +1,4 @@
-<!-- @component TrackDetails
+<!-- @component PlaybackDetails
 
 A pane for viewing and editing details of the selected track?.
 -->
@@ -16,9 +16,15 @@ $: tracks = $playback.queue;
 
 
 <div class="part">
-  {#each tracks.entries() as [i, track]}
-    <TrackRow {track} ctx="queue" idx={i} />
-  {/each}
+  {#if tracks.entries()}
+    {#each tracks.entries() as [i, track]}
+      <TrackRow {track} ctx="queue" idx={i} />
+    {/each}
+
+  {:else}
+    <p> No tracks in queue </p>
+
+  {/if}
 </div>
 
 
