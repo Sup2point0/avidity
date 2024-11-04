@@ -7,17 +7,14 @@ A row representing a track in menus.
 
 import play_exec from "#scripts";
 import { nav, playback } from "#scripts/stores";
-import { find_artist, find_track } from "#scripts/utils";
+import { find_artist } from "#scripts/utils";
 import type { Track } from "#scripts/types";
 
 import PlaylistTag from "#parts/playlist-tag.svelte";
 
-export let track: string;
+export let track: Track;
 export let ctx: "tracks" | "list" | "queue" = "tracks";
 export let idx: number | undefined = undefined;
-
-
-const data: Track | null = find_track(track);
 
 </script>
 
@@ -27,35 +24,35 @@ const data: Track | null = find_track(track);
 >
 
   <div class="left">
-		<div>
-			<button class="ui rounded play-track" style:height="2rem"
-				on:click={() => play_exec.play_track(track)}
-			>
-				<span class="material-symbols-rounded"> play_arrow </span>
-			</button>
-		</div>
-	
+    <div>
+      <button class="ui rounded play-track" style:height="2rem"
+        on:click={() => play_exec.play_track(track)}
+      >
+        <span class="material-symbols-rounded"> play_arrow </span>
+      </button>
+    </div>
+  
     {#if ctx != "queue"}
       <div>
-        <p class="track-duration"> {data?.duration ?? "--:--"} </p>
+        <p class="track-duration"> {track.duration ?? "--:--"} </p>
       </div>
     {/if}
-	
-		<div class="track-info">
-			<h4 class="track-name"> {data?.name ?? "?"} </h4>
-			{#if !$nav.condensed_view}
-				<p class="track-artist"> {@html find_artist(data?.artist)} </p>
-			{/if}
-		</div>
+  
+    <div class="track-info">
+      <h4 class="track-name"> {track.name ?? "?"} </h4>
+      {#if !$nav.condensed_view}
+        <p class="track-artist"> {@html find_artist(track.artist)} </p>
+      {/if}
+    </div>
 
-		{#if $nav.condensed_view}
-			<p class="track-artist"> {@html find_artist(data?.artist)} </p>
-		{/if}
+    {#if $nav.condensed_view}
+      <p class="track-artist"> {@html find_artist(track.artist)} </p>
+    {/if}
   </div>
 
   {#if ctx != "queue"}
     <div class="playlist-tags">
-      {#each data?.lists ?? [] as playlist}
+      {#each track.lists ?? [] as playlist}
         <PlaylistTag {playlist} />
       {/each}
     </div>
@@ -155,8 +152,8 @@ button.track-row {
 }
 
 .track-info {
-	min-width: 4rem;
-	flex-grow: 1;
+  min-width: 4rem;
+  flex-grow: 1;
   text-align: left;
 }
 
