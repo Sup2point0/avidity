@@ -5,7 +5,7 @@ A search bar with dropdown filters.
 
 <script lang="ts">
 
-import { search } from "#scripts/data";
+import { search } from "#scripts/utils";
 
 import { SearchFilter } from "#parts/search-filter.svelte";
 
