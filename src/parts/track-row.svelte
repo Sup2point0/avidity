@@ -7,26 +7,31 @@ A row representing a track in menus.
 
 import play_exec from "#scripts";
 import { nav, playback } from "#scripts/stores";
-import { find_artist } from "#scripts/utils";
+import { find_track, find_artist } from "#scripts/utils";
 import type { Track } from "#scripts/types";
 
 import PlaylistTag from "#parts/playlist-tag.svelte";
 
-export let track: Track;
+export let track: Track | string | null;
 export let ctx: "tracks" | "list" | "queue" = "tracks";
 export let idx: number | undefined = undefined;
+
+
+if (typeof(track) == "string") {
+  track = find_track(track);
+}
 
 </script>
 
 
 <div class="part"
-  on:click={() => $nav.selected_track = track}
+  on:click={() => $nav.selected_track = track?.shard}
 >
 
   <div class="left">
     <div>
       <button class="ui rounded play-track" style:height="2rem"
-        on:click={() => play_exec.play_track(track)}
+        on:click={() => play_exec.play_track(track?.shard)}
       >
         <span class="material-symbols-rounded"> play_arrow </span>
       </button>
@@ -34,25 +39,25 @@ export let idx: number | undefined = undefined;
   
     {#if ctx != "queue"}
       <div>
-        <p class="track-duration"> {track.duration ?? "--:--"} </p>
+        <p class="track-duration"> {track?.duration ?? "--:--"} </p>
       </div>
     {/if}
   
     <div class="track-info">
-      <h4 class="track-name"> {track.name ?? "?"} </h4>
+      <h4 class="track-name"> {track?.name ?? "?"} </h4>
       {#if !$nav.condensed_view}
-        <p class="track-artist"> {@html find_artist(track.artist)} </p>
+        <p class="track-artist"> {@html find_artist(track?.artist)} </p>
       {/if}
     </div>
 
     {#if $nav.condensed_view}
-      <p class="track-artist"> {@html find_artist(track.artist)} </p>
+      <p class="track-artist"> {@html find_artist(track?.artist)} </p>
     {/if}
   </div>
 
   {#if ctx != "queue"}
     <div class="playlist-tags">
-      {#each track.lists ?? [] as playlist}
+      {#each track?.lists ?? [] as playlist}
         <PlaylistTag {playlist} />
       {/each}
     </div>
@@ -67,7 +72,7 @@ export let idx: number | undefined = undefined;
   <div class="right">
     {#if ctx == "tracks" || ctx == "list"}
       <button class="ui rounded" style:height="2rem"
-        on:click={() => $playback.queue.push(track)}
+        on:click={() => $playback.queue.push(track.shard)}
       >
         <span class="material-symbols-rounded"> playlist_add </span>
       </button>
