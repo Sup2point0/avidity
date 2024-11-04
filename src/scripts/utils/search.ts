@@ -1,3 +1,5 @@
+import { ratio as fuzzyRatio } from "fuzzball";
+
 import type { Track, SearchData } from "#scripts/types";
 
 
@@ -9,20 +11,22 @@ export function filter_tracks(
   options: SearchData,
 ): Track[]
 {
-  let tracks = tracks.clone();
+  tracks = tracks.clone();
 
   let props = {
-    name: options.name;
-    query: 
+    name: options.name,
+    query: options.query,
   };
 
-  if (options.value) {
-    tracks = tracks.map(each => {
-      data: each,
-      score: calc_relevance(each, options.value, props)
-    });
-    tracks.sort((prot, deut) => prot.score - deut.score);
-    tracks = tracks.map(each => each.data);
+  if (options.query) {
+    let scores = tracks.map(each => (
+      {
+        data: each,
+        score: calc_relevance(each, options.query, props)
+      }
+    ));
+    scores.sort((prot, deut) => prot.score - deut.score);
+    tracks = scores.map(each => each.data);
   }
 
   switch (options.sort) {
@@ -48,10 +52,10 @@ function calc_relevance(
   if (!target) return -1;
 
   let scores = Object.entries(props).map(
-    (prop, state) => (
-      (state && target[prop]) ? ratio(target[prop], value)) : -1
+    prop => (
+      (prop[1] && target[prop[0]]) ? fuzzyRatio(target[prop[0]], prop[1]) : -1
     )
   );
 
-  return Math.max(scores);
+  return Math.max(...scores);
 }
