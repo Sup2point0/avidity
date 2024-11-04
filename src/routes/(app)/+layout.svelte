@@ -10,11 +10,15 @@ import TrackDetails from "#parts/panes/track-details.svelte";
 import PlaybackDetails from "#parts/panes/playback-details.svelte";
 import TrackControls from "#parts/panes/track-controls.svelte";
 
+
+$: track = find_track($nav.selected_track);
+$: image = track && `url(/covers/${track?.artist}/${track?.cover})`;
+
 </script>
 
 
 <div id="page" class="ui-layout tomorrow-night-blue"
-  style:background-image="url(/covers/{find_track($nav.selected_track)?.cover})"
+  style:background-image={image}
 >
   <div class="bar">
     <Nav />
