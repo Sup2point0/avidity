@@ -7,11 +7,11 @@ import type { Track, SearchData } from "#scripts/types";
  * Filters a list of tracks by applying the given search options.
  */
 export function filter_tracks(
-  tracks: Track[],
+  tracks: (Track | null)[],
   options: SearchData,
 ): Track[]
 {
-  tracks = tracks.clone();
+  let out = tracks.filter(Boolean) as Track[];
 
   let props = {
     name: options.name,
@@ -19,27 +19,27 @@ export function filter_tracks(
   };
 
   if (options.query) {
-    let scores = tracks.map(each => (
+    let scores = out.map(each => (
       {
         data: each,
         score: calc_relevance(each, options.query, props)
       }
     ));
     scores.sort((prot, deut) => prot.score - deut.score);
-    tracks = scores.map(each => each.data);
+    out = scores.map(each => each.data);
   }
 
   switch (options.sort) {
     case "plays":
-      tracks.sort((prot, deut) => prot.plays - deut.plays);
+      out.sort((prot, deut) => prot.plays - deut.plays);
       break;
   }
 
   if (options.reverse) {
-    tracks.reverse();
+    out.reverse();
   }
 
-  return tracks;
+  return out;
 }
 
 
