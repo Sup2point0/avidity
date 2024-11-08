@@ -2,7 +2,7 @@
 
 import play from "#scripts";
 import { Tracks } from "#scripts/data";
-import { playback, search } from "#scripts/stores";
+import { playback, search, nav } from "#scripts/stores";
 import { find_track, filter_tracks } from "#scripts/utils";
 
 import TrackRow from "#parts/track-row.svelte";
@@ -25,6 +25,7 @@ $: filtered = $search.dirty ? filter_tracks(tracks, $search) : tracks;
   <h2> debug </h2>
   <pre>play_exec: {JSON.stringify(play, null, 2)} </pre>
   <pre>$playback: {JSON.stringify($playback, null, 2)} </pre>
+  <pre>nav: {JSON.stringify($nav, null, 2)}</pre>
 </section>
 
 

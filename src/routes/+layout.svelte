@@ -2,10 +2,14 @@
 
 import play_exec from "#scripts";
 import { Tracks } from "#scripts/data";
-import { playback } from "#scripts/stores";
+import { nav, playback } from "#scripts/stores";
 import { hydrate_data } from "#scripts/data/tracks";
 
+import Credits from "#parts/popups/credits.svelte";
+
 import { onMount } from "svelte";
+import { fade } from "svelte/transition";
+import { easeIn, easeOut } from "svelte/easing";
 
 
 setInterval(() => {
@@ -55,4 +59,42 @@ function on_keydown(event: KeyboardEvent)
 
 <svelte:window on:keydown={on_keydown} />
 
+<!-- <div class="notifs">
+  {#each $nav.notifs as notif}
+    <Notif kind={notif.kind} text={notif.text} />
+  {/each}
+</div> -->
+
+{#if $nav.popup}
+  <div class="popup-overlay"
+    on:click={() => $nav.popup = null}
+    transition:fade={{ duration: 400, easing: easeIn }}
+  >
+    {#if $nav.popup == "credits"}
+      <Credits />
+    {/if}
+  </div>
+{/if}
+
 <slot> Uh, something has gone <em>really</em> wrong! </slot>
+
+
+<style lang="scss">
+
+div.notifs {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+div.popup-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(black, 69%);
+  filter: blur(8px);
+}
+
+</style>
