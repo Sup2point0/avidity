@@ -17,7 +17,7 @@ $: image = track && `url(/covers/${track?.artist}/${track?.cover})`;
 </script>
 
 
-<div id="page" class="ui-layout tomorrow-night-blue"
+<div id="page" class="ui-layout"
   style:background-image={image}
 >
   <div class="bar">

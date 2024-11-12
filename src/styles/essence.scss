@@ -19,6 +19,10 @@
 }
 
 
+p {
+  color: var(--col-text);
+}
+
 button {
   &:not(:disabled) {
     cursor: pointer;

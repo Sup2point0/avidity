@@ -10,7 +10,7 @@ import { cubicOut } from "svelte/easing";
 
 <div class="popup-overlay"
   on:click={() => $nav.popup = null}
-  transition:fade={{ duration: 400, easing: cubicOut }}
+  transition:fade={{ duration: 300, easing: cubicOut }}
 >
   {#if $nav.popup == "credits"}
     <slot />
@@ -27,7 +27,11 @@ import { cubicOut } from "svelte/easing";
   top: 0;
   left: 0;
   z-index: 5;
-  background-color: rgb(black, 69%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(black, 50%);
   backdrop-filter: blur(8px);
 }
 

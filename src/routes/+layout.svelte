@@ -56,19 +56,21 @@ function on_keydown(event: KeyboardEvent)
 
 <svelte:window on:keydown={on_keydown} />
 
-<!-- <div class="notifs">
-  {#each $nav.notifs as notif}
-    <Notif kind={notif.kind} text={notif.text} />
-  {/each}
-</div> -->
+<div class="tomorrow-night-blue">
+  <!-- <div class="notifs">
+    {#each $nav.notifs as notif}
+      <Notif kind={notif.kind} text={notif.text} />
+    {/each}
+  </div> -->
 
-{#if $nav.popup}
-  <Popup>
-    <Credits />
-  </Popup>
-{/if}
+  {#if $nav.popup}
+    <Popup>
+      <Credits />
+    </Popup>
+  {/if}
 
-<slot> Uh, something has gone <em>really</em> wrong! </slot>
+  <slot> Uh, something has gone <em>really</em> wrong! </slot>
+</div>
 
 
 <style lang="scss">
