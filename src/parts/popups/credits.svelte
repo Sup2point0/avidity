@@ -16,7 +16,7 @@ function desync(offset: number): object
 </script>
 
 
-<aside class="part">
+<aside class="credits">
   <button class="exit ui rounded"
     on:click={() => $nav.popup = null}
   >
@@ -55,7 +55,7 @@ function desync(offset: number): object
 
 <style lang="scss">
 
-.part {
+.credits {
   width: 90%;
   max-width: 800px;
   height: 80%;

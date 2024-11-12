@@ -5,17 +5,14 @@ import { Tracks } from "#scripts/data";
 import { nav, playback } from "#scripts/stores";
 import { hydrate_data } from "#scripts/data/tracks";
 
-import Credits from "#parts/popups/credits.svelte";
-
 import { onMount } from "svelte";
-import { fade } from "svelte/transition";
-import { easeIn, easeOut } from "svelte/easing";
+import Popup from "#src/parts/popups/popup.svelte";
+import Credits from "#src/parts/popups/credits.svelte";
 
 
 setInterval(() => {
   $playback.elapsed = play_exec.elapsed;
 }, 250);
-
 
 onMount(() => {
   $Tracks = hydrate_data($Tracks);
@@ -66,14 +63,9 @@ function on_keydown(event: KeyboardEvent)
 </div> -->
 
 {#if $nav.popup}
-  <div class="popup-overlay"
-    on:click={() => $nav.popup = null}
-    transition:fade={{ duration: 400, easing: easeIn }}
-  >
-    {#if $nav.popup == "credits"}
-      <Credits />
-    {/if}
-  </div>
+  <Popup>
+    <Credits />
+  </Popup>
 {/if}
 
 <slot> Uh, something has gone <em>really</em> wrong! </slot>
@@ -85,16 +77,6 @@ div.notifs {
   width: 100%;
   position: absolute;
   bottom: 0;
-}
-
-div.popup-overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgb(black, 69%);
-  filter: blur(8px);
 }
 
 </style>
