@@ -17,88 +17,89 @@
   "dawn": {
     "name": "Dawn",
     "artist": "sup",
-    "file": "sup/dawn.m4a",
     "album": "algorhythm-origins",
     "lists": [
       "mood"
     ],
+    "file": "sup/dawn.m4a",
     "plays": 3
   },
   "day": {
     "name": "Day",
     "artist": "sup",
-    "file": "sup/day.m4a",
     "album": "algorhythm-origins",
     "lists": [
       "vibrant"
     ],
+    "file": "sup/day.m4a",
     "plays": 1
   },
   "night": {
     "name": "Night",
     "artist": "sup",
-    "file": "sup/night.m4a",
     "album": "algorhythm-origins",
     "lists": [
       "vibrant"
-    ]
+    ],
+    "file": "sup/night.m4a"
   },
   "tomorrow": {
     "name": "Tomorrow",
     "artist": "sup",
-    "file": "sup/tomorrow.m4a",
-    "album": "algorhythm-origins"
+    "album": "algorhythm-origins",
+    "file": "sup/tomorrow.m4a"
   },
   "aphenia": {
     "name": "Aphenia",
     "artist": "sup",
-    "file": "sup/aphenia.m4a",
     "album": "elysion",
     "lists": [
       "hardcore"
-    ]
+    ],
+    "file": "sup/aphenia.m4a"
   },
   "voxel": {
     "name": "Voxel",
     "artist": "sup",
-    "file": "sup/voxel.m4a",
     "album": "cortex",
     "lists": [
       "sound",
       "bop"
-    ]
+    ],
+    "file": "sup/voxel.m4a"
   },
   "rejuvenate": {
     "name": "Rejuvenate",
     "artist": "sup",
-    "file": "sup/rejuvenate.m4a",
     "lists": [
       "vibrant"
-    ]
+    ],
+    "file": "sup/rejuvenate.m4a"
   },
   "ceruleus": {
     "name": "Ceruleus",
     "artist": "sup",
-    "file": "sup/ceruleus.m4a",
     "album": "elysion",
     "lists": [
       "neuro",
       "hardcore",
       "mood",
       "sound"
-    ]
+    ],
+    "file": "sup/ceruleus.m4a"
   },
   "let-you-down": {
     "name": "Let You Down",
     "artist": "sup",
-    "file": "sup/let-you-down.m4a",
     "lists": [
       "chill"
-    ]
+    ],
+    "file": "sup/let-you-down.m4a"
   },
   "terabyte": {
     "name": "+ERABY+E CONNEC+10N",
     "artist": "camellia",
+    "album": "tera-io",
     "lists": [
       "electronic",
       "rhythm",
@@ -106,7 +107,7 @@
       "rich",
       "flavour"
     ],
-    "file": null,
+    "file": "terabyte-connection.mp3",
     "cover": "terabyte-connection.png",
     "plays": 0
   },
@@ -703,7 +704,17 @@
       "rhythm",
       "orchestral"
     ],
-    "file": null,
+    "file": "camellia/1f1e33.mp3",
+    "plays": 0
+  },
+  "1f1e33-ant1p01e": {
+    "name": "#1f1e33 (ant1p01e)",
+    "lists": [
+      "electronic",
+      "rhythm",
+      "orchestral"
+    ],
+    "file": "camellia/1f1e33-ant1p01e.mp3",
     "plays": 0
   },
   "1nput-spine": {
@@ -713,7 +724,7 @@
       "rhythm",
       "metal"
     ],
-    "file": null,
+    "file": "1nput",
     "plays": 0
   },
   "compute-iwsdase": {
@@ -723,7 +734,7 @@
       "rhythm",
       "oriental"
     ],
-    "file": null,
+    "file": "compute",
     "plays": 0
   },
   "dance-silence": {
