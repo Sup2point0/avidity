@@ -6,8 +6,9 @@ import json
 
 
 def clean(file: str):
-  print(f">> python / cleaning {file}")
-  with open(file) as source:
+  print(f">>        / cleaning {file}")
+
+  with open(file, "r") as source:
     load = json.load(source)
 
   out = {
@@ -15,11 +16,16 @@ def clean(file: str):
     for each, data in sorted(load.items())
   }
 
-  with open(file) as dest:
+  with open(file, "w") as dest:
     json.dump(out, dest, indent = 2)
+    dest.write("\n")
 
 
 if __name__ == "__main__":
+  print(">> python / running!")
+  
   clean("tracks.json")
   clean("playlists.json")
   clean("artists.json")
+
+  print(">> python / done!")
