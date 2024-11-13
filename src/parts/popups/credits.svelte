@@ -66,7 +66,7 @@ function desync(offset: number): object
 
   @include font-ui;
   background-color: var(--col-back);
-  box-shadow: 0 0 20px var(--col-shadow);
+  box-shadow: 0 0 2rem var(--col-shadow);
 }
 
 button.exit {
