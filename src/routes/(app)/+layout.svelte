@@ -8,7 +8,7 @@ import { find_track } from "#scripts/utils";
 import Nav from "#parts/panes/nav.svelte";
 import TrackDetails from "#parts/panes/track-details.svelte";
 import PlaybackDetails from "#parts/panes/playback-details.svelte";
-import TrackControls from "#parts/panes/track-controls.svelte";
+import TrackControls from "#src/parts/panes/track-controls.svelte";
 
 
 $: track = find_track($nav.selected_track);
@@ -80,13 +80,18 @@ $: image = track && `url(/covers/${track?.artist}/${track?.cover})`;
     }
   }
 
-  #left, #right {
+  #left {
     flex-grow: 0.25;
     overflow: hidden;
   }
 
   #core {
     flex: 1 1 auto;
+    overflow: hidden;
+  }
+
+  #right {
+    flex-grow: 0.5;
     overflow: hidden;
   }
 }

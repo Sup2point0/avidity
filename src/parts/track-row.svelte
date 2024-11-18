@@ -17,21 +17,19 @@ export let ctx: "tracks" | "list" | "queue" = "tracks";
 export let idx: number | undefined = undefined;
 
 
-if (typeof(track) == "string") {
-  track = find_track(track);
-}
+const data = (typeof(track) == "string" ? find_track(track) : track);
 
 </script>
 
 
 <div class="part"
-  on:click={() => $nav.selected_track = track?.shard}
+  on:click={() => $nav.selected_track = data?.shard}
 >
 
   <div class="left">
     <div>
       <button class="ui rounded play-track" style:height="2rem"
-        on:click={() => play_exec.play_track(track?.shard)}
+        on:click={() => play_exec.play_track(data?.shard)}
       >
         <span class="material-symbols-rounded"> play_arrow </span>
       </button>
@@ -39,25 +37,25 @@ if (typeof(track) == "string") {
   
     {#if ctx != "queue"}
       <div>
-        <p class="track-duration"> {track?.duration ?? "--:--"} </p>
+        <p class="track-duration"> {data?.duration ?? "--:--"} </p>
       </div>
     {/if}
   
     <div class="track-info">
-      <h4 class="track-name"> {track?.name ?? "?"} </h4>
+      <h4 class="track-name"> {data?.name ?? "?"} </h4>
       {#if !$nav.condensed_view}
-        <p class="track-artist"> {@html find_artist(track?.artist)} </p>
+        <p class="track-artist"> {@html find_artist(data?.artist)} </p>
       {/if}
     </div>
 
     {#if $nav.condensed_view}
-      <p class="track-artist"> {@html find_artist(track?.artist)} </p>
+      <p class="track-artist"> {@html find_artist(data?.artist)} </p>
     {/if}
   </div>
 
   {#if ctx != "queue"}
     <div class="playlist-tags">
-      {#each track?.lists ?? [] as playlist}
+      {#each data?.lists ?? [] as playlist}
         <PlaylistTag {playlist} />
       {/each}
     </div>
@@ -72,7 +70,7 @@ if (typeof(track) == "string") {
   <div class="right">
     {#if ctx == "tracks" || ctx == "list"}
       <button class="ui rounded" style:height="2rem"
-        on:click={() => $playback.queue.push(track.shard)}
+        on:click={() => $playback.queue.push(data?.shard)}
       >
         <span class="material-symbols-rounded"> playlist_add </span>
       </button>

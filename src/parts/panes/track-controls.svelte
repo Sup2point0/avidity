@@ -16,8 +16,8 @@ $: track = find_track($playback.current);
 </script>
 
 
-<div class="part">
-  <div class="track-controls">
+<div class="track-controls outer">
+  <div class="track-controls inner">
 
     <section id="playback-controls">
       <button class="ui rounded" style:height="2rem"
@@ -70,7 +70,7 @@ $: track = find_track($playback.current);
 
 <style lang="scss">
 
-.part {
+.track-controls.outer {
   width: 100%;
   min-height: 2rem;
   padding: 1rem 0;
@@ -80,7 +80,7 @@ $: track = find_track($playback.current);
   @include ui-block;
 }
 
-.track-controls {
+.track-controls.inner {
   margin: auto;
   width: 90%;
   height: 100%;
