@@ -109,8 +109,7 @@ const data = (typeof(track) == "string" ? find_track(track) : track);
   gap: 0.5rem;
 
   @include font-ui;
-  background-color: color-mix(in oklch, var(--col-back), transparent 4%);
-  @include frost-blur;
+  background-color: transparent;
   border: none;
 
   &:hover {

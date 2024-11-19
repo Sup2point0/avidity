@@ -1,13 +1,13 @@
-<!-- @component Search
+<!-- @component SearchControls
 
 A search bar with dropdown filters.
 -->
 
 <script lang="ts">
 
-import { search } from "#scripts/utils";
+import { search } from "#scripts/stores";
 
-import { SearchFilter } from "#parts/search-filter.svelte";
+import SearchFilter from "#parts/search-filter.svelte";
 
 import { fade } from "svelte/transition";
 
@@ -17,10 +17,11 @@ let expanded = false;
 </script>
 
 
-<search class="part">
+<search class="search-controls">
   <!-- search bar -->
   <div class="row">
 		<input type="search"
+      placeholder="Search"
 			bind:value={$search.value}
 		/>
 
@@ -29,9 +30,9 @@ let expanded = false;
     >
       <span class="material-symbols-rounded">
         {#if expanded}
-          up_arrow
+          keyboard_arrow_up
         {:else}
-          down_arrow
+          keyboard_arrow_down
         {/if}
       </span>
     </button>
@@ -78,8 +79,14 @@ let expanded = false;
 
 <style lang="scss">
 
-.part {
+.search-controls {
   width: 100%;
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: color-mix(in oklch, var(--col-back), transparent 4%);
+  @include frost-blur;
 }
 
 .row {
@@ -91,9 +98,35 @@ let expanded = false;
 }
 
 
-table, tr, th, td {
-  width: 100%;
+input {
+  width: min(80%, 30em);
+  margin-right: 1rem;
+  padding: 0.5em 1.5em;
+  @include font-ui;
+  font-size: 150%;
+  background-color: color-mix(in oklch, var(--col-back-deut), transparent 4%);
   border: none;
+  border-radius: 0.5em;
+  outline: none;
+}
+
+
+table, tr, th, td {
+  border: none;
+}
+
+tr {
+  padding: 1rem 0;
+}
+
+td {
+  padding: 0 1em;
+}
+
+th {
+  @include font-ui;
+  color: var(--col-text-deut);
+  text-align: left;
 }
 
 </style>

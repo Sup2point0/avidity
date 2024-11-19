@@ -16,10 +16,10 @@ $: active = $search[filter];
 </script>
 
 
-<button class="part" class:active
+<button class="search-filter" class:active
   on:click={() => {if (filter) {
     $search[filter] = !active;
-  }}
+  }}}
 >
   {text}
 </button>
@@ -27,12 +27,14 @@ $: active = $search[filter];
 
 <style lang="scss">
 
-.part {
+.search-filter {
   min-width: 2rem;
   padding: 0.5em 1em;
+  display: inline-block;
 
   @include font-ui;
   background-color: var(--col-card);
+  border: none;
   border-radius: 0.5em;
 
   &.active {
