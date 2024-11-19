@@ -2842,40 +2842,46 @@
   },
   "words": {
     "name": "words, words, words.",
+    "artist": "bo-burnham",
+    "album": "words",
     "lists": [
       "rap",
       "clever"
     ],
-    "file": null,
+    "file": "bo-burnham/words-words-words.mp3",
     "plays": 0
   },
   "world-revolving": {
     "name": "THE WORLD REVOLVING",
+    "artist": "camellia",
     "lists": [
       "electronic",
       "rhythm",
       "hardcore",
       "gothic"
     ],
-    "file": null,
+    "file": "camellia/the-world-revolving.mp3",
     "plays": 0
   },
   "wtwky": {
     "name": "We Think We Know You",
+    "artist": "bo-burnham",
+    "album": "what",
     "lists": [
       "genius"
     ],
-    "file": null,
+    "file": "bo-burnham/we-think-we-know-you.mp3",
     "plays": 0
   },
   "x7124": {
     "name": "X7124",
+    "artist": "silentroom",
     "lists": [
       "electronic",
       "rhythm",
       "arcade"
     ],
-    "file": null,
+    "file": "silentroom/x7124.mp3",
     "plays": 0
   },
   "xenolith": {
@@ -2885,16 +2891,17 @@
       "electronic",
       "rhythm"
     ],
-    "file": null,
+    "file": "rhythm/xenolith.mp3",
     "plays": 0
   },
   "xin-zhi-suo-xiang": {
     "name": "\u5fc3\u4e4b\u6240\u5411",
+    "artist": "jiang-mi-tiao",
     "lists": [
       "electronic",
       "rhythm"
     ],
-    "file": null,
+    "file": "jiang-mi-tiao/xin-zhi-suo-xiang".mp3,
     "plays": 0
   },
   "xing": {
@@ -2905,60 +2912,64 @@
       "rhythm",
       "arcade"
     ],
-    "file": null,
+    "file": "rhythm/xing.mp3",
     "plays": 0
   },
   "xnor": {
     "name": "XNOR XNOR XNOR",
+    "artist": "frums"
     "lists": [
       "music",
       "rich"
     ],
-    "file": null,
+    "file": "frums/xnor.mp3",
     "plays": 0
   },
   "yoru-ni-kakeru": {
     "name": "Yoru ni Kakeru",
+    "artist": "yoasobi",
     "lists": [
       "electronic",
       "rhythm",
       "J-pop"
     ],
-    "file": null,
+    "file": "yoasobi/yori-ni-kakeru.mp3",
     "plays": 0
   },
   "you-are-miserable": {
     "name": "You are the Miserable",
+    "artist": "t-pazolite",
     "lists": [
       "electronic",
       "rhythm",
       "artcore"
     ],
-    "file": null,
+    "file": "t-pazolite/you-are-the-miserable.mp3",
     "plays": 0
   },
   "zhan-ming": {
     "name": "\u76cf\u8317",
+    "artist": "cha-ming-12-lv",
     "lists": [
       "electronic",
       "rhythm",
       "oriental",
       "bop"
     ],
-    "file": null,
+    "file": "cha-ming-12-lv/zhan-ming.mp3",
     "plays": 0
   },
   "zhui-yi": {
     "name": "\u8ffd\u61b6",
     "artist": [
-      "PIKASONIC",
+      "pikasonic",
       "nakotanmaru"
     ],
     "lists": [
       "electronic",
       "rhythm"
     ],
-    "file": null,
+    "file": "pikasonic/zhui-yi.mp3",
     "plays": 0
   }
 }
