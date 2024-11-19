@@ -54,6 +54,12 @@ const data = (typeof(track) == "string" ? find_track(track) : track);
   </div>
 
   {#if ctx != "queue"}
+    <div class="album-tag">
+      <!-- {#if data?.album}
+        <PlaylistTag {data.album} />
+      {/if} -->
+    </div>
+
     <div class="playlist-tags">
       {#each data?.lists ?? [] as playlist}
         <PlaylistTag {playlist} />
@@ -80,7 +86,7 @@ const data = (typeof(track) == "string" ? find_track(track) : track);
       <button class="ui rounded" style:height="2rem"
         on:click={() => (typeof(idx) == "number") && $playback.queue.splice(idx, 1)}
       >
-        <span class="material-symbols-rounded"> delete </span>
+        <span class="material-symbols-rounded"> close </span>
       </button>
     {/if}
   </div>

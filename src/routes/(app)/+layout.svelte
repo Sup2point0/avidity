@@ -7,7 +7,7 @@ import { find_track } from "#scripts/utils";
 
 import Nav from "#parts/panes/nav.svelte";
 import TrackDetails from "#parts/panes/track-details.svelte";
-import PlaybackDetails from "#parts/panes/playback-details.svelte";
+import PlaybackQueue from "#src/parts/panes/playback-queue.svelte";
 import TrackControls from "#src/parts/panes/track-controls.svelte";
 
 
@@ -34,7 +34,7 @@ $: image = track && `url(/covers/${track?.artist}/${track?.cover})`;
     </div>
   
     <div id="right">
-      <PlaybackDetails />
+      <PlaybackQueue />
     </div>
   </div>
   

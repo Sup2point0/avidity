@@ -25,13 +25,14 @@ button {
     @include font-ui;
     background: none;
     border: none;
-    transition: background-color 0.2s;
+    transition: color 0.2s, background-color 0.2s;
 
     &:disabled {
       color: var(--col-text-deut);
     }
 
     &:not(:disabled):hover {
+      color: var(--col-prot);
       background-color: var(--col-hover);
     }
   }
