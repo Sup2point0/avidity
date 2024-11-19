@@ -378,12 +378,12 @@
   },
   "breakaway": {
     "name": "Breakaway",
-    "artist": "Avril Lavigne",
+    "artist": "avril-lavigne",
     "lists": [
       "pop",
       "nostalgic"
     ],
-    "file": null,
+    "file": "avril-lavigne/breakaway.mp3",
     "plays": 0
   },
   "breeze": {
@@ -394,7 +394,7 @@
       "house",
       "upbeat"
     ],
-    "file": null,
+    "file": "elektronomia/breeze.mp3",
     "plays": 0
   },
   "bug": {
@@ -405,17 +405,18 @@
       "rhythm",
       "vocaloid"
     ],
-    "file": null,
+    "file": "anime/bug.mp3",
     "plays": 0
   },
   "butterfly": {
     "name": "Butterfly",
+    "artist": "elektronomia",
     "lists": [
       "electronic",
       "house",
       "nostalgic"
     ],
-    "file": null,
+    "file": "elektronomia/butterfly.mp3",
     "plays": 0
   },
   "calling": {
@@ -425,7 +426,7 @@
       "J-pop",
       "melodramatic"
     ],
-    "file": null,
+    "file": "anime/calling.mp3",
     "plays": 0
   },
   "can-you-hear-music": {
@@ -436,17 +437,17 @@
       "film",
       "rich"
     ],
-    "file": null,
+    "file": "can-you-hear-the-music",
     "plays": 0
   },
   "cant-catch-me-now": {
     "name": "Can't Catch Me Now",
-    "artist": "Olivia Rodrigo",
+    "artist": "olivia-rodrigo",
     "lists": [
       "alt-pop",
       "film"
     ],
-    "file": null,
+    "file": "olivia-rodrigo/cant-catch-me-now.mp3",
     "plays": 0
   },
   "ceruleus": {
@@ -468,49 +469,51 @@
       "oriental",
       "chill"
     ],
-    "file": null,
+    "file": "cha-ming-12-lv/cha-ying-xi.mp3",
     "plays": 0
   },
   "chariot": {
     "name": "The Chariot ~REVIIVAL~",
-    "artist": "Attoclef",
+    "artist": "attoclef",
     "lists": [
       "electronic",
       "rhythm",
       "bop"
     ],
-    "file": null,
+    "file": "rhythm/chariot.mp3",
     "plays": 0
   },
   "checkpoint-76": {
     "name": "Checkpoint 76",
+    "artist": "johannes-bornlof",
     "lists": [
       "orchestral",
       "war"
     ],
-    "file": null,
+    "file": "johannes-bornlof/checkpoint-76.mp3",
     "plays": 0
   },
   "chicken": {
     "name": "The Chicken",
+    "artist": "bo-burnham",
     "lists": [
       "piano",
       "nostalgic",
       "funny"
     ],
-    "file": null,
+    "file": "bo-burnham/the-chicken.mp3",
     "plays": 0
   },
   "chronomia": {
     "name": "Chronomia",
-    "artist": "Lime",
+    "artist": "lime",
     "lists": [
       "electronic",
       "rhythm",
       "artcore",
       "anime"
     ],
-    "file": null,
+    "file": "lime/chronomia.mp3",
     "plays": 0
   },
   "chronos-campanella": {
@@ -521,29 +524,32 @@
       "rhythm",
       "anxiety"
     ],
-    "file": null,
+    "file": "rhythm/chronos-campanella.mp3",
     "plays": 0
   },
   "clash": {
     "name": "Clash",
+    "artist": "johannes-bornlof",
+    "album": "run-rabbit-run",
     "lists": [
       "orchestral",
       "heroic"
     ],
-    "file": null,
+    "file": "johannes-bornlof/clash.mp3",
     "plays": 0
   },
   "close-to-you": {
     "name": "Close To You",
+    "artist": "elektronomia",
     "lists": [
       "electronic",
       "house",
       "dubstep"
     ],
-    "file": null,
+    "file": "elektronomia/close-to-you.mp3",
     "plays": 0
   },
-  "cold-herat": {
+  "cold-heart": {
     "name": "Cold Heart",
     "artist": [
       "Elton John",
@@ -553,26 +559,29 @@
       "pop",
       "nostalgic"
     ],
-    "file": null,
+    "file": "pop/cold-heart.mp3",
     "plays": 0
   },
   "complicated": {
     "name": "Complicated",
+    "artist": "avril-lavigne",
     "lists": [
       "pop",
       "rock"
     ],
-    "file": null,
+    "file": "avril-lavigne/complicated.mp3",
     "plays": 0
   },
   "compute-iwsdase": {
     "name": "Compute It With Some Devilish Alcholic Steampunk Engines",
+    "artist": "camellia",
+    "album": "tera-io",
     "lists": [
       "electronic",
       "rhythm",
       "oriental"
     ],
-    "file": "compute",
+    "file": "camellia/compute.mp3",
     "plays": 0
   },
   "contradiction": {
@@ -582,7 +591,7 @@
       "electronic",
       "rhythm"
     ],
-    "file": null,
+    "file": "tn-shi/contradiction.mp3",
     "plays": 0
   },
   "crave-wave": {
@@ -593,48 +602,51 @@
       "rhythm",
       "chill"
     ],
-    "file": null,
+    "file": "rhythm/crave-wave.mp3",
     "plays": 0
   },
   "credits": {
     "name": "Credits",
-    "artist": "Frums",
+    "artist": "frums",
     "lists": [
       "music"
     ],
-    "file": null,
+    "file": "frums/credits.mp3",
     "plays": 0
   },
   "crush-beta": {
     "name": "Crush BETA",
-    "artist": "shadow_blink",
+    "artist": "shadow-bling",
     "lists": [
       "electronic",
       "rhythm",
       "arcade"
     ],
-    "file": null,
+    "file": "shadow-bling/crush-beta.mp3",
     "plays": 0
   },
   "cyberfantasia": {
     "name": "Cyberfantastia",
+    "artist": "tn-shi",
     "lists": [
       "electronic",
       "rhythm",
       "rich"
     ],
-    "file": null,
+    "file": "tn-shi/cyberfantasia.mp3",
     "plays": 0
   },
   "dance-silence": {
     "name": "Dance with Silence",
+    "artist": "camellia",
+    "album": "tera-io",
     "lists": [
       "electronic",
       "rhythm",
       "complextro",
       "melodic"
     ],
-    "file": null,
+    "file": "camellia/dance-with-silence.mp3",
     "plays": 0
   },
   "darkside": {
