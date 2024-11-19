@@ -26,7 +26,7 @@
       "rhythm",
       "metal"
     ],
-    "file": "1nput",
+    "file": "camellia/1nput.mp3",
     "plays": 0
   },
   "4-chords": {
@@ -36,7 +36,7 @@
       "pop",
       "mashup"
     ],
-    "file": null,
+    "file": "pop/four-chords.mp3",
     "plays": 0
   },
   "a39-hui": {
@@ -47,7 +47,7 @@
       "breakdown",
       "vocaloid"
     ],
-    "file": null,
+    "file": "a-39/hui.mp3",
     "plays": 0
   },
   "a39-sayonara": {
@@ -57,7 +57,7 @@
       "rhythm",
       "vocaloid"
     ],
-    "file": null,
+    "file": "a-39/sayonara",
     "plays": 0
   },
   "a39-xin": {
@@ -68,7 +68,7 @@
       "breakdown",
       "vocaloid"
     ],
-    "file": null,
+    "file": "a-39/xin.mp3",
     "plays": 0
   },
   "a39-xuejiang": {
@@ -78,7 +78,7 @@
       "rhythm",
       "vocaloid"
     ],
-    "file": null,
+    "file": "a-39/xue-jiang.mp3",
     "plays": 0
   },
   "a39-ye": {
@@ -88,7 +88,7 @@
       "rhythm",
       "breakdown"
     ],
-    "file": null,
+    "file": "a-39/ye.mp3",
     "plays": 0
   },
   "accidental-office": {
@@ -97,17 +97,17 @@
     "lists": [
       "piano"
     ],
-    "file": null,
+    "file": "pop/accidental-office.mp3",
     "plays": 0
   },
   "adventure-awaits": {
     "name": "Adventure Awaits",
-    "artist": "Johannes Bornl\u00f6f",
+    "artist": "johannes-bornlof",
     "lists": [
       "orchestral",
       "heroic"
     ],
-    "file": null,
+    "file": "johannes-bornlof/adventure-awaits.mp3",
     "plays": 0
   },
   "aegleseeker": {
@@ -122,7 +122,7 @@
       "quirky",
       "sad"
     ],
-    "file": null,
+    "file": "silentroom/aegleseeker.mp3",
     "plays": 0
   },
   "after-dawn": {
@@ -133,7 +133,7 @@
       "rhythm",
       "dubstep"
     ],
-    "file": null,
+    "file": "rhythm/after-dawn.mp3",
     "plays": 0
   },
   "aleph-zero": {
@@ -145,7 +145,7 @@
       "anxiety",
       "music"
     ],
-    "file": null,
+    "file": "leaf/aleph-zero.mp3",
     "plays": 0
   },
   "algebra": {
@@ -157,41 +157,42 @@
       "flavour",
       "atmos"
     ],
-    "file": null,
+    "file": "rhythm/algebra.mp3",
     "plays": 0
   },
   "all-eyes-on-me": {
     "name": "All Eyes On Me",
-    "artist": "Bo Burnham",
+    "artist": "bo-burnham",
     "lists": [
       "pop",
       "deep",
       "haunting"
     ],
-    "file": null,
+    "file": "bo-burnham/all-eyes-on-me.mp3",
     "plays": 0
   },
   "all-falls-down": {
     "name": "All Falls Down",
     "artist": [
-      "Alan Walker",
+      "alan-walker",
       "Noah Cyrus",
-      "Digital Farm Animals"
+      "digital-farm-animals"
     ],
     "lists": [
       "electronic",
       "house",
       "melodramatic"
     ],
-    "file": null,
+    "file": "alan-walker/all-falls-down.mp3",
     "plays": 0
   },
   "almost-spring-home": {
     "name": "It's Almost Spring Back Home",
+    "album": "Splitting the Arrow",
     "lists": [
       "orchestral"
     ],
-    "file": null,
+    "file": "johannes-bornlof/almost-spring-back-home.mp3",
     "plays": 0
   },
   "alone": {
@@ -202,7 +203,7 @@
       "house",
       "nostalgic"
     ],
-    "file": null,
+    "file": "alan-walker/alone.mp3",
     "plays": 0
   },
   "anesthesia": {
@@ -216,69 +217,72 @@
       "chill",
       "bop"
     ],
-    "file": null,
+    "file": "vexento/anesthesia.mp3",
     "plays": 0
   },
   "antihero": {
     "name": "Anti-Hero",
-    "artist": "Taylor Swift",
+    "artist": "taylor-swift",
     "lists": [
       "pop",
       "lofi",
       "nostalgic"
     ],
-    "file": null,
+    "file": "taylor-swift/antihero.mp3",
     "plays": 0
   },
   "aphenia": {
     "name": "Aphenia",
     "artist": "sup",
-    "album": "elysion",
+    "album": "ELYSION",
     "lists": [
-      "hardcore"
+      "hardcore",
+      "neuro"
     ],
     "file": "sup/aphenia.m4a"
   },
   "are-you-happy": {
     "name": "Are You Happy",
+    "artist": "bo-burnham",
+    "album": "make-happy",
     "lists": [
       "piano",
       "sad",
       "deep"
     ],
-    "file": null,
+    "file": "bo-burnham/are-you-happy.mp3",
     "plays": 0
   },
   "arghena": {
     "name": "Arghena",
     "artist": [
-      "Feryquitous",
-      "Laur"
+      "feryquitous",
+      "laur"
     ],
     "lists": [
       "electronic",
       "rhythm",
       "flavour"
     ],
-    "file": null,
+    "file": "laur/arghena.mp3",
     "plays": 0
   },
   "ascension": {
     "name": "Ascension",
     "artist": [
-      "Elektronomia",
-      "Alex Skrindo"
+      "elektronomia",
+      "alex-skrindo"
     ],
     "lists": [
       "electronic",
       "house"
     ],
-    "file": null,
+    "file": "elektronomia/ascension.mp3",
     "plays": 0
   },
   "awaken": {
     "name": "Awaken",
-    "artist": "Au5",
+    "artist": "au5",
     "lists": [
       "electronic",
       "rhythm",
@@ -286,33 +290,38 @@
       "dubstep",
       "complextro"
     ],
-    "file": null,
+    "file": "rhythm/awaken.mp3",
     "plays": 0
   },
   "banana-breeze": {
     "name": "Banana Breeze",
-    "artist": "Vexento",
+    "artist": "vexento",
+    "album": "fruit-salad",
     "lists": [
       "electronic",
       "chill",
       "bop"
     ],
-    "file": null,
+    "file": "vexento/banana-breeze.mp3",
     "plays": 0
   },
   "beat-to-quarters": {
     "name": "Beat to Quarters",
+    "artist": "johannes-bornlof",
     "lists": [
       "orchestral",
       "heroic",
       "war"
     ],
-    "file": null,
+    "file": "johannes-bornlof/beat-to-quarters.mp3",
     "plays": 0
   },
   "beyond-the-way": {
     "name": "Beyond the Way",
-    "artist": "Giga",
+    "artist": [
+      "giga",
+      "miku"
+    ],
     "lists": [
       "electronic",
       "rhythm",
@@ -320,15 +329,16 @@
       "edgy",
       "hop"
     ],
-    "file": null,
+    "file": "beyond-the-way",
     "plays": 0
   },
   "blank-space": {
     "name": "Blank Space",
+    "artist": "taylor-swift",
     "lists": [
       "pop"
     ],
-    "file": null,
+    "file": "taylor-swift/blank-space.mp3",
     "plays": 0
   },
   "bound-quiet": {
@@ -342,7 +352,7 @@
       "rhythm",
       "anime"
     ],
-    "file": null,
+    "file": "rhythm/bounded-quietude.mp3",
     "plays": 0
   },
   "braving": {
@@ -352,7 +362,7 @@
       "J-pop",
       "melodramatic"
     ],
-    "file": null,
+    "file": "anime/braving.mp3",
     "plays": 0
   },
   "break-over": {
@@ -363,7 +373,7 @@
       "rhythm",
       "breakcore"
     ],
-    "file": null,
+    "file": "rhythm/break-over.mp3",
     "plays": 0
   },
   "breakaway": {
@@ -2025,7 +2035,7 @@
       "rhythm",
       "neurofunk"
     ],
-    "file": null,
+    "file": "silentroom/rainshower.mp3",
     "plays": 0
   },
   "rainy-season": {
