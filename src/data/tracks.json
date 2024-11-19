@@ -651,13 +651,13 @@
   },
   "darkside": {
     "name": "Darkside",
-    "artist": "Alan Walker",
+    "artist": "alan-walker",
     "lists": [
       "electronic",
       "melodramatic",
       "sad"
     ],
-    "file": null,
+    "file": "alan-walker/darkside.mp3",
     "plays": 0
   },
   "dawn": {
@@ -682,48 +682,53 @@
   },
   "day-we-become-family": {
     "name": "The Day We Become Family",
+    "artist": "cha-ming-12-lv",
     "lists": [
       "electronic",
       "rhythm",
       "breakdown"
     ],
-    "file": null,
+    "file": "cha-ming-12-lv/the-day-we-become-family.mp3",
     "plays": 0
   },
   "deep-dark-blue": {
     "name": "Deep Dark Blue (instrumental)",
-    "artist": "Approaching Nirvana",
+    "artist": "approaching-nirvana",
     "lists": [
       "electronic",
       "rhythm",
       "drum-n-bass"
     ],
-    "file": null,
+    "file": "rhythm/deep-dark-blue.mp3",
     "plays": 0
   },
   "delta": {
     "name": "\u03b4: for the DELTA",
+    "artist": "camellia",
+    "album": "planet-shaper",
     "lists": [
       "electronic",
       "rhythm",
       "flavour"
     ],
-    "file": null,
+    "file": "camellia/delta.mp3",
     "plays": 0
   },
   "destiny": {
     "name": "Destiny",
     "artist": [
-      "Jim Yosef",
-      "Electro-Light",
-      "Anna Yvette, Deaf Kev, Tobu"
+      "jim-yosef",
+      "electro-light",
+      "anna-yvette",
+      "deaf-kev",
+      "tobu"
     ],
     "lists": [
       "electronic",
       "house",
       "melodramatic"
     ],
-    "file": null,
+    "file": "rhythm/destiny.mp3",
     "plays": 0
   },
   "destruction": {
