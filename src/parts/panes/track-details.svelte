@@ -21,7 +21,7 @@ $: track = find_track($nav.selected_track);
 <div class="part">
   <img
     alt={track?.name ?? "?"}
-    src="{base}/covers/{track?.artist}/{track?.cover}"
+    src="{base}/covers/{track?.cover}"
   >
 
   <div class="info">

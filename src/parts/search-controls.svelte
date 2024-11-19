@@ -85,7 +85,7 @@ let expanded = false;
   position: sticky;
   top: 0;
   z-index: 2;
-  background-color: color-mix(in oklch, var(--col-back), transparent 4%);
+  background-color: color-mix(in oklch, var(--col-back), transparent 20%);
   @include frost-blur;
 }
 
@@ -104,7 +104,7 @@ input {
   padding: 0.5em 1.5em;
   @include font-ui;
   font-size: 150%;
-  background-color: color-mix(in oklch, var(--col-back-deut), transparent 4%);
+  background-color: color-mix(in oklch, var(--col-back-deut), transparent 40%);
   border: none;
   border-radius: 0.5em;
   outline: none;

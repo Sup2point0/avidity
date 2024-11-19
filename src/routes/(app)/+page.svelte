@@ -5,6 +5,7 @@ import { Tracks } from "#scripts/data";
 import { playback, search, nav } from "#scripts/stores";
 import { find_track, filter_tracks } from "#scripts/utils";
 
+import Header from "#src/parts/panes/header.svelte";
 import SearchControls from "#src/parts/search-controls.svelte";
 import TrackRow from "#parts/track-row.svelte";
 
@@ -15,6 +16,8 @@ $: filtered = filter_tracks(tracks, $search);
 
 </script>
 
+
+<Header title="Tracks" />
 
 <main>
   <SearchControls />
@@ -42,14 +45,11 @@ main {
   min-height: 0;
   z-index: 1;
   overflow-y: scroll;
+  background-color: color-mix(in oklch, var(--col-back), transparent 4%);
+  @include frost-blur;
   
   scrollbar-color: var(--col-text-deut) var(--col-back);
   scrollbar-width: thick;
-}
-
-.tracks {
-  background-color: color-mix(in oklch, var(--col-back), transparent 4%);
-  @include frost-blur;
 }
 
 // TODO WIP

@@ -32,10 +32,10 @@ $: track = find_track($playback.current);
         disabled={!track}
       >
         <span class="material-symbols-rounded">
-          {#if $playback.paused}
-            play_arrow
-          {:else}
+          {#if $playback.paused === false}
             pause
+          {:else}
+            play_arrow
           {/if}
         </span>
       </button>
