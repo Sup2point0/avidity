@@ -10,14 +10,14 @@ import { playback } from "#scripts/stores";
 import TrackRow from "#parts/track-row.svelte";
 
 
-$: tracks = $playback.queue;
+$: tracks = $playback.queue.entries();
 
 </script>
 
 
-<div class="part">
-  {#if tracks.entries()}
-    {#each tracks.entries() as [i, track]}
+<div class="playback-queue">
+  {#if tracks}
+    {#each tracks as [i, track]}
       <TrackRow {track} ctx="queue" idx={i} />
     {/each}
 
@@ -30,7 +30,7 @@ $: tracks = $playback.queue;
 
 <style lang="scss">
 
-.part {
+.playback-queue {
   max-width: 40vw;
   flex-grow: 0.5;
   height: 100%;
