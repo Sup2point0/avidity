@@ -744,7 +744,7 @@
       "hardcore",
       "sound"
     ],
-    "file": null,
+    "file": "rhythm/destruction.mp3",
     "plays": 0
   },
   "diamond-eyes": {
@@ -2901,7 +2901,7 @@
       "electronic",
       "rhythm"
     ],
-    "file": "jiang-mi-tiao/xin-zhi-suo-xiang".mp3,
+    "file": "jiang-mi-tiao/xin-zhi-suo-xiang.mp3",
     "plays": 0
   },
   "xing": {
@@ -2917,7 +2917,7 @@
   },
   "xnor": {
     "name": "XNOR XNOR XNOR",
-    "artist": "frums"
+    "artist": "frums",
     "lists": [
       "music",
       "rich"
