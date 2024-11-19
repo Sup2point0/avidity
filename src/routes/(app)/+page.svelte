@@ -10,7 +10,8 @@ import TrackRow from "#parts/track-row.svelte";
 
 
 $: tracks = Object.keys($Tracks).map(shard => find_track(shard));
-$: filtered = $search.dirty ? filter_tracks(tracks, $search) : tracks;
+// $: filtered = $search.dirty ? filter_tracks(tracks, $search) : tracks;
+$: filtered = filter_tracks(tracks, $search);
 
 </script>
 

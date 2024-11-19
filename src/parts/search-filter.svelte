@@ -35,11 +35,12 @@ $: active = $search[filter];
   @include font-ui;
   background-color: var(--col-card);
   border: none;
-  border-radius: 0.5em;
+  border-radius: 1em;
+  transition: background-color 0.12s ease-out;
 
   &.active {
     background-color: var(--col-card-hover);
-    border-radius: 0.25em;
+    border-radius: 0.75em;
   }
 
   &:hover, &:focus {
