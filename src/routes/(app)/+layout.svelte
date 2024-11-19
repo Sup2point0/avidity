@@ -12,7 +12,7 @@ import TrackControls from "#src/parts/panes/track-controls.svelte";
 
 
 $: track = find_track($nav.selected_track);
-$: image = track && `url(/covers/${track?.artist}/${track?.cover})`;
+$: image = track && `url(/covers/${track?.cover})`;
 
 </script>
 

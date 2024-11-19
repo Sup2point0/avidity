@@ -773,7 +773,7 @@
   },
   "distorted-fate": {
     "name": "Distorted Fate",
-    "artist": "Sakuzyo",
+    "artist": "sakuzyo",
     "lists": [
       "electronic",
       "rhythm",
@@ -782,7 +782,7 @@
       "rich",
       "sound"
     ],
-    "file": null,
+    "file": "sakuzyo/distorted-fate.mp3",
     "plays": 0
   },
   "eleven-thousand-feet": {
@@ -2569,8 +2569,8 @@
       "rich",
       "flavour"
     ],
-    "file": "terabyte-connection.mp3",
-    "cover": "terabyte-connection.png",
+    "file": "camellia/terabyte-connection.mp3",
+    "cover": "camellia/terabyte-connection.png",
     "plays": 0
   },
   "tevo": {

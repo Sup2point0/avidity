@@ -64,13 +64,13 @@ const data = (typeof(track) == "string" ? find_track(track) : track);
       {#each data?.lists ?? [] as playlist}
         <PlaylistTag {playlist} />
       {/each}
+
+      <button class="ui rounded" style:height="2rem"
+        on:click={() => alert("This feature is under development!")}
+      >
+        <span class="material-symbols-rounded"> add </span>
+      </button>
     </div>
-    
-    <button class="ui rounded" style:height="2rem"
-      on:click={() => alert("This feature is under development!")}
-    >
-      <span class="material-symbols-rounded"> add </span>
-    </button>
   {/if}
 
   <div class="right">
@@ -106,18 +106,18 @@ const data = (typeof(track) == "string" ? find_track(track) : track);
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1.5rem;
 
   @include font-ui;
   background-color: transparent;
   border: none;
 
   &:hover {
-    background-color: var(--col-back-deut);
+    background-color: color-mix(in oklch, var(--col-back-deut), transparent 50%);
   }
 
-  &:click {
-    background-color: var(--col-back-trit);
+  &:active {
+    background-color: var(--col-back-deut);
   }
 }
 
