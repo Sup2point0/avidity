@@ -756,19 +756,19 @@
       "chill",
       "bop"
     ],
-    "file": null,
+    "file": "rhythm/diamond-eyes.mp3",
     "plays": 0
   },
   "different-world": {
     "name": "Different World",
-    "artist": "Alan Walker",
+    "artist": "alan-walker",
     "lists": [
       "electronic",
       "sad",
       "deep",
       "rich"
     ],
-    "file": null,
+    "file": "alan-walker/different-world.mp3",
     "plays": 0
   },
   "distorted-fate": {
@@ -787,12 +787,14 @@
   },
   "eleven-thousand-feet": {
     "name": "Eleven Thousand Feet",
+    "artist": "johannes-bornlof",
+    "album": "cloud-prism",
     "lists": [
       "orchestral",
       "cute",
       "chill"
     ],
-    "file": null,
+    "file": "johannes-bornlof/eleven-thousand-feet.mp3",
     "plays": 0
   },
   "end-of-time": {
