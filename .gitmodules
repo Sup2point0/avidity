@@ -1,3 +1,6 @@
 [submodule "vividity"]
 	path = vividity
 	url = https://github.com/Sup2point0/vividity.git
+[submodule "static"]
+	path = static
+	url = https://github.com/Sup2point0/avidity-assets
