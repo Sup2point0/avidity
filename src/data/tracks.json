@@ -800,8 +800,8 @@
   "end-of-time": {
     "name": "End of Time",
     "artist": [
-      "Alan Walker",
-      "K-391",
+      "alan-walker",
+      "k-391",
       "Ahrix"
     ],
     "lists": [
@@ -809,7 +809,7 @@
       "house",
       "nostalgic"
     ],
-    "file": null,
+    "file": "alan-walker/end-of-time.mp3",
     "plays": 0
   },
   "epitaxy": {

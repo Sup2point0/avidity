@@ -8,6 +8,7 @@
     "prep": "python vividity/export --root=src/styles --css=colours.css",
 		"build": "vite build",
       "buildx": "npm run prep && vite build",
+      "build-cloud": "git submodule update --init --remote && npm run buildx",
 		"preview": "vite preview"
 	},
 	"devDependencies": {
