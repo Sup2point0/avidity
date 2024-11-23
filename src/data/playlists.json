@@ -1,15 +1,41 @@
 {
-  "elysion": "ELYSION",
-  "fruit-salad": "Fruit Salad",
-  "inside": "INSIDE",
-  "make-happy": "Make Happy",
-  "neuro": "neuro",
-  "planet-shaper": "PLANET//SHAPER",
-  "rhythm": "rhythm",
-  "run-rabbit-run": "Run Rabbit Run",
-  "splitting-arrow": "Splitting the Arrow",
-  "tera-io": "TERA I/O",
-  "what": "what.",
-  "words": "words, words, words",
-  "cloud-prism": "Cloud Prism"
+  "cloud-prism": {
+    "name": "Cloud Prism"
+  },
+  "elysion": {
+    "name": "ELYSION"
+  },
+  "fruit-salad": {
+    "name": "Fruit Salad"
+  },
+  "inside": {
+    "name": "INSIDE"
+  },
+  "make-happy": {
+    "name": "Make Happy"
+  },
+  "neuro": {
+    "name": "neuro"
+  },
+  "planet-shaper": {
+    "name": "PLANET//SHAPER"
+  },
+  "rhythm": {
+    "name": "rhythm"
+  },
+  "run-rabbit-run": {
+    "name": "Run Rabbit Run"
+  },
+  "splitting-arrow": {
+    "name": "Splitting the Arrow"
+  },
+  "tera-io": {
+    "name": "TERA I/O"
+  },
+  "what": {
+    "name": "what."
+  },
+  "words": {
+    "name": "words, words, words"
+  }
 }
