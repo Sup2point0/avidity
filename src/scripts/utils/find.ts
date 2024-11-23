@@ -16,7 +16,7 @@ export function find_playlist(shard: string | null | undefined): Playlist | null
 }
 
 
-export function find_artist(shard: string | string[] | null | undefined): string | null | undefined
+export function find_artist(shard: string | string[] | null | undefined): string | null
 {
   if (Array.isArray(shard)) {
     return (shard
