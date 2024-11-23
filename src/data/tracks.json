@@ -133,7 +133,7 @@
       "rhythm",
       "dubstep"
     ],
-    "file": "rhythm/after-dawn.mp3",
+    "file": "~rhythm/after-dawn.mp3",
     "plays": 0
   },
   "aleph-zero": {
@@ -157,7 +157,7 @@
       "flavour",
       "atmos"
     ],
-    "file": "rhythm/algebra.mp3",
+    "file": "~rhythm/algebra.mp3",
     "plays": 0
   },
   "all-eyes-on-me": {
@@ -290,7 +290,7 @@
       "dubstep",
       "complextro"
     ],
-    "file": "rhythm/awaken.mp3",
+    "file": "~rhythm/awaken.mp3",
     "plays": 0
   },
   "banana-breeze": {
@@ -352,7 +352,7 @@
       "rhythm",
       "anime"
     ],
-    "file": "rhythm/bounded-quietude.mp3",
+    "file": "~rhythm/bounded-quietude.mp3",
     "plays": 0
   },
   "braving": {
@@ -362,7 +362,7 @@
       "J-pop",
       "melodramatic"
     ],
-    "file": "anime/braving.mp3",
+    "file": "~anime/braving.mp3",
     "plays": 0
   },
   "break-over": {
@@ -373,7 +373,7 @@
       "rhythm",
       "breakcore"
     ],
-    "file": "rhythm/break-over.mp3",
+    "file": "~rhythm/break-over.mp3",
     "plays": 0
   },
   "breakaway": {
@@ -405,7 +405,7 @@
       "rhythm",
       "vocaloid"
     ],
-    "file": "anime/bug.mp3",
+    "file": "~anime/bug.mp3",
     "plays": 0
   },
   "butterfly": {
@@ -426,7 +426,7 @@
       "J-pop",
       "melodramatic"
     ],
-    "file": "anime/calling.mp3",
+    "file": "~anime/calling.mp3",
     "plays": 0
   },
   "can-you-hear-music": {
@@ -480,7 +480,7 @@
       "rhythm",
       "bop"
     ],
-    "file": "rhythm/chariot.mp3",
+    "file": "~rhythm/chariot.mp3",
     "plays": 0
   },
   "checkpoint-76": {
@@ -524,7 +524,7 @@
       "rhythm",
       "anxiety"
     ],
-    "file": "rhythm/chronos-campanella.mp3",
+    "file": "~rhythm/chronos-campanella.mp3",
     "plays": 0
   },
   "clash": {
@@ -602,7 +602,7 @@
       "rhythm",
       "chill"
     ],
-    "file": "rhythm/crave-wave.mp3",
+    "file": "~rhythm/crave-wave.mp3",
     "plays": 0
   },
   "credits": {
@@ -699,7 +699,7 @@
       "rhythm",
       "drum-n-bass"
     ],
-    "file": "rhythm/deep-dark-blue.mp3",
+    "file": "~rhythm/deep-dark-blue.mp3",
     "plays": 0
   },
   "delta": {
@@ -728,7 +728,7 @@
       "house",
       "melodramatic"
     ],
-    "file": "rhythm/destiny.mp3",
+    "file": "~rhythm/destiny.mp3",
     "plays": 0
   },
   "destruction": {
@@ -744,7 +744,7 @@
       "hardcore",
       "sound"
     ],
-    "file": "rhythm/destruction.mp3",
+    "file": "~rhythm/destruction.mp3",
     "plays": 0
   },
   "diamond-eyes": {
@@ -756,7 +756,7 @@
       "chill",
       "bop"
     ],
-    "file": "rhythm/diamond-eyes.mp3",
+    "file": "~rhythm/diamond-eyes.mp3",
     "plays": 0
   },
   "different-world": {
@@ -814,31 +814,32 @@
   },
   "epitaxy": {
     "name": "epitaxy",
+    "artist": "camellia",
     "lists": [
       "electronic",
       "rhythm",
       "chill",
       "atmos"
     ],
-    "file": null,
+    "file": "camellia/epitaxy.mp3",
     "plays": 0
   },
   "eternal-snow": {
     "name": "Eternal Snow",
-    "artist": "Abyss Idols",
+    "artist": "abyss-idols",
     "lists": [
       "electronic",
       "rhythm",
       "J-pop",
       "girly"
     ],
-    "file": null,
+    "file": "abyss-idols/eternal-snow.mp3",
     "plays": 0
   },
   "euphoria": {
     "name": "Euphoria",
     "artist": [
-      "PIKASONIC",
+      "pikasonic",
       "Tatsunoshin",
       "Tsugumi Nagahara"
     ],
@@ -846,59 +847,62 @@
       "electronic",
       "rhythm"
     ],
-    "file": null,
+    "file": "pikasonic/euphoric.mp3",
     "plays": 0
   },
   "exit-earth-atmos": {
     "name": "Exit This Earth's Atomosphere",
+    "artist": "camellia",
     "lists": [
       "electronic",
       "rhythm",
       "vibrant"
     ],
-    "file": null,
+    "file": "camellia/exit-earth-atmos.mp3",
     "plays": 0
   },
   "facetime-mom": {
     "name": "FaceTime with My Mom",
+    "artist": "bo-burnham",
     "lists": [
       "electronic",
       "pop",
       "lofi",
       "funny"
     ],
-    "file": null,
+    "file": "bo-burnham/facetime-with-mom.mp3",
     "plays": 0
   },
   "faded": {
     "name": "Faded",
-    "artist": "Alan Walker",
+    "artist": "alan-walker",
     "lists": [
       "electronic",
       "house",
       "sad"
     ],
-    "file": null,
+    "file": "alan-walker/faded.mp3",
     "plays": 0
   },
   "faded-restrung": {
     "name": "Faded (restrung)",
-    "artist": "Alan Walker",
+    "artist": "alan-walker",
     "lists": [
       "orchestral",
       "sad"
     ],
-    "file": null,
+    "file": "alan-walker/faded-restrung.mp3",
     "plays": 0
   },
   "fallensquare": {
     "name": "Fallensquare",
+    "artist": "silentroom",
     "lists": [
       "electronic",
       "rhythm",
       "arcade"
     ],
-    "file": null,
+    "file": "silentroom/fallensquare.mp3",
     "plays": 0
   },
   "fatal": {
@@ -910,36 +914,36 @@
       "anime",
       "edgy"
     ],
-    "file": null,
+    "file": "~anime/fatal.mp3",
     "plays": 0
   },
   "fate": {
     "name": "Distorted Fate",
     "artist": "sakuzyo",
-    "file": "distorted-fate.mp3",
-    "cover": "distorted-fate.jpg",
     "lists": [
       "rhythm",
       "phigros",
       "artcore",
       "melodramatic",
       "sound"
-    ]
+    ],
+    "file": "distorted-fate.mp3",
+    "cover": "distorted-fate.jpg"
   },
   "feast": {
     "name": "Feast\u8fdc\u4e1c\u4e4b\u5bb4",
-    "artist": "\u8336\u9e23\u62fe\u8d30\u5f8b",
+    "artist": "cha-ming-12-lv",
     "lists": [
       "electronic",
       "rhythm",
       "oriental"
     ],
-    "file": null,
+    "file": "cha-ming-12-lv/feast.mp3",
     "plays": 0
   },
   "filament": {
     "name": "Filament",
-    "artist": "Puru",
+    "artist": "puru",
     "lists": [
       "electronic",
       "rhythm",
@@ -947,16 +951,17 @@
       "chill",
       "atmos"
     ],
-    "file": null,
+    "file": "puru/filament.mp3",
     "plays": 0
   },
   "final-step": {
     "name": "Final Step!",
+    "artist": "lime",
     "lists": [
       "electronic",
       "rhythm"
     ],
-    "file": null,
+    "file": "lime/final-step.mp3",
     "plays": 0
   },
   "fireflies": {
@@ -967,7 +972,7 @@
       "nostalgic",
       "bop"
     ],
-    "file": null,
+    "file": "~pop/fireflies.mp3",
     "plays": 0
   },
   "five-years": {
@@ -2893,7 +2898,7 @@
       "electronic",
       "rhythm"
     ],
-    "file": "rhythm/xenolith.mp3",
+    "file": "~rhythm/xenolith.mp3",
     "plays": 0
   },
   "xin-zhi-suo-xiang": {
@@ -2914,7 +2919,7 @@
       "rhythm",
       "arcade"
     ],
-    "file": "rhythm/xing.mp3",
+    "file": "~rhythm/xing.mp3",
     "plays": 0
   },
   "xnor": {
