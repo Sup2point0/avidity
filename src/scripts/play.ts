@@ -182,6 +182,7 @@ class PlaybackExecutive
    */
   toggle_pause()
   {
+    console.log("PAUSING!")
     if (this.audio?.paused) {
       this.audio.play();
       this.#sync_push("paused", false);
@@ -245,7 +246,7 @@ export const play = new PlaybackExecutive();
 
 if ("mediaSession" in navigator) {
   trySetHandler("play",
-    () => play.play_current()
+    () => play.toggle_pause()
   );
   trySetHandler("pause",
     () => play.toggle_pause()
