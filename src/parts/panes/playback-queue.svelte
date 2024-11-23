@@ -16,15 +16,9 @@ $: tracks = $playback.queue.entries();
 
 
 <div class="playback-queue">
-  {#if tracks.length > 0}
-    {#each tracks as [i, track]}
-      <TrackRow {track} ctx="queue" idx={i} />
-    {/each}
-
-  {:else}
-    <p> No tracks in queue </p>
-
-  {/if}
+  {#each tracks as [i, track]}
+    <TrackRow {track} ctx="queue" idx={i} />
+  {/each}
 </div>
 
 
@@ -42,6 +36,13 @@ $: tracks = $playback.queue.entries();
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  &:empty::after {
+    content: "No tracks in queue";
+    @include font-ui;
+    color: var(--col-text-deut);
+    margin-top: 1rem;
   }
 }
 
