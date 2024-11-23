@@ -1,8 +1,7 @@
 <script lang="ts">
 
-import play from "#scripts";
 import { Tracks } from "#scripts/data";
-import { playback, search, nav } from "#scripts/stores";
+import { search, searchDirty, nav } from "#scripts/stores";
 import { find_track, filter_tracks } from "#scripts/utils";
 
 import Header from "#src/parts/panes/header.svelte";
@@ -11,8 +10,7 @@ import TrackRow from "#parts/track-row.svelte";
 
 
 $: tracks = Object.keys($Tracks).map(shard => find_track(shard));
-// $: filtered = $search.dirty ? filter_tracks(tracks, $search) : tracks;
-$: filtered = filter_tracks(tracks, $search);
+$: filtered = searchDirty ? filter_tracks(tracks, $search) : tracks;
 
 </script>
 
@@ -24,18 +22,20 @@ $: filtered = filter_tracks(tracks, $search);
 
   <div class="tracks">
     {#each filtered as track}
-      <TrackRow track={track} />
+      {#if track}
+        <TrackRow track={track} />
+      {/if}
     {/each}
   </div>
 </main>
 
 
-<section>
+<!-- <section>
   <h2> debug </h2>
   <pre>play_exec: {JSON.stringify(play, null, 2)} </pre>
   <pre>$playback: {JSON.stringify($playback, null, 2)} </pre>
   <pre>nav: {JSON.stringify($nav, null, 2)}</pre>
-</section>
+</section> -->
 
 
 <style lang="scss">

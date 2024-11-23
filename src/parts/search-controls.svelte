@@ -44,10 +44,10 @@ let expanded = false;
       <tr>
         <th> in </th>
         <td>
-          <SearchFilter text="track" filter="in-track" />
-          <SearchFilter text="artist" filter="in-artist" />
-          <SearchFilter text="album" filter="in-album" />
-          <SearchFilter text="playlist" filter="in-list" />
+          <SearchFilter text="name" filter="name" />
+          <SearchFilter text="artist" filter="artist" />
+          <SearchFilter text="album" filter="album" />
+          <SearchFilter text="playlist" filter="list" />
         </td>
       </tr>
 

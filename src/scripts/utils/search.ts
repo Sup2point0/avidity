@@ -3,6 +3,12 @@ import { ratio as fuzzyRatio } from "fuzzball";
 import type { Track, SearchData } from "#scripts/types";
 
 
+interface ScoredTrack {
+  data: Track;
+  score: number;
+}
+
+
 /*
  * Filters a list of tracks by applying the given search options.
  */
@@ -13,24 +19,48 @@ export function filter_tracks(
 {
   let out = tracks.filter(Boolean) as Track[];
 
-  let props = {
-    name: options.name,
-    query: options.query,
-  };
+  let fields = [
+    options.name ? "name" : null,
+    options.artist ? "artist" : null,
+    options.album ? "album" : null,
+    options.list ? "list" : null,
+  ].filter(Boolean);
+
+  // FILTER
+  let scores: ScoredTrack[] = [];
 
   if (options.query) {
-    let scores = out.map(each => (
+    scores = out.map(each => (
       {
         data: each,
-        score: calc_relevance(each, options.query, props)
+        score: calc_relevance(each, options.query, fields)
       }
     ));
-    scores.sort((prot, deut) => prot.score - deut.score);
-    out = scores.map(each => each.data);
   }
 
+  console.log("out =", out);
+
+  // SORT
   switch (options.sort) {
+    case "rel":
+    case null:
+      if (scores) {
+        scores.sort((prot, deut) => prot.score - deut.score);
+        out = scores.map(each => each.data);
+      }
+      break;
+
+    case "alpha":
+      if (scores) {
+        out = keep_relevant(scores, 0.1).map(each => each.data);
+      }
+      out.sort((prot, deut) => prot.name.localeCompare(deut.name));
+      break;
+
     case "plays":
+      if (scores) {
+        out = keep_relevant(scores, 0.1).map(each => each.data);
+      }
       out.sort((prot, deut) => prot.plays - deut.plays);
       break;
   }
@@ -39,23 +69,33 @@ export function filter_tracks(
     out.reverse();
   }
 
+  console.log("out =", out);
   return out;
 }
 
 
 function calc_relevance(
-  target: Track,
-  value: string,
-  props: object,
+  source: Track | null,
+  query: string,
+  fields: (string | null)[],
 ): number
 {
-  if (!target) return -1;
+  if (!source) return -1;
 
-  let scores = Object.entries(props).map(
-    prop => (
-      (prop[1] && target[prop[0]]) ? fuzzyRatio(target[prop[0]], prop[1]) : -1
+  let scores = fields.map(
+    field => (
+      field ? fuzzyRatio(source[field], query) : -1
     )
   );
 
   return Math.max(...scores);
+}
+
+
+function keep_relevant(
+  scores: ScoredTrack[],
+  threshold: number
+): ScoredTrack[]
+{
+  return scores.filter(each => each.score > threshold);
 }

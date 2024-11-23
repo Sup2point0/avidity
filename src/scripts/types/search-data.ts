@@ -1,12 +1,15 @@
 export class SearchData
 {
-  dirty: boolean = true;
-
   query: string = "";
-  name: string = "";
-  artist: string = "";
-  lists: string[] = [];
 
-  sort: "alpha" | "plays" = "plays";
+  // The fields to match the query against.
+  name: boolean = true;
+  artist: boolean = true;
+  album: boolean = true;
+  list: boolean = true;
+
+  // How to sort the results.
+  sort: "rel" | "alpha" | "plays" = "rel";
+  group: "artist" | "album" | null = null;
   reverse: boolean = false;
 }

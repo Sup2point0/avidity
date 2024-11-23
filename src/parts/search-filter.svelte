@@ -17,9 +17,7 @@ $: active = $search[filter];
 
 
 <button class="search-filter" class:active
-  on:click={() => {if (filter) {
-    $search[filter] = !active;
-  }}}
+  on:click={() => {if (filter) { $search[filter] = !active; }}}
 >
   {text}
 </button>

@@ -245,25 +245,11 @@ function trySetHandler(event: string, handler)
 export const play = new PlaybackExecutive();
 
 if ("mediaSession" in navigator) {
-  trySetHandler("play",
-    () => play.toggle_pause()
-  );
-  trySetHandler("pause",
-    () => play.toggle_pause()
-  );
-  trySetHandler("previoustrack",
-    () => play.restart()
-  );
-  trySetHandler("nexttrack",
-    () => play.play_next()
-  );
-  trySetHandler("seekbackward",
-    (details) => play.shift(details.seekOffset ?? -5)
-  );
-  trySetHandler("seekforward",
-    (details) => play.shift(details.seekOffset ?? 5)
-  );
-  trySetHandler("seekforward",
-    (details) => play.seek(details.seekTime)
-  );
+  trySetHandler("play", () => play.toggle_pause());
+  trySetHandler("pause", () => play.toggle_pause());
+  trySetHandler("previoustrack", () => play.restart());
+  trySetHandler("nexttrack", () => play.play_next());
+  trySetHandler("seekbackward", (details) => play.shift(details.seekOffset ?? -5));
+  trySetHandler("seekforward", (details) => play.shift(details.seekOffset ?? 5));
+  trySetHandler("seekforward", (details) => play.seek(details.seekTime));
 }
