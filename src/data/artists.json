@@ -1,101 +1,35 @@
 {
-  "a-39": {
-    "name": "A-39"
-  },
-  "abyss-idols": {
-    "name": "Abyss Idols"
-  },
-  "alan-walker": {
-    "name": "Alan Walker"
-  },
-  "alex-skrindo": {
-    "name": "Alex Skrindo"
-  },
-  "anna-yvette": {
-    "name": "Anna Yvette"
-  },
-  "approaching-nirvana": {
-    "name": "Approaching Nirvana"
-  },
-  "attoclef": {
-    "name": "Attoclef"
-  },
-  "au5": {
-    "name": "Au5"
-  },
-  "avril-lavigne": {
-    "name": "Avril Lavigne"
-  },
-  "bo-burnham": {
-    "name": "Bo Burnham"
-  },
-  "camellia": {
-    "name": "Camellia"
-  },
-  "cha-ming-12-lv": {
-    "name": "\u00e8\u0152\u00b6\u00e9\u00b8\u00a3\u00e6\u2039\u00be\u00e8\u00b4\u00b0\u00e5\u00be\u2039"
-  },
-  "deaf-kev": {
-    "name": "DEAF KEV"
-  },
-  "electro-light": {
-    "name": "Electro-Light"
-  },
-  "elektronomia": {
-    "name": "Elektronomia"
-  },
-  "feryquitous": {
-    "name": "Feryquitous"
-  },
-  "frums": {
-    "name": "Frums"
-  },
-  "giga": {
-    "name": "Giga"
-  },
-  "jiang-mi-tiao": {
-    "name": "\u59dc\u7c73\u689d"
-  },
-  "jim-yosef": {
-    "name": "Jim Yosef"
-  },
-  "johannes-bornlof": {
-    "name": "Johannes Bornl\u00f6f"
-  },
-  "k-391": {
-    "name": "K-391"
-  },
-  "laur": {
-    "name": "Laur"
-  },
-  "lime": {
-    "name": "Lime"
-  },
-  "miku": {
-    "name": "Miku"
-  },
-  "olivia-rodrigo": {
-    "name": "Olivia Rodrigo"
-  },
-  "pikasonic": {
-    "name": "PIKASONIC"
-  },
-  "puru": {
-    "name": "Puru"
-  },
-  "shadow-bling": {
-    "name": "shadow_bling"
-  },
-  "sup": {
-    "name": "Sup#2.0"
-  },
-  "taylor-swift": {
-    "name": "Taylor Swift"
-  },
-  "tobu": {
-    "name": "Tobu"
-  },
-  "yoasobi": {
-    "name": "YOASOBI"
-  }
+  "a-39": "A-39",
+  "abyss-idols": "Abyss Idols",
+  "alan-walker": "Alan Walker",
+  "alex-skrindo": "Alex Skrindo",
+  "anna-yvette": "Anna Yvette",
+  "approaching-nirvana": "Approaching Nirvana",
+  "attoclef": "Attoclef",
+  "au5": "Au5",
+  "avril-lavigne": "Avril Lavigne",
+  "bo-burnham": "Bo Burnham",
+  "camellia": "Camellia",
+  "cha-ming-12-lv": "\u00e8\u0152\u00b6\u00e9\u00b8\u00a3\u00e6\u2039\u00be\u00e8\u00b4\u00b0\u00e5\u00be\u2039",
+  "deaf-kev": "DEAF KEV",
+  "electro-light": "Electro-Light",
+  "elektronomia": "Elektronomia",
+  "feryquitous": "Feryquitous",
+  "frums": "Frums",
+  "giga": "Giga",
+  "jiang-mi-tiao": "\u59dc\u7c73\u689d",
+  "jim-yosef": "Jim Yosef",
+  "johannes-bornlof": "Johannes Bornl\u00f6f",
+  "k-391": "K-391",
+  "laur": "Laur",
+  "lime": "Lime",
+  "miku": "Miku",
+  "olivia-rodrigo": "Olivia Rodrigo",
+  "pikasonic": "PIKASONIC",
+  "puru": "Puru",
+  "shadow-bling": "shadow_bling",
+  "sup": "Sup#2.0",
+  "taylor-swift": "Taylor Swift",
+  "tobu": "Tobu",
+  "yoasobi": "YOASOBI"
 }
