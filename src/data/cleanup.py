@@ -5,6 +5,14 @@ Utility script for alphabetically sorting tracks, playlists and artists data.
 import json
 
 
+def fill(data: str | dict) -> str | dict:
+  if not isinstance(data, dict):
+    return
+  
+  data["plays"] = data.get("plays", 0)
+  return data
+
+
 def clean(file: str):
   print(f">>        / cleaning {file}")
 
@@ -12,7 +20,7 @@ def clean(file: str):
     load = json.load(source)
 
   out = {
-    each: data
+    each: fill(data)
     for each, data in sorted(load.items())
   }
 

@@ -240,7 +240,8 @@
       "hardcore",
       "neuro"
     ],
-    "file": "sup/aphenia.m4a"
+    "file": "sup/aphenia.m4a",
+    "plays": 0
   },
   "are-you-happy": {
     "name": "Are You Happy",
@@ -461,7 +462,8 @@
       "mood",
       "sound"
     ],
-    "file": "sup/ceruleus.m4a"
+    "file": "sup/ceruleus.m4a",
+    "plays": 0
   },
   "cha-ying-xi": {
     "name": "\u8336\u5f71\u620f",
@@ -929,7 +931,8 @@
       "sound"
     ],
     "file": "distorted-fate.mp3",
-    "cover": "distorted-fate.jpg"
+    "cover": "distorted-fate.jpg",
+    "plays": 0
   },
   "feast": {
     "name": "Feast\u8fdc\u4e1c\u4e4b\u5bb4",
@@ -1139,6 +1142,7 @@
   },
   "grimheart": {
     "name": "Grimheart",
+    "artist": "puru",
     "lists": [
       "electronic",
       "rhythm",
@@ -1146,7 +1150,7 @@
       "chill",
       "atmos"
     ],
-    "file": null,
+    "file": "puru/grimheart.mp3",
     "plays": 0
   },
   "gvn": {
@@ -1444,7 +1448,8 @@
     "lists": [
       "chill"
     ],
-    "file": "sup/let-you-down.m4a"
+    "file": "sup/let-you-down.m4a",
+    "plays": 0
   },
   "levitating": {
     "name": "Levitating",
@@ -1792,7 +1797,8 @@
     "lists": [
       "vibrant"
     ],
-    "file": "sup/night.m4a"
+    "file": "sup/night.m4a",
+    "plays": 0
   },
   "night-attack": {
     "name": "The Night Attack",
@@ -2136,7 +2142,8 @@
     "lists": [
       "vibrant"
     ],
-    "file": "sup/rejuvenate.m4a"
+    "file": "sup/rejuvenate.m4a",
+    "plays": 0
   },
   "repeat-stuff": {
     "name": "Repeat Stuff",
@@ -2385,6 +2392,17 @@
       "sound"
     ],
     "file": null,
+    "plays": 0
+  },
+  "snow-white": {
+    "name": "Snow White",
+    "artist": "puru",
+    "lists": [
+      "electronic",
+      "rhythm",
+      "chill"
+    ],
+    "file": "puru/snow-white.mp3",
     "plays": 0
   },
   "spasmodic": {
@@ -2663,10 +2681,12 @@
     "name": "Tomorrow",
     "artist": "sup",
     "album": "algorhythm-origins",
-    "file": "sup/tomorrow.m4a"
+    "file": "sup/tomorrow.m4a",
+    "plays": 0
   },
   "trap-crow": {
     "name": "Trap Crow",
+    "artist": "puru",
     "lists": [
       "electronic",
       "rhythm",
@@ -2674,7 +2694,7 @@
       "chill",
       "atmos"
     ],
-    "file": null,
+    "file": "puru/trap-crow.mp3",
     "plays": 0
   },
   "triad-dryad": {
@@ -2773,7 +2793,8 @@
       "sound",
       "bop"
     ],
-    "file": "sup/voxel.m4a"
+    "file": "sup/voxel.m4a",
+    "plays": 0
   },
   "wanna-be-girl": {
     "name": "I wanna be a girl",

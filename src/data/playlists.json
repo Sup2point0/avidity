@@ -1,41 +1,54 @@
 {
   "cloud-prism": {
-    "name": "Cloud Prism"
+    "name": "Cloud Prism",
+    "plays": 0
   },
   "elysion": {
-    "name": "ELYSION"
+    "name": "ELYSION",
+    "plays": 0
   },
   "fruit-salad": {
-    "name": "Fruit Salad"
+    "name": "Fruit Salad",
+    "plays": 0
   },
   "inside": {
-    "name": "INSIDE"
+    "name": "INSIDE",
+    "plays": 0
   },
   "make-happy": {
-    "name": "Make Happy"
+    "name": "Make Happy",
+    "plays": 0
   },
   "neuro": {
-    "name": "neuro"
+    "name": "neuro",
+    "plays": 0
   },
   "planet-shaper": {
-    "name": "PLANET//SHAPER"
+    "name": "PLANET//SHAPER",
+    "plays": 0
   },
   "rhythm": {
-    "name": "rhythm"
+    "name": "rhythm",
+    "plays": 0
   },
   "run-rabbit-run": {
-    "name": "Run Rabbit Run"
+    "name": "Run Rabbit Run",
+    "plays": 0
   },
   "splitting-arrow": {
-    "name": "Splitting the Arrow"
+    "name": "Splitting the Arrow",
+    "plays": 0
   },
   "tera-io": {
-    "name": "TERA I/O"
+    "name": "TERA I/O",
+    "plays": 0
   },
   "what": {
-    "name": "what."
+    "name": "what.",
+    "plays": 0
   },
   "words": {
-    "name": "words, words, words"
+    "name": "words, words, words",
+    "plays": 0
   }
 }
