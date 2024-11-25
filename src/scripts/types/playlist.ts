@@ -4,6 +4,7 @@ import type { Track } from "./track";
 export class Playlist
 {
   public shard: string;
+  public kind: "album" | "tag";
   public name: string;
   public colour: string;
   public tracks: Track[];
@@ -15,6 +16,7 @@ export class Playlist
   )
   {
     this.shard = shard;
+    this.kind = data?.kind ?? "tag"
     this.name = data?.name ?? shard;
     this.colour = data?.col ?? "var(--col-deut)"
     this.tracks = [];
