@@ -1,6 +1,6 @@
 export class NavData
 {
-  page: "home" | "tracks" | "lists" = "home";
+  page: "home" | "tracks" | "lists" = "tracks";
   popup: string | null = null;
   notifs: string[] = [];
   
