@@ -984,73 +984,82 @@
   },
   "five-years": {
     "name": "Five Years",
+    "artist": "bo-burnham",
     "lists": [
       "electronic",
       "pop",
       "lofi"
     ],
-    "file": null,
+    "file": "bo-burnham/five-years.mp3",
     "plays": 0
   },
   "flamewall": {
     "name": "Flamewall",
+    "artist": "camellia",
+    "album": "tera-io",
     "lists": [
       "electronic",
       "rhythm",
       "metal",
       "orchestral"
     ],
-    "file": null,
+    "file": "camellia/flamewall.mp3",
     "plays": 0
   },
   "flashback": {
     "name": "Flashback",
+    "artist": "elektronomia",
     "lists": [
       "electronic",
       "house",
       "sad"
     ],
-    "file": null,
+    "file": "elektronomia/flashback.mp3",
     "plays": 0
   },
   "fly-wit-me": {
     "name": "Fly Wit Me",
+    "artist": "camellia",
+    "album": "tera-io",
     "lists": [
       "electronic",
       "rhythm",
       "chill",
       "flavour"
     ],
-    "file": null,
+    "file": "camellia/fly-wit-me.mp3",
     "plays": 0
   },
   "for-the-weary": {
     "name": "For the Weary",
+    "artist": "johannes-bornlof",
     "lists": [
       "orchestral",
       "folk",
       "mood"
     ],
-    "file": null,
+    "file": "johannes-bornlof/for-the-weary",
     "plays": 0
   },
   "force": {
     "name": "Force",
-    "artist": "Alan Walker",
+    "artist": "alan-walker",
     "lists": [
       "electronic",
       "house"
     ],
-    "file": null,
+    "file": "alan-walker/force.mp3",
     "plays": 0
   },
   "forest-trekking": {
     "name": "Forest Trekking",
+    "artist": "johannes-bornlof",
+    "album": "cloud-prism",
     "lists": [
       "cute",
       "chill"
     ],
-    "file": null,
+    "file": "johannes-bornlof/forest-trekking.mp3",
     "plays": 0
   },
   "fractured-angel": {
@@ -1061,7 +1070,7 @@
       "rhythm",
       "sound"
     ],
-    "file": null,
+    "file": "~rhythm/fractured-angel.mp3",
     "plays": 0
   },
   "freefalling": {
@@ -1076,28 +1085,29 @@
       "hardcore",
       "rich"
     ],
-    "file": null,
+    "file": "~rhythm/freefalling.mp3",
     "plays": 0
   },
   "fuli-buster": {
     "name": "FULi AUTO BUSTER",
-    "artist": "MYUKKE.",
+    "artist": "myukke",
     "lists": [
       "electronic",
       "rhythm",
       "arcade"
     ],
-    "file": null,
+    "file": "myukke/fuli-auto-buster.mp3",
     "plays": 0
   },
   "fuli-shooter": {
     "name": "FULi AUTO SHOOTER",
+    "artist": "myukke",
     "lists": [
       "electronic",
       "rhythm",
       "arcade"
     ],
-    "file": null,
+    "file": "myukke/fuli-auto-shooter.mp3",
     "plays": 0
   },
   "geometric-love": {
@@ -1111,36 +1121,40 @@
       "vocaloid",
       "clever"
     ],
-    "file": null,
+    "file": "~anime/geometric-love.mp3",
     "plays": 0
   },
   "globetrotter": {
     "name": "Globetrotter",
+    "artist": "johannes-bornlof",
+    "album": "cloud-prism",
     "lists": [
       "cute",
       "chill"
     ],
-    "file": null,
+    "file": "johannes-bornlof/globetrotter.mp3",
     "plays": 0
   },
   "gods-perspective": {
-    "name": "From God\u2019s Perspective",
+    "name": "From God's Perspective",
+    "artist": "bo-burnham",
+    "album": "what",
     "lists": [
       "piano",
       "funny"
     ],
-    "file": null,
+    "file": "bo-burnham/from-gods-perspective.mp3",
     "plays": 0
   },
   "goodtek": {
     "name": "GOODTEK",
-    "artist": "EBIMAYO",
+    "artist": "ebimayo",
     "lists": [
       "electronic",
       "rhythm",
       "arcade"
     ],
-    "file": null,
+    "file": "ebimayo/goodtek.mp3",
     "plays": 0
   },
   "grimheart": {

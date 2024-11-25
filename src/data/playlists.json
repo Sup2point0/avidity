@@ -41,6 +41,7 @@
   },
   "tera-io": {
     "name": "TERA I/O",
+    "col": "#4ecc9d",
     "plays": 0
   },
   "what": {
