@@ -11,14 +11,26 @@ import { save_napkin } from "#scripts";
 </script>
 
 
-<nav class="nav">
+<nav>
   <div>
-    <span id="nav-title">
-      avidity
-    </span>
+    <span id="nav-title"> avidity </span>
     <span id="nav-credits">
       by <a target="_blank" href="https://github.com/Sup2point0">Sup#2.0</a>
     </span>
+  </div>
+
+  <div class="pages">
+    <button class="ui" on:click={() => { $nav.page = "home"; }}>
+      <span class="material-symbols-rounded"> home </span>
+    </button>
+
+    <button class="ui" on:click={() => { $nav.page = "tracks"; }}>
+      <span class="material-symbols-rounded"> music_note </span>
+    </button>
+
+    <button class="ui" on:click={() => { $nav.page = "lists"; }}>
+      <span class="material-symbols-rounded"> queue_music </span>
+    </button>
   </div>
 
   <div>
@@ -28,9 +40,7 @@ import { save_napkin } from "#scripts";
       </button>
 
     {:else}
-      <button class="ui rounded" on:click={() => {
-        $nav.popup = "shard";
-      }}>
+      <button class="ui rounded" on:click={() => { $nav.popup = "shard"; }}>
         <span class="material-symbols-rounded"> key </span>
       </button>
 
@@ -48,9 +58,7 @@ import { save_napkin } from "#scripts";
       </a>
     </button>
 
-    <button class="ui rounded" on:click={() => {
-      $nav.popup = "credits";
-    }}>
+    <button class="ui rounded" on:click={() => { $nav.popup = "credits"; }}>
       <span class="material-symbols-rounded"> info </span>
     </button>
   </div>
@@ -59,7 +67,7 @@ import { save_napkin } from "#scripts";
 
 <style lang="scss">
 
-nav.nav {
+nav {
   width: 100%;
   min-height: 4rem;
   margin: 0;
@@ -74,9 +82,15 @@ nav.nav {
   background-color: color-mix(in oklch, var(--col-back-prot), transparent 16%);
   @include ui-block;
 
-  div * {
-    display: inline-block;
+  div {
+    display: flex;
+    align-items: center;
   }
+}
+
+.pages button {
+  @include font-ui;
+  border-radius: 0.5rem;
 }
 
 

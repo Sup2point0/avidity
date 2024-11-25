@@ -34,3 +34,11 @@ span.separator {
   padding: 0 0.5em;
   color: var(--col-text-deut);
 }
+
+.material-symbols-rounded {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' -25,
+    'opsz' 48;
+}
