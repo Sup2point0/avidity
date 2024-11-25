@@ -7,7 +7,7 @@ import json
 
 def fill(data: str | dict) -> str | dict:
   if not isinstance(data, dict):
-    return
+    return data
   
   data["plays"] = data.get("plays", 0)
   return data
