@@ -4,12 +4,18 @@ import { nav } from "#scripts/stores";
 
 import HomePage from "./(pages)/home.svelte";
 import TracksPage from "./(pages)/tracks.svelte";
+import PlaylistsPage from "./(pages)/playlists.svelte";
+
+
+$: page = $nav.page;
 
 </script>
 
 
-{#if $nav.page === "tracks"}
+{#if page === "tracks"}
   <TracksPage />
+{:else if page === "lists"}
+  <PlaylistsPage />
 {:else}
   <HomePage />
 {/if}

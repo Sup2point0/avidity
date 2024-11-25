@@ -22,7 +22,7 @@ const data = (typeof(track) == "string" ? find_track(track) : track);
 </script>
 
 
-<div class="part"
+<div class="track-row"
   on:click={() => $nav.selected_track = data?.shard}
 >
 
@@ -96,7 +96,7 @@ const data = (typeof(track) == "string" ? find_track(track) : track);
 
 <style lang="scss">
 
-.part {
+.track-row {
   cursor: pointer;
   
   width: 100%;

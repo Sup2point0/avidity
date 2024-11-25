@@ -25,7 +25,7 @@ export class Playlist
     
     this.tracks = data?.tracks ?? [];
     this.featured = data?.featured ?? this.tracks.at(0) ?? null;
-    this.cover = data?.cover ?? this.tracks.at(0);
+    this.cover = data?.cover ?? null;
     this.plays = data?.plays ?? 0;
   }
 }
