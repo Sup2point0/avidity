@@ -2,6 +2,7 @@
 
 import { nav } from "#scripts/stores";
 
+import HomePage from "./(pages)/home.svelte";
 import TracksPage from "./(pages)/tracks.svelte";
 
 </script>
@@ -9,6 +10,8 @@ import TracksPage from "./(pages)/tracks.svelte";
 
 {#if $nav.page === "tracks"}
   <TracksPage />
+{:else}
+  <HomePage />
 {/if}
 
 
