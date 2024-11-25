@@ -1,4 +1,4 @@
-/// Implements the `play` global for managing audio playback.
+/// Implements the `play_exec` global for managing audio playback.
 
 import { get } from "svelte/store";
 import { base } from "$app/paths";
@@ -163,15 +163,27 @@ class PlaybackExecutive
   /**
    * Play a track given its `shard`.
    */
-  play_track(shard: string): boolean
+  play_track(shard: string)
   {
     playback.update(s => {
       s.current = shard;
-      return s;
     });
 
     this.play_current();
-    return true;
+  }
+
+  /**
+   * Add all tracks in a playlist to the queue.
+   */
+  play_list(shard: string)
+  {
+    playback.update(s => {
+      s.queue = s.queue.concat(find_playlist(shard)?.tracks ?? []);
+    });
+
+    if (!this.current) {
+      this.play_next();
+    }
   }
 
 
@@ -182,7 +194,6 @@ class PlaybackExecutive
    */
   toggle_pause()
   {
-    console.log("PAUSING!")
     if (this.audio?.paused) {
       this.audio.play();
       this.#sync_push("paused", false);
@@ -242,14 +253,14 @@ function trySetHandler(event: string, handler)
 /**
  * The global `PlaybackExecutive` instance for managing audio playback.
  */
-export const play = new PlaybackExecutive();
+export const play_exec = new PlaybackExecutive();
 
 if ("mediaSession" in navigator) {
-  trySetHandler("play", () => play.toggle_pause());
-  trySetHandler("pause", () => play.toggle_pause());
-  trySetHandler("previoustrack", () => play.restart());
-  trySetHandler("nexttrack", () => play.play_next());
-  trySetHandler("seekbackward", (details) => play.shift(details.seekOffset ?? -5));
-  trySetHandler("seekforward", (details) => play.shift(details.seekOffset ?? 5));
-  trySetHandler("seekforward", (details) => play.seek(details.seekTime));
+  trySetHandler("play", () => play_exec.toggle_pause() );
+  trySetHandler("pause", () => play_exec.toggle_pause() );
+  trySetHandler("previoustrack", () => play_exec.restart() );
+  trySetHandler("nexttrack", () => play_exec.play_next() );
+  trySetHandler("seekbackward", details => play_exec.shift(details.seekOffset ?? -5) );
+  trySetHandler("seekforward", details => play_exec.shift(details.seekOffset ?? 5) );
+  trySetHandler("seekforward", details => play_exec.seek(details.seekTime) );
 }

@@ -38,8 +38,6 @@ export function filter_tracks(
     ));
   }
 
-  console.log("out =", out);
-
   // SORT
   switch (options.sort) {
     case "rel":
@@ -68,8 +66,7 @@ export function filter_tracks(
   if (options.reverse) {
     out.reverse();
   }
-
-  console.log("out =", out);
+  
   return out;
 }
 

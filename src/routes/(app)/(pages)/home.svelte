@@ -5,13 +5,17 @@ The home page for navigating to tracks or playlists.
 
 <script lang="ts">
 
+import { Playlists } from "#scripts/data";
+
 import PlaylistBlock from "#parts/playlist-block.svelte";
 
 </script>
 
 
 <main>
-  
+  {#each Object.keys($Playlists) as shard}
+    <PlaylistBlock {shard} />
+  {/each}
 </main>
 
 

@@ -11,7 +11,9 @@ import Credits from "#src/parts/popups/credits.svelte";
 
 
 setInterval(() => {
-  $playback.elapsed = play_exec.elapsed;
+  if ($playback) {
+    $playback.elapsed = play_exec.elapsed;
+  }
 }, 250);
 
 onMount(() => {

@@ -15,12 +15,12 @@ function process_raw(raw_data: object): PlaylistsData
   let out = {};
   console.group("loading playlists data...");
 
-  for (let [shard, name] of Object.entries(raw_data)) {
+  for (let [shard, data] of Object.entries(raw_data)) {
     if (shard == "default") continue;
 
     try {
       /* @ts-ignore */
-      out[shard] = new Playlist(shard, name);
+      out[shard] = new Playlist(shard, data);
     } catch {
       console.error(`failed to load playlist \`${shard}\``);
     }

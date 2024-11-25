@@ -5,7 +5,7 @@ A card for selecting a playlist.
 
 <script lang="ts">
 
-import play from "#scripts";
+import play_exec from "#scripts";
 import { nav } from "#scripts/stores";
 import { find_playlist } from "#scripts/utils";
 
@@ -37,7 +37,7 @@ const cover = playlist?.cover ?? "void.png";
       </div>
 
       <button class="play"
-        on:click={() => { play.play_list(shard); }}
+        on:click={() => { play_exec.play_list(shard); }}
       >
         <span class="material-symbols-rounded">
           play_arrow
