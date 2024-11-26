@@ -66,6 +66,7 @@ class PlaybackExecutive
   #sync_push(prop: string, val: any)
   {
     playback.update(s => {
+      // @ts-ignore
       s[prop] = val;
       return s;
     })
@@ -95,7 +96,10 @@ class PlaybackExecutive
 
     this.audio?.pause();
     this.audio = this.#load(track);
-    if (this.audio == null) return;
+    if (this.audio == null) {
+      alert(`failed to load audio file for track \`${track.shard}\``);
+      return;
+    }
 
     this.audio.play();
     // this.audio.addEventListener("ended", this.play_next);
@@ -179,6 +183,7 @@ class PlaybackExecutive
   {
     playback.update(s => {
       s.queue = s.queue.concat(find_playlist(shard)?.tracks ?? []);
+      return s;
     });
 
     if (!this.current) {

@@ -8,7 +8,7 @@ import { find_track } from "#scripts/utils";
 import Nav from "#parts/panes/nav.svelte";
 import TrackDetails from "#parts/panes/track-details.svelte";
 import PlaybackQueue from "#src/parts/panes/playback-queue.svelte";
-import TrackControls from "#src/parts/panes/track-controls.svelte";
+import PlaybackControls from "#src/parts/panes/playback-controls.svelte";
 
 
 $: track = find_track($nav.selected_track);
@@ -39,7 +39,7 @@ $: image = track && `url(/covers/${track?.cover})`;
   </div>
   
   <div class="bar">
-    <TrackControls />
+    <PlaybackControls />
   </div>
 </div>
 

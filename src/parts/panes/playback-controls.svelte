@@ -8,7 +8,7 @@ The global track playback control bar.
 import play_exec from "#scripts";
 import { Artists } from "#scripts/data";
 import { playback } from "#scripts/stores";
-import { find_track, display_time } from "#scripts/utils";
+import { find_track, display_artist, display_time } from "#scripts/utils";
 
 
 $: track = find_track($playback.current);
@@ -50,7 +50,7 @@ $: track = find_track($playback.current);
 
     <section id="track-details">
       <h4> {track?.name ?? "?"} </h4>
-      <p> {track?.artist ? $Artists[track.artist] : "?"} </p>
+      <p> {@html display_artist(track?.artist)} </p>
     </section>
 
     <section id="playback-details">

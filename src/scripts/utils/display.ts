@@ -1,4 +1,4 @@
-export function display_time(t: number | null): string
+export function display_time(t: number | null | undefined): string
 {
   if (t == null) return "--:--";
   if (typeof(t) == "string") {

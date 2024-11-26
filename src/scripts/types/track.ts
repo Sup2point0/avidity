@@ -1,3 +1,6 @@
+/**
+ * Represents a soundtrack and its associated metadata and analytics.
+ */
 export class Track
 {
   /// INTERNAL
@@ -20,7 +23,7 @@ export class Track
   {
     this.shard = shard;
     this.file = data.file;
-    this.cover = data.cover ?? null;
+    this.cover = data.cover ?? this.file;
     this.duration = data.duration ?? null;
     this.plays = data.plays ?? 0;
     
