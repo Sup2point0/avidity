@@ -11,6 +11,7 @@
 :root {
   @include font-ui;
   font-size: 80%;
+  color: var(--col-text);
 }
 
 ::selection {

@@ -23,8 +23,16 @@ const cover = playlist?.cover ?? find_track(playlist?.featured)?.cover ?? "void.
 
 {#if playlist}
 
-<button class="playlist-block"
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div class="playlist-block"
   on:click={() => { $nav.selected_playlist = shard; }}
+  on:keydown={(e) => {
+    if (e.key === "Enter") {
+      $nav.selected_playlist = shard;
+    } else if (e.key === "Space") {
+      play_exec.play_list(shard);
+    }
+  }}
 >
   <img class="playlist-cover"
     alt={playlist.name}
@@ -37,7 +45,7 @@ const cover = playlist?.cover ?? find_track(playlist?.featured)?.cover ?? "void.
       <p> {track_count} </p>
     </div>
 
-    <button class="play"
+    <button class="ui play"
       on:click={() => { play_exec.play_list(shard); }}
     >
       <span class="material-symbols-rounded">
@@ -45,15 +53,17 @@ const cover = playlist?.cover ?? find_track(playlist?.featured)?.cover ?? "void.
       </span>
     </button>
   </div>
-</button>
+</div>
 
 {/if}
 
 
 <style lang="scss">
 
-button {
-  padding: 0.5rem;
+.playlist-block {
+  padding: 1rem;
+  display: inline-block;
+  flex-grow: 0;
 
   @include font-ui;
   background-color: transparent;
@@ -70,21 +80,33 @@ button {
 }
 
 .layout {
+  margin-top: 1rem;
   display: flex;
 }
 
 
 img.playlist-cover {
   min-width: 6rem;
+  max-width: 15vw;
   aspect-ratio: 1;
 }
 
 .playlist-info {
+  flex-grow: 1;
   text-align: left;
+
+  h3 {
+    @include font-flavour;
+    color: var(--col-text);
+    font-size: 150%;
+  }
 
   p {
     color: var(--col-text-deut);
   }
+}
+
+button {
 }
 
 </style>

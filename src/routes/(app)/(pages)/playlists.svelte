@@ -24,8 +24,10 @@ import PlaylistBlock from "#parts/playlist-block.svelte";
 main {
   height: 100%;
   min-height: 0;
+  padding: 1rem;
   z-index: 1;
   overflow-y: scroll;
+
   background-color: color-mix(in oklch, var(--col-back), transparent 4%);
   @include frost-blur;
   

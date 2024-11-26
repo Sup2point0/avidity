@@ -1181,16 +1181,17 @@
       "rhythm",
       "atmos"
     ],
-    "file": null,
+    "file": "~rhythm/gvn.mp3",
     "plays": 0
   },
   "heavy-duty": {
     "name": "Heavy Duty",
+    "artist": "johannes-bornlof",
     "lists": [
       "orchestral",
       "war"
     ],
-    "file": null,
+    "file": "johannes-bornlof/heavy-duty.mp3",
     "plays": 0
   },
   "highland-hymn": {
