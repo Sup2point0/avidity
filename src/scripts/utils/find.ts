@@ -16,7 +16,7 @@ export function find_playlist(shard: string | null | undefined): Playlist | null
 }
 
 
-export function display_artist(shard: string | string[] | null | undefined): string | null
+export function display_artist(shard: string | string[] | null | undefined): string
 {
   if (Array.isArray(shard)) {
     return (shard
@@ -24,6 +24,6 @@ export function display_artist(shard: string | string[] | null | undefined): str
       .join("<span class=\"separator\">/</span>")
     );
   } else {
-    return shard ? (get(Artists)[shard] ?? shard) : null;
+    return shard ? (get(Artists)[shard]?.name ?? shard) : "unkown artist";
   }
 }

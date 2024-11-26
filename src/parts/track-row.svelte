@@ -22,8 +22,18 @@ const data = (typeof(track) == "string" ? find_track(track) : track);
 </script>
 
 
+<!-- {#if data} -->
+
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <div class="track-row"
   on:click={() => $nav.selected_track = data?.shard}
+  on:keydown={(e) => {
+    if (e.key === "Enter") {
+      $nav.selected_track = data?.shard ?? track;
+    } else if (e.key === "Space") {
+      play_exec.play_track(data?.shard);
+    }
+  }}
 >
 
   <div class="left">
@@ -92,6 +102,8 @@ const data = (typeof(track) == "string" ? find_track(track) : track);
   </div>
 
 </div>
+
+<!-- {/if} -->
 
 
 <style lang="scss">

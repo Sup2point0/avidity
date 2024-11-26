@@ -1,5 +1,6 @@
 export { Track } from "./track";
 export { Playlist } from "./playlist";
+export { Artist } from "./artist";
 
 export { Changes } from "./changes-data";
 

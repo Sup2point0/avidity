@@ -1,5 +1,6 @@
 import type { Track } from "./track";
 import type { Playlist } from "./playlist";
+import type { Artist } from "./artist";
 
 
 export interface TracksData
@@ -16,5 +17,5 @@ export interface PlaylistsData
 
 export interface ArtistsData
 {
-  [shard: string]: string;
+  [shard: string]: Artist;
 }
