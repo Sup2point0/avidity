@@ -22,7 +22,7 @@ const data = (typeof(track) == "string" ? find_track(track) : track);
 </script>
 
 
-<!-- {#if data} -->
+{#if data}
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div class="track-row"
@@ -64,16 +64,14 @@ const data = (typeof(track) == "string" ? find_track(track) : track);
   </div>
 
   {#if ctx != "queue"}
-    <div class="album-tag">
-      <!-- {#if data?.album}
-        <PlaylistTag {data.album} />
-      {/if} -->
-    </div>
-
     <div class="playlist-tags">
       {#each data?.lists ?? [] as playlist}
         <PlaylistTag {playlist} />
       {/each}
+
+      {#if data?.album}
+        <PlaylistTag playlist={data.album} />
+      {/if}
     </div>
   {/if}
 
@@ -97,7 +95,7 @@ const data = (typeof(track) == "string" ? find_track(track) : track);
 
 </div>
 
-<!-- {/if} -->
+{/if}
 
 
 <style lang="scss">
