@@ -17,12 +17,13 @@ let expanded = false;
 </script>
 
 
+<!-- svelte-ignore component-name-lowercase -->
 <search class="search-controls">
   <!-- search bar -->
   <div class="row">
 		<input type="search"
       placeholder="Search"
-			bind:value={$search.value}
+			bind:value={$search.query}
 		/>
 
     <button class="ui"
@@ -86,7 +87,7 @@ let expanded = false;
   top: 0;
   z-index: 2;
   background-color: color-mix(in oklch, var(--col-back), transparent 20%);
-  @include frost-blur;
+  @include ui-block;
 }
 
 .row {
@@ -98,10 +99,25 @@ let expanded = false;
 }
 
 
+table, tr, th, td {
+  border: none;
+}
+
+td {
+  padding: 0.25em 1em;
+}
+
+th {
+  @include font-ui;
+  color: var(--col-text-deut);
+  text-align: left;
+}
+
+
 input {
   width: min(80%, 30em);
-  margin-right: 1rem;
-  padding: 0.5em 1.5em;
+  margin-right: 0.5rem;
+  padding: 0.5em 1em;
   @include font-ui;
   font-size: 150%;
   background-color: color-mix(in oklch, var(--col-back-deut), transparent 40%);
@@ -110,23 +126,26 @@ input {
   outline: none;
 }
 
-
-table, tr, th, td {
-  border: none;
-}
-
-tr {
-  padding: 1rem 0;
-}
-
-td {
-  padding: 0 1em;
-}
-
-th {
+select, option {
   @include font-ui;
-  color: var(--col-text-deut);
-  text-align: left;
+  background-color: var(--col-card);
+  border: none;
+  outline: none;
+}
+
+select {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+
+  &:hover {
+    outline: var(--col-prot) solid 1px;
+  }
+}
+
+option {
+  &:hover {
+    background-color: var(--col-card-click);
+  }
 }
 
 </style>
