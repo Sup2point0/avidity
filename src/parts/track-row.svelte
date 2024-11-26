@@ -74,12 +74,6 @@ const data = (typeof(track) == "string" ? find_track(track) : track);
       {#each data?.lists ?? [] as playlist}
         <PlaylistTag {playlist} />
       {/each}
-
-      <button class="ui rounded" style:height="2rem"
-        on:click={() => alert("This feature is under development!")}
-      >
-        <span class="material-symbols-rounded"> add </span>
-      </button>
     </div>
   {/if}
 
@@ -140,7 +134,7 @@ div {
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
   &.playlist-tags {

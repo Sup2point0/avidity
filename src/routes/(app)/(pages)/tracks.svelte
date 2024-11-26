@@ -38,15 +38,20 @@ $: filtered = searchDirty ? filter_tracks(tracks, $search) : tracks;
 <style lang="scss">
 
 main {
-  height: 100%;
+  flex-grow: 1;
   min-height: 0;
   z-index: 1;
   overflow-y: scroll;
+
   background-color: color-mix(in oklch, var(--col-back), transparent 4%);
   @include frost-blur;
   
   scrollbar-color: var(--col-text-deut) var(--col-back);
   scrollbar-width: thick;
+}
+
+.tracks {
+  padding-bottom: 8rem;
 }
 
 </style>

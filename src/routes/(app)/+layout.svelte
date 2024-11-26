@@ -52,6 +52,8 @@ $: image = track && `url(/covers/${track?.cover})`;
   max-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: stretch;
+
   background-color: var(--col-back);
   background-size: cover;
   background-position: center;
@@ -67,7 +69,6 @@ $: image = track && `url(/covers/${track?.cover})`;
 
   #split {
     min-height: 0;
-    max-height: inherit;
     flex: 1 1 auto;
     position: relative;
     display: flex;
@@ -87,6 +88,9 @@ $: image = track && `url(/covers/${track?.cover})`;
 
   #core {
     flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
     overflow: hidden;
   }
 
