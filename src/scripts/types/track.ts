@@ -7,7 +7,7 @@ export class Track
   shard: string;
   file: string;
   cover: string | null;
-  duration: number | null;
+  duration: number;
   plays: number;
 
   /// EXTERNAL
@@ -24,7 +24,7 @@ export class Track
     this.shard = shard;
     this.file = data.file;
     this.cover = data.cover ?? this.file;
-    this.duration = data.duration ?? null;
+    this.duration = data.duration ?? 369;
     this.plays = data.plays ?? 0;
     
     this.name = data.name ?? shard;

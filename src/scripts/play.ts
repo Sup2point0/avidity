@@ -171,6 +171,7 @@ class PlaybackExecutive
   {
     playback.update(s => {
       s.current = shard;
+      return s;
     });
 
     this.play_current();

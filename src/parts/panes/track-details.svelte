@@ -26,7 +26,7 @@ $: track = find_track($nav.selected_track);
 
   <div class="info">
     <h2 id="name"> {track?.name} </h2>
-    <p id="artist"> {@html display_artist(track?.artist) ?? "?"} </p>
+    <p id="artist"> {@html display_artist(track?.artist)} </p>
   </div>
   
   <div class="stats">

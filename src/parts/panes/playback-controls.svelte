@@ -56,10 +56,14 @@ $: track = find_track($playback.current);
     <section id="playback-details">
       <div id="playback-progress">
         <p> {display_time($playback.elapsed)} </p>
-        <!-- <meter
+        <meter
           min={0} max={1}
-          value={play_exec.playing ? (play_exec.elapsed / track.duration) : 0}
-        > -->
+          value={
+            (track && $playback.elapsed)
+            ? ($playback.elapsed / track.duration)
+            : 0
+          }
+        />
         <p> {display_time(track?.duration)} </p>
       </div>
     </section>
@@ -84,7 +88,7 @@ $: track = find_track($playback.current);
   margin: auto;
   width: 90%;
   height: 100%;
-  max-width: 600px;
+  max-width: 50rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -101,7 +105,7 @@ section#playback-controls {
 }
 
 section#track-details {
-  flex-grow: 1;
+  flex-grow: 0.25;
 
   > * {
     display: block;
@@ -118,11 +122,20 @@ section#track-details {
 }
 
 section#playback-details {
-  flex-grow: 0.5;
+  flex-grow: 1;
 
   #playback-progress {
+    display: flex;
+    flex-direction: horizontal;
+    flex-wrap: nowrap;
+
     p {
       @include font-ui;
+    }
+
+    meter {
+      width: 100%;
+      margin: 0 1rem;
     }
   }
 }

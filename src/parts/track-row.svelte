@@ -7,7 +7,7 @@ A row representing a track in menus.
 
 import play_exec from "#scripts";
 import { nav, playback } from "#scripts/stores";
-import { find_track, display_artist } from "#scripts/utils";
+import { find_track, display_artist, display_time } from "#scripts/utils";
 import type { Track } from "#scripts/types";
 
 import PlaylistTag from "#parts/playlist-tag.svelte";
@@ -47,7 +47,7 @@ const data = (typeof(track) == "string" ? find_track(track) : track);
   
     {#if ctx != "queue"}
       <div>
-        <p class="track-duration"> {data?.duration ?? "--:--"} </p>
+        <p class="track-duration"> {display_time(data?.duration)} </p>
       </div>
     {/if}
   
