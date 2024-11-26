@@ -7,7 +7,7 @@ A row representing a track in menus.
 
 import play_exec from "#scripts";
 import { nav, playback } from "#scripts/stores";
-import { find_track, find_artist } from "#scripts/utils";
+import { find_track, display_artist } from "#scripts/utils";
 import type { Track } from "#scripts/types";
 
 import PlaylistTag from "#parts/playlist-tag.svelte";
@@ -44,12 +44,12 @@ const data = (typeof(track) == "string" ? find_track(track) : track);
     <div class="track-info">
       <h4 class="track-name"> {data?.name ?? "?"} </h4>
       {#if !$nav.condensed_view}
-        <p class="track-artist"> {@html find_artist(data?.artist)} </p>
+        <p class="track-artist"> {@html display_artist(data?.artist)} </p>
       {/if}
     </div>
 
     {#if $nav.condensed_view}
-      <p class="track-artist"> {@html find_artist(data?.artist)} </p>
+      <p class="track-artist"> {@html display_artist(data?.artist)} </p>
     {/if}
   </div>
 

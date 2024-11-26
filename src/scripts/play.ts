@@ -6,7 +6,7 @@ import { base } from "$app/paths";
 import { Tracks } from "#scripts/data";
 import { playback } from "#scripts/stores";
 import { Track } from "#scripts/types";
-import { find_artist, find_playlist } from "#scripts/utils";
+import { display_artist, find_playlist } from "#scripts/utils";
 
 
 /**
@@ -104,7 +104,7 @@ class PlaybackExecutive
 
     navigator.mediaSession.metadata = new MediaMetadata({
       title: track.name,
-      artist: find_artist(track.artist) ?? "unknown artist",
+      artist: display_artist(track.artist) ?? "unknown artist",
       album: find_playlist(track.album)?.name,
       artwork: track.cover ? [
         { src: `${base}/covers/${track.cover}` }
