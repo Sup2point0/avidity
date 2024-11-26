@@ -1,6 +1,7 @@
 {
   "1f1e33": {
     "name": "#1f1e33",
+    "artist": "camellia",
     "lists": [
       "electronic",
       "rhythm",
@@ -11,6 +12,7 @@
   },
   "1f1e33-ant1p01e": {
     "name": "#1f1e33 (ant1p01e)",
+    "artist": "camellia",
     "lists": [
       "electronic",
       "rhythm",
@@ -1197,46 +1199,50 @@
   },
   "highland-hymn": {
     "name": "Highland Hymn",
+    "artist": "johannes-bornlof",
     "lists": [
       "orchestral",
       "folk"
     ],
-    "file": null,
+    "file": "johannes-bornlof/highland-hymn.mp3",
     "plays": 0
   },
   "hikari": {
     "name": "\u5149",
+    "artist": "jiang-mi-tiao",
     "lists": [
       "electronic",
       "rhythm",
       "hardcore"
     ],
-    "file": null,
+    "file": "jiang-mi-tiao/hikari.mp3",
     "plays": 0
   },
   "home": {
     "name": "Home",
+    "artist": "vexento",
     "lists": [
       "electronic",
       "chill",
       "nostalgic"
     ],
-    "file": null,
+    "file": "vexento/home.mp3",
     "plays": 0
   },
   "ibiza": {
     "name": "Ibiza",
+    "artist": "elektronomia",
     "lists": [
       "electronic",
       "house",
       "nostalgic"
     ],
-    "file": null,
+    "file": "elektronomia/ibiza.mp3",
     "plays": 0
   },
   "idol": {
     "name": "IDOL",
-    "artist": "YOASOBI",
+    "artist": "yoasobi",
     "lists": [
       "J-pop",
       "rap",
@@ -1244,27 +1250,28 @@
       "anime",
       "edgy"
     ],
-    "file": null,
+    "file": "yoasobi/idol.mp3",
     "plays": 0
   },
   "idols": {
     "name": "Idols",
+    "artist": "virtual-riot",
     "lists": [
       "pop",
       "mashup"
     ],
-    "file": null,
+    "file": "virtual-riot/idols.mp3",
     "plays": 0
   },
   "igallta": {
     "name": "Igallta",
-    "artist": "Se-U-Ra",
+    "artist": "se-u-ra",
     "lists": [
       "electronic",
       "rhythm",
       "arcade"
     ],
-    "file": null,
+    "file": "se-u-ra/igallta.mp3",
     "plays": 0
   },
   "ignite": {
@@ -1279,38 +1286,39 @@
       "house",
       "sad"
     ],
-    "file": null,
+    "file": "alan-walker/ignite.mp3",
     "plays": 0
   },
   "in-the-brume": {
     "name": "In the Brume",
+    "artist": "johannes-bornlof",
     "lists": [
       "orchestral",
       "war"
     ],
-    "file": null,
+    "file": "johannes-bornlof/in-the-brume.mp3",
     "plays": 0
   },
   "indelible-scar": {
     "name": "Indelible Scar",
-    "artist": "Noah",
+    "artist": "noah",
     "lists": [
       "electronic",
       "rhythm",
       "orchestral"
     ],
-    "file": null,
+    "file": "noah/indelible-scar.mp3",
     "plays": 0
   },
   "inferior": {
     "name": "inferior",
-    "artist": "\u59dc\u7c73\u689d",
+    "artist": "jiang-mi-tiao",
     "lists": [
       "electronic",
       "rhythm",
       "neurofunk"
     ],
-    "file": null,
+    "file": "jiang-mi-tiao/inferior.mp3",
     "plays": 0
   },
   "inferno-city": {
@@ -1324,7 +1332,7 @@
       "rock",
       "melodramatic"
     ],
-    "file": null,
+    "file": "~rhythm/inferno-city.mp3",
     "plays": 0
   },
   "inori": {
@@ -1339,43 +1347,44 @@
       "rhythm",
       "arcade"
     ],
-    "file": null,
+    "file": "~rhythm/inori.mp3",
     "plays": 0
   },
   "inversion": {
     "name": "INVERSION",
+    "artist": "tn-shi",
     "lists": [
       "electronic",
       "rhythm",
       "rich"
     ],
-    "file": null,
+    "file": "tn-shi/inversion.mp3",
     "plays": 0
   },
   "invincible": {
     "name": "Invincible",
-    "artist": "DEAF KEV",
+    "artist": "deaf-kev",
     "lists": [
       "electronic",
       "glitch-hop"
     ],
-    "file": null,
+    "file": "~electronic/deaf-kev.mp3",
     "plays": 0
   },
   "journey": {
     "name": "Journey",
     "artist": [
-      "Elektronomia",
-      "stahl!"
+      "elektronomia",
+      "stahl"
     ],
     "lists": [
       "electronic",
       "house"
     ],
-    "file": null,
+    "file": "elektronomia/journey.mp3",
     "plays": 0
   },
-  "journey-w-you": {
+  "journey-with-you": {
     "name": "Journey with You",
     "artist": "Iris",
     "lists": [
@@ -1383,47 +1392,49 @@
       "rhythm",
       "breakdown"
     ],
-    "file": null,
+    "file": "~rhythm/journey-with-you.mp3",
     "plays": 0
   },
   "kanataharuka": {
     "name": "KANATAHARUKA",
-    "artist": "RADWIMPS",
+    "artist": "radwimps",
     "lists": [
       "J-pop",
       "orchestral",
       "melodramatic"
     ],
-    "file": null,
+    "file": "~anime/kanataharuka.mp3",
     "plays": 0
   },
   "khrono-katharsis": {
     "name": "Khronostasis Katharsis",
-    "artist": "Halv",
+    "artist": "halv",
     "lists": [
       "electronic",
       "rhythm",
       "artcore"
     ],
-    "file": null,
+    "file": "halv/khronostasis-katharsis.mp3",
     "plays": 0
   },
   "kill-yourself": {
     "name": "Kill Yourself",
+    "artist": "bo-burnham",
     "lists": [
       "piano",
       "funny"
     ],
-    "file": null,
+    "file": "bo-burnham/kill-yourself.mp3",
     "plays": 0
   },
   "knights-templar": {
     "name": "Knight's Templar",
+    "artist": "johannes-bornlof",
     "lists": [
       "orchestral",
       "traditional"
     ],
-    "file": null,
+    "file": "johannes-bornlof/knights-templar.mp3",
     "plays": 0
   },
   "kyu-kurarin": {
@@ -1438,27 +1449,29 @@
       "J-pop",
       "cute"
     ],
-    "file": null,
+    "file": "~anime/kyu-kurarin.mp3",
     "plays": 0
   },
   "labyrinth-kowloon": {
     "name": "Labyrinth in Kowloon: Walled World",
+    "artist": "camellia",
     "lists": [
       "electronic",
       "rhythm",
       "oriental",
       "flavour"
     ],
-    "file": null,
+    "file": "camellia/labyrinth-kowloon.mp3",
     "plays": 0
   },
   "le-yuan-shang": {
     "name": "\u4e50\u56ed\u4e4b\u4e0a",
+    "artist": "cha-ming-12-lv",
     "lists": [
       "electronic",
       "rhythm"
     ],
-    "file": null,
+    "file": "cha-ming-12-lv/le-yuan-shang.mp3",
     "plays": 0
   },
   "let-you-down": {
@@ -1470,18 +1483,9 @@
     "file": "sup/let-you-down.m4a",
     "plays": 0
   },
-  "levitating": {
-    "name": "Levitating",
-    "artist": "Dua Lipa",
-    "lists": [
-      "pop"
-    ],
-    "file": null,
-    "plays": 0
-  },
   "life-weeb-eyes": {
     "name": "life flashes before weeb eyes",
-    "artist": "BilliumMoto",
+    "artist": "billium-moto",
     "lists": [
       "electronic",
       "rhythm",

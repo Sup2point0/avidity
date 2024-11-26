@@ -44,6 +44,11 @@
     "cover": null,
     "plays": 0
   },
+  "billium-moto": {
+    "name": "BilliumMoto",
+    "cover": null,
+    "plays": 0
+  },
   "bo-burnham": {
     "name": "Bo Burnham",
     "cover": null,
@@ -129,6 +134,11 @@
     "cover": null,
     "plays": 0
   },
+  "noah": {
+    "name": "Noah",
+    "cover": null,
+    "plays": 0
+  },
   "olivia-rodrigo": {
     "name": "Olivia Rodrigo",
     "cover": null,
@@ -149,8 +159,23 @@
     "cover": null,
     "plays": 0
   },
+  "radwimps": {
+    "name": "RADWIMPS",
+    "cover": null,
+    "plays": 0
+  },
+  "se-u-ra": {
+    "name": "Se-U-Ra",
+    "cover": null,
+    "plays": 0
+  },
   "shadow-bling": {
     "name": "shadow_bling",
+    "cover": null,
+    "plays": 0
+  },
+  "stahl": {
+    "name": "stahl!",
     "cover": null,
     "plays": 0
   },
