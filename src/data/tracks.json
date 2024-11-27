@@ -1,4 +1,6 @@
 {
+  "$schema": "./schemas/tracks.schema.json",
+
   "1f1e33": {
     "name": "#1f1e33",
     "artist": "camellia",
@@ -473,6 +475,7 @@
   },
   "cha-ying-xi": {
     "name": "\u8336\u5f71\u620f",
+    "artist": "cha-ming-12-lv",
     "lists": [
       "rhythm",
       "oriental",
@@ -1492,27 +1495,27 @@
       "piano",
       "quirky"
     ],
-    "file": null,
+    "file": "~rhythm/life-flashes-before-weeb-eyes.mp3",
     "plays": 0
   },
   "lightning": {
     "name": "Lightning",
     "artist": [
-      "Distrion",
-      "Alex Skrindo"
+      "distrion",
+      "alex-skrindo"
     ],
     "lists": [
       "electronic",
       "house"
     ],
-    "file": null,
+    "file": "~electronic/lightning.mp3",
     "plays": 0
   },
   "lily": {
     "name": "Lily",
     "artist": [
-      "Alan Walker",
-      "K-391",
+      "alan-walker",
+      "k-391",
       "Emelie Hollow"
     ],
     "lists": [
@@ -1521,45 +1524,46 @@
       "melodramatic",
       "bop"
     ],
-    "file": null,
+    "file": "alan-walker/lily.mp3",
     "plays": 0
   },
   "limitless": {
     "name": "Limitless",
+    "artist": "elektronomia",
     "lists": [
       "electronic",
       "house"
     ],
-    "file": null,
+    "file": "elektronomia/limitless.mp3",
     "plays": 0
   },
   "link": {
     "name": "Link",
-    "artist": "Jim Yosef",
+    "artist": "jim-yosef",
     "lists": [
       "electronic",
       "house"
     ],
-    "file": null,
+    "file": "jim-yosef/link.mp3",
     "plays": 0
   },
   "linked": {
     "name": "Linked",
     "artist": [
-      "Jim Yosef",
-      "Anna Yvette"
+      "yim-yosef",
+      "anna-yvette"
     ],
     "lists": [
       "electronic",
       "house"
     ],
-    "file": null,
+    "file": "jim-yosef/linked.mp3",
     "plays": 0
   },
   "lockdown": {
     "name": "Lockdown",
     "artist": [
-      "PIKASONIC",
+      "pikasonic",
       "Tatsunoshin"
     ],
     "lists": [
@@ -1568,13 +1572,13 @@
       "kawaii bass",
       "hardcore"
     ],
-    "file": null,
+    "file": "pikasonic/lockdown.mp3",
     "plays": 0
   },
   "lonely-world": {
     "name": "Lonely World",
     "artist": [
-      "K-391",
+      "k-391",
       "Victor Crone"
     ],
     "lists": [
@@ -1582,26 +1586,27 @@
       "house",
       "sad"
     ],
-    "file": null,
+    "file": "k-391/lonely-world.mp3",
     "plays": 0
   },
   "lost-control": {
     "name": "Lost Control",
-    "artist": "Alan Walker",
+    "artist": "alan-walker",
     "lists": [
       "electronic",
       "sad"
     ],
-    "file": null,
+    "file": "alan-walker/lost-control.mp3",
     "plays": 0
   },
   "lower-expectations": {
     "name": "Lower Your Expectations",
+    "artist": "bo-burnham",
     "lists": [
       "piano",
       "funny"
     ],
-    "file": null,
+    "file": "bo-burnham/lower-expectations.mp3",
     "plays": 0
   },
   "luminescent": {
@@ -1611,7 +1616,7 @@
       "electronic",
       "rhythm"
     ],
-    "file": null,
+    "file": "~rhythm/luminescent.mp3",
     "plays": 0
   },
   "luo-ri": {
@@ -1622,25 +1627,27 @@
       "C-pop",
       "bop"
     ],
-    "file": null,
+    "file": "~chinese/luo-ri.mp3",
     "plays": 0
   },
   "magnif-march": {
     "name": "Magnificent March",
+    "artist": "johannes-bornlof",
     "lists": [
       "orchestral",
       "heroic"
     ],
-    "file": null,
+    "file": "johannes-bornlof/magnificent-march.mp3",
     "plays": 0
   },
   "masked-heroes": {
     "name": "Masked Heroes",
+    "artist": "vexento",
     "lists": [
       "electronic",
       "bop"
     ],
-    "file": null,
+    "file": "vexento/masked-heroes.mp3",
     "plays": 0
   },
   "masterpiece": {
@@ -1651,27 +1658,29 @@
       "rhythm",
       "quirky"
     ],
-    "file": null,
+    "file": "yugioh/masterpiece.mp3",
     "plays": 0
   },
   "maximilian": {
     "name": "Maximilian",
+    "artist": "johannes-bornlof",
     "lists": [
       "orchestral",
       "war"
     ],
-    "file": null,
+    "file": "johannes-bornlof/maximilian.mp3",
     "plays": 0
   },
   "megalovania": {
     "name": "MEGALOVANIA (Camellia Remix)",
+    "artist": "camellia",
     "lists": [
       "electronic",
       "hardcore",
       "power",
       "remix"
     ],
-    "file": null,
+    "file": "camellia/megalovania.mp3",
     "plays": 0
   },
   "mephisto": {
@@ -1684,7 +1693,7 @@
       "bop",
       "edgy"
     ],
-    "file": null,
+    "file": "~anime/mephisto.mp3",
     "plays": 0
   },
   "mighty-rush": {
