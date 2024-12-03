@@ -24,6 +24,14 @@ p {
   color: var(--col-text);
 }
 
+h1,h2,h3 {
+  @include font-ui;
+  color: var(--col-text);
+}
+
+h1 { font-size: 250%; }
+h2 { font-size: 200%; }
+
 button {
   &:not(:disabled) {
     cursor: pointer;

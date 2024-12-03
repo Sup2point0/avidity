@@ -11,6 +11,10 @@ export function display_time(t: number | null | undefined): string
     t = parseInt(t);
   }
 
+  if (t < 0) {
+    t = 0;
+  }
+
   let mins = Math.floor(t / 60);
 
   let secs = (Math.round(t % 60)).toString();

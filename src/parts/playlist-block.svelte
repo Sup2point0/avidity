@@ -7,21 +7,23 @@ A card for selecting a playlist.
 
 import play_exec from "#scripts";
 import { nav } from "#scripts/stores";
+import { Playlist } from "#scripts/types";
 import { find_track, find_playlist } from "#scripts/utils";
 
 import { base } from "$app/paths";
 
-export let shard: string;
+export let playlist: Playlist | string | null;
 
 
-const playlist = find_playlist(shard);
-const track_count = playlist?.tracks?.length;
-const cover = playlist?.cover ?? find_track(playlist?.featured)?.cover ?? "void.png";
+const data = (typeof(playlist) == "string" ? find_playlist(playlist) : playlist);
+const track_count = data?.tracks?.length;
+const cover = data?.cover ?? find_track(data?.featured)?.cover ?? "void.png";
 
 
 function select_playlist() {
-  $nav.selected_playlist = shard;
   $nav.page = "list";
+  $nav.selected_playlist = data?.shard;
+  $nav.selected_track = data?.featured;
 }
 
 </script>
