@@ -7,10 +7,13 @@ The home page for navigating to tracks or playlists.
 
 import { Playlists } from "#scripts/data";
 
+import Header from "#src/parts/panes/header.svelte";
 import PlaylistBlock from "#parts/playlist-block.svelte";
 
 </script>
 
+
+<Header title="Playlists" />
 
 <main>
   {#each Object.keys($Playlists) as shard}

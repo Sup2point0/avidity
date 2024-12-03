@@ -13,7 +13,7 @@ export let title: string;
 <style lang="scss">
 
 header {
-  padding: 1rem 2rem;
+  padding: 3rem 2rem 1rem;
   background-color: color-mix(in oklch, var(--col-back), transparent 4%);
   @include frost-blur;
 

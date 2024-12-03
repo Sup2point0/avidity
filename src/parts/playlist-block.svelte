@@ -18,6 +18,12 @@ const playlist = find_playlist(shard);
 const track_count = playlist?.tracks?.length;
 const cover = playlist?.cover ?? find_track(playlist?.featured)?.cover ?? "void.png";
 
+
+function select_playlist() {
+  $nav.selected_playlist = shard;
+  $nav.page = "list";
+}
+
 </script>
 
 
@@ -25,11 +31,11 @@ const cover = playlist?.cover ?? find_track(playlist?.featured)?.cover ?? "void.
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div class="playlist-block"
-  on:click={() => { $nav.selected_playlist = shard; }}
-  on:keydown={(e) => {
-    if (e.key === "Enter") {
-      $nav.selected_playlist = shard;
-    } else if (e.key === "Space") {
+  on:click={select_playlist}
+  on:keydown={event => {
+    if (event.key === "Enter") {
+      select_playlist();
+    } else if (event.key === "Space") {
       play_exec.play_list(shard);
     }
   }}
