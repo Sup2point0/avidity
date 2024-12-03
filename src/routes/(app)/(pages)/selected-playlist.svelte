@@ -18,7 +18,7 @@ $: playlist = find_playlist($nav.selected_playlist);
   <div class="tracks">
     {#each playlist?.tracks ?? [] as track}
       {#if track}
-        <TrackRow track={track} />
+        <TrackRow ctx="list" track={track} />
       {/if}
     {/each}
   </div>

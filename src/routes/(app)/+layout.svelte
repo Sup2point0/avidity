@@ -82,6 +82,7 @@ $: image = track && `url(/covers/${track?.cover})`;
   }
 
   #left {
+    min-width: 20rem;
     flex-grow: 0.25;
     overflow: hidden;
   }
@@ -95,6 +96,7 @@ $: image = track && `url(/covers/${track?.cover})`;
   }
 
   #right {
+    min-width: 10rem;
     flex-grow: 0.5;
     overflow: hidden;
   }

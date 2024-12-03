@@ -14,7 +14,7 @@ export class Playlist
 
   constructor(
     shard: string,
-    data: any | undefined,
+    data?: any,
   )
   {
     this.shard = shard;
