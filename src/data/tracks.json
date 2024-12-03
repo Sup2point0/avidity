@@ -1,5 +1,5 @@
 {
-  "$schema": "./schemas/tracks.schema.json",
+  // "$schema": "./schemas/tracks.schema.json",
 
   "1f1e33": {
     "name": "#1f1e33",
@@ -1910,6 +1910,7 @@
   },
   "ooparts": {
     "name": "\u03a9\u03a9PARTS",
+    "artist": "camellia",
     "lists": [
       "electronic",
       "rhythm",
@@ -1917,27 +1918,29 @@
       "hardcore",
       "rich"
     ],
-    "file": null,
+    "file": "camellia/ooparts.mp3",
     "plays": 0
   },
   "opia": {
     "name": "opia",
-    "artist": "rN",
+    "artist": "rn",
     "lists": [
       "electronic",
       "rhythm",
       "neurofunk"
     ],
-    "file": null,
+    "file": "rn/opia.mp3",
     "plays": 0
   },
   "pandering": {
     "name": "Pandering",
+    "artist": "bo-burnham",
+    "album": "make-happy",
     "lists": [
       "pop",
       "funny"
     ],
-    "file": null,
+    "file": "bo-burnham/pandering.mp3",
     "plays": 0
   },
   "papipupi": {
@@ -1949,40 +1952,45 @@
       "vocaloid",
       "quirky"
     ],
-    "file": null,
+    "file": "~rhythm/papipupipupipa.mp3",
     "plays": 0
   },
   "party-pspace": {
     "name": "Party in PSPACE",
+    "artist": "tn-shi",
     "lists": [
       "electronic",
       "rhythm"
     ],
-    "file": null,
+    "file": "tn-shi/party-in-pspace.mp3",
     "plays": 0
   },
   "phoenix": {
     "name": "Phoenix",
-    "artist": "League of Legends",
+    "artist": "against-the-current",
+    "album": "lol",
     "lists": [
       "electronic",
       "orchestral",
       "epic"
     ],
-    "file": null,
+    "file": "~ost/phoenix.mp3",
     "plays": 0
   },
   "phoenix-rising": {
     "name": "Phoenix Rising",
+    "artist": "johannes-bornlof",
     "lists": [
       "orchestral",
       "epic"
     ],
-    "file": null,
+    "file": "johannes-bornlof/phoenix-rising.mp3",
     "plays": 0
   },
   "pirate-cove": {
     "name": "To Pirate Cove",
+    "artist": "johannes-bornlof",
+    "album": "the-lonely-sailor",
     "lists": [
       "orchestral",
       "pirate",
