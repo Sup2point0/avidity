@@ -16,8 +16,8 @@ import PlaylistBlock from "#parts/playlist-block.svelte";
 <Header title="Playlists" />
 
 <main>
-  {#each Object.keys($Playlists) as shard}
-    <PlaylistBlock {shard} />
+  {#each Object.keys($Playlists) as playlist}
+    <PlaylistBlock {playlist} />
   {/each}
 </main>
 

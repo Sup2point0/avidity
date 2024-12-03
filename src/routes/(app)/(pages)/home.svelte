@@ -6,6 +6,7 @@ The home page for navigating to tracks or playlists.
 <script lang="ts">
 
 import { Tracks, Playlists } from "#scripts/data";
+import { prefs } from "#scripts/stores";
 
 import TrackRow from "#parts/track-row.svelte";
 import PlaylistBlock from "#parts/playlist-block.svelte";
@@ -31,6 +32,10 @@ function sort_plays(data) {
 
   <section>
     <h2> Favourites </h2>
+
+    {#each $prefs.favs as track}
+      <TrackRow {track} />
+    {/each}
   </section>
 
   <section>

@@ -5,7 +5,7 @@ A pane for viewing and editing details of the selected track?.
 
 <script>
 
-import { nav } from "#scripts/stores";
+import { nav, prefs } from "#scripts/stores";
 import { find_track, display_artist } from "#scripts/utils";
 
 import PlaylistTag from "#parts/playlist-tag.svelte";
@@ -14,6 +14,7 @@ import { base } from "$app/paths";
 
 
 $: track = find_track($nav.selected_track);
+$: fav = $prefs.favs.findIndex(each => each == track?.shard);
 
 </script>
 
@@ -27,6 +28,24 @@ $: track = find_track($nav.selected_track);
   <div class="info">
     <h2 id="name"> {track?.name} </h2>
     <p id="artist"> {@html display_artist(track?.artist)} </p>
+  </div>
+
+  <div class="actions">
+    <button class="ui rounded"
+      on:click={() => {
+        if (fav > 0) {
+          $prefs.favs = $prefs.favs.toSpliced(fav, 1);
+        } else if (track?.shard) {
+          $prefs.favs = $prefs.favs.concat(track.shard);
+        }
+      }}
+    >
+      <span class="material-symbols-rounded"
+        style:font-variation-settings="'FILL' {fav ? 1 : 0}"
+      >
+        favorite
+      </span>
+    </button>
   </div>
   
   <div class="stats">

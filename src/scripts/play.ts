@@ -180,8 +180,10 @@ class PlaybackExecutive
   /**
    * Add all tracks in a playlist to the queue.
    */
-  play_list(shard: string)
+  play_list(shard: string | null | undefined)
   {
+    if (shard == null) return;
+
     playback.update(s => {
       s.queue = s.queue.concat(find_playlist(shard)?.tracks ?? []);
       return s;
@@ -200,7 +202,9 @@ class PlaybackExecutive
    */
   toggle_pause()
   {
-    if (this.audio?.paused) {
+    if (this.audio == null) return;
+
+    if (this.audio.paused) {
       this.audio.play();
       this.#sync_push("paused", false);
       navigator.mediaSession.playbackState = "playing";

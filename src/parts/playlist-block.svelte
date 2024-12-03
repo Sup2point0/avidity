@@ -38,23 +38,23 @@ function select_playlist() {
     if (event.key === "Enter") {
       select_playlist();
     } else if (event.key === "Space") {
-      play_exec.play_list(shard);
+      play_exec.play_list(data?.shard);
     }
   }}
 >
   <img class="playlist-cover"
-    alt={playlist.name}
+    alt={data?.name}
     src="{base}/covers/{cover}"
   />
 
   <div class="layout">
     <div class="playlist-info">
-      <h3> {playlist.name} </h3>
+      <h3> {data?.name} </h3>
       <p> {track_count} </p>
     </div>
 
     <button class="ui play"
-      on:click={() => { play_exec.play_list(shard); }}
+      on:click={() => { play_exec.play_list(data?.shard); }}
     >
       <span class="material-symbols-rounded">
         play_arrow
