@@ -14,7 +14,6 @@ let tracks_data = process_raw(raw_data);
 let data = hydrate_data(tracks_data);
 
 export const Tracks = writable<TracksData>(data);
-console.log(get(Tracks))
 
 
 function process_raw(raw_data: object): TracksData
@@ -23,7 +22,9 @@ function process_raw(raw_data: object): TracksData
   console.group("loading tracks data...");
 
   for (let [shard, data] of Object.entries(raw_data)) {
-    // try {
+    if (shard.startsWith("$")) continue;
+    
+    try {
       let track = new Track(shard, data);
       out[shard] = track;
 
@@ -35,18 +36,15 @@ function process_raw(raw_data: object): TracksData
           add_to_playlist(list, shard);
         }
       }
-    // }
-    // catch {
-    //   console.error(`failed to load track \`${shard}\``);
-    // }
+    }
+    catch {
+      console.error(`failed to load track \`${shard}\``);
+    }
   }
 
   console.groupEnd();
   return out;
 }
-
-
-
 
 
 /**
