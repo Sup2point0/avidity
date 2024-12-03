@@ -1,3 +1,9 @@
+import { get } from "svelte/store";
+
+import { Artists } from "#scripts/data";
+
+
+
 export function display_time(t: number | null | undefined): string
 {
   if (t == null) return "--:--";
@@ -13,4 +19,17 @@ export function display_time(t: number | null | undefined): string
   }
 
   return `${mins}:${secs}`;
+}
+
+
+export function display_artist(shard: string | string[] | null | undefined): string
+{
+  if (Array.isArray(shard)) {
+    return (shard
+      .map((shard) => display_artist(shard))
+      .join("<span class=\"separator\">/</span>")
+    );
+  } else {
+    return shard ? (get(Artists)[shard]?.name ?? shard) : "unkown artist";
+  }
 }

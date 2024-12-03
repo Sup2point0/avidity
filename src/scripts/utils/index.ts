@@ -1,3 +1,3 @@
-export { find_track, find_playlist, display_artist } from "./find";
+export { find_track, find_playlist } from "./find";
 export { filter_tracks } from "./search";
-export { display_time } from "./display";
+export { display_time, display_artist } from "./display";
