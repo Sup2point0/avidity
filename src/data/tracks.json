@@ -1698,11 +1698,12 @@
   },
   "mighty-rush": {
     "name": "Mighty Rush",
+    "artist": "johannes-bornlof",
     "lists": [
       "orchestral",
       "heroic"
     ],
-    "file": null,
+    "file": "johannes-bornlof/mighty-rush.mp3",
     "plays": 0
   },
   "miku": {
@@ -1713,71 +1714,62 @@
       "vocaloid",
       "bop"
     ],
-    "file": null,
+    "file": "~anime/miku.mp3",
     "plays": 0
   },
   "million-pp": {
     "name": "M1LLI0N PP",
+    "artist": "camellia",
     "lists": [
       "electronic",
       "rhythm",
       "full-flavour"
     ],
-    "file": null,
+    "file": "camellia/million-pp.mp3",
+    "cover": "camellia/tera-io.jpg",
     "plays": 0
   },
   "miss-you": {
     "name": "Miss You",
-    "artist": "PIKASONIC",
+    "artist": "pikasonic",
     "lists": [
       "electronic",
       "rhythm",
       "kawaii bass"
     ],
-    "file": null,
+    "file": "pikasonic/miss-you.mp3",
     "plays": 0
   },
   "monuments": {
     "name": "Monuments",
+    "artist": "johannes-bornlof",
     "lists": [
       "orchestral",
       "film",
       "melodramatic"
     ],
-    "file": null,
-    "plays": 0
-  },
-  "muffin-song": {
-    "name": "THE MUFFIN SONG",
-    "artist": [
-      "asdfmovie",
-      "Schmoyoho"
-    ],
-    "lists": [
-      "electronic",
-      "quirky",
-      "meme"
-    ],
-    "file": null,
+    "file": "johannes-bornlof/monuments.mp3",
     "plays": 0
   },
   "mural-legends": {
     "name": "Mural Legends",
+    "artist": "johannes-bornlof",
     "lists": [
       "orchestral",
       "pirate"
     ],
-    "file": null,
+    "file": "johannes-bornlof/mural-legends.mp3",
     "plays": 0
   },
   "nacreous-snowmelt": {
     "name": "Nacreous Snowmelt",
+    "artist": "camellia",
     "lists": [
       "electronic",
       "rhythm",
       "atmos"
     ],
-    "file": null,
+    "file": "camellia/nacreous-snowmelt.mp3",
     "plays": 0
   },
   "nana": {
@@ -1788,38 +1780,41 @@
       "bop",
       "quirky"
     ],
-    "file": null,
+    "file": "~anime/nana.mp3",
     "plays": 0
   },
   "nerds": {
     "name": "Nerds",
+    "artist": "bo-burnham",
     "lists": [
       "alt-pop",
       "rap",
       "quirky",
       "clever"
     ],
-    "file": null,
+    "file": "bo-burnham/nerds.mp3",
     "plays": 0
   },
   "new-start": {
     "name": "New Start",
+    "artist": "pikasonic",
     "lists": [
       "electronic",
       "rhythm",
       "kawaii bass"
     ],
-    "file": null,
+    "file": "pikasonic/new-start.mp3",
     "plays": 0
   },
   "nhelv": {
     "name": "Nhelv",
+    "artist": "silentroom",
     "lists": [
       "electronic",
       "rhythm",
       "neurofunk"
     ],
-    "file": null,
+    "file": "silentroom/nhelv.mp3",
     "plays": 0
   },
   "night": {
@@ -1834,51 +1829,56 @@
   },
   "night-attack": {
     "name": "The Night Attack",
+    "artist": "johannes-bornlof",
     "lists": [
       "orchestral",
       "heroic"
     ],
-    "file": null,
+    "file": "johannes-bornlof/the-night-attack.mp3",
     "plays": 0
   },
   "no-one-yes-man": {
     "name": "NO ONE YES MAN",
+    "artist": "myukke",
     "lists": [
       "electronic",
       "rhythm",
       "arcade"
     ],
-    "file": null,
+    "file": "myukke/no-one-yes-man.mp3",
     "plays": 0
   },
   "no-turn-back": {
     "name": "No Turning Back",
+    "artist": "vexento",
     "lists": [
       "electronic",
       "chill",
       "nostalgic"
     ],
-    "file": null,
+    "file": "vexento/no-turning-back.mp3",
     "plays": 0
   },
   "northern-lights": {
     "name": "Northern Lights",
+    "artist": "vexento",
     "lists": [
       "electronic",
       "chill",
       "vibe"
     ],
-    "file": null,
+    "file": "vexento/northern-lights.mp3",
     "plays": 0
   },
   "nulctrl": {
     "name": "NULCTRL",
+    "artist": "silentroom",
     "lists": [
       "electronic",
       "rhythm",
       "quirky"
     ],
-    "file": null,
+    "file": "silentroom/nulctrl.mp3",
     "plays": 0
   },
   "on-and-on": {
@@ -1894,17 +1894,18 @@
       "hardcore",
       "flavour"
     ],
-    "file": null,
+    "file": "~rhythm/on-and-on.mp3",
     "plays": 0
   },
   "only-the-brave": {
     "name": "Only the Brave",
+    "artist": "johannes-bornlof",
     "lists": [
       "orchestral",
       "heroic",
       "sad"
     ],
-    "file": null,
+    "file": "johannes-bornlof/only-the-brave.mp3",
     "plays": 0
   },
   "ooparts": {
