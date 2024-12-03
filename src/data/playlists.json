@@ -17,10 +17,8 @@
     "plays": 0
   },
   "lol": {
-    "name": "League of Legends"
-  },
-  "the-lonely-sailor": {
-    "name": "The Lonely Sailor"
+    "name": "League of Legends",
+    "plays": 0
   },
   "make-happy": {
     "name": "Make Happy",
@@ -49,6 +47,10 @@
   "tera-io": {
     "name": "TERA I/O",
     "col": "#4ecc9d",
+    "plays": 0
+  },
+  "the-lonely-sailor": {
+    "name": "The Lonely Sailor",
     "plays": 0
   },
   "what": {

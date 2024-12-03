@@ -1,6 +1,5 @@
 {
-  // "$schema": "./schemas/tracks.schema.json",
-
+  "$schema": "./schemas/tracks.schema.json",
   "1f1e33": {
     "name": "#1f1e33",
     "artist": "camellia",
