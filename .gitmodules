@@ -3,4 +3,4 @@
 	url = https://github.com/Sup2point0/vividity.git
 [submodule "static"]
 	path = static
-	url = https://github.com/Sup2point0/avidity-assets
+	url = git@github.com:Sup2point0/avidity-assets
